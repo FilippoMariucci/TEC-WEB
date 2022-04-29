@@ -1,16 +1,57 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Registrazione</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
-        <link rel="stylesheet" href="/css/style.css">
-    </head>
-    <body>
-        <form method="post" action="/php/register.php">
-            <h1>Registrazione</h1>
-            <input type="text" id="username" placeholder="Username" name="username" maxlength="50" required>
-            <input type="password" id="password" placeholder="Password" name="password" required>
-            <button type="submit" name="register">Registrati</button>
-        </form>
-    </body>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<img src="img_sailboat.jpg" alt="Boat" class="w3-animate-opacity" style="width:100%;min-height:200px;max-height:400px;">
+
+<div class="w3-container">
+  <h2>Welcome to Sailing</h2>
+  <p>Sailing comprises wind propulsion of a craft by means of sails and steering it over water,
+  ice or land, depending on the type of craft. A sailor manages the force of the wind on the
+  sails by adjusting their angle with respect to the moving sailing craft...</p>
+  <p>
+  <button onclick="document.getElementById('id01').style.display='block'" class="w3-btn">Register</button></p>
+</div>
+
+
+<form id="id01" action="/action_page.php" class="w3-modal w3-pale-yellow">
+
+<button onclick="document.getElementById('id01').style.display='none'"
+class="w3-btn w3-right w3-large w3-hover-red w3-clear">X</button>
+
+<div class="w3-clear"></div>
+
+<div class="w3-container">
+<h2>Class Registration</h2>
+
+<p>
+<input class="w3-input" type="text" name="first" style="width:90%" required>
+<label>First Name</label></p>
+
+<p>
+<input class="w3-input" type="text" name="last" style="width:90%" required>
+<label>Last Name</label></p>
+
+<p>
+<input class="w3-radio" type="radio" name="gender" value="male" checked>
+<label>Male</label></p>
+
+<p>
+<input class="w3-radio" type="radio" name="gender" value="female">
+<label>Female</label></p>
+
+<p>
+<input class="w3-radio" type="radio" name="gender" value="" disabled>
+<label>Don't know (Disabled)</label></p>
+
+<p>
+<button class="w3-btn w3-ripple w3-hover-green">Register</button></p>
+</div>
+
+</form>
+
+</body>
 </html>

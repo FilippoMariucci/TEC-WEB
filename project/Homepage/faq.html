@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:width="http://www.w3.org/1999/xhtml">
 <head>
-<title>FAQ</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
+  <title>Affittacamere</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+style="padding:58px 16px";
 </style>
 </head>
 <body>
@@ -20,8 +21,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <div class="w3-bar w3-black w3-card w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="homepage.html" class="w3-bar-item w3-button w3-padding-large w3-black">Home</a>
-    <a href="faq.html" class="w3-bar-item w3-button w3-padding-large w3-black">FAQ</a>
-    <a href="contattaci.html" class="w3-bar-item w3-button w3-padding-large w3-black">Contattaci</a>
     <a href="login.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-black w3-hover-white w3-right" onclick="">Login</a>
     <a href="Registrazione.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-black w3-hover-white w3-right" onclick="">Registrati</a>
   </div>
@@ -33,21 +32,63 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   </div>
 </div>
 
-<header class="w3-container w3-center" style="padding:128px 16px">
-  <button onclick="myFunction('Demo1')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey w3-half">Open Section 1
-  <i class="fa fa-caret-down"></i>
-  </button>
-<div id="Demo1" class="w3-container w3-hide w3-left-align">
-  <h4>Section 1</h4>
-  <p>Some text..</p>
+<!-- HERO PAGE SECTION-->
+
+<div class="w3-container">
+  <section id="page-hero" >
+    <div class="w3-displey-container w3-center" style="padding:58px 30px">
+      <img src="	https://pbs.twimg.com/profile_images/506502716282376192/85K1eGXQ_400x400.jpeg"
+           class="w3-round " alt="Assistenza" style="width: 50%;">
+      <div class="w3-display-bottommiddle w3-container">
+        <h1 class="hero__title raleway w3-text-white" >Assistenza e contatti</h1>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq-page">
+    <div class="w3-container ">
+      <div class="w3-container w3-center">
+        <h2 class="w3-title w3-opacity">Domande Frequenti</h2>
+        <p class="section-header__text w3-opacity">
+          Hai una domanda? Qui puoi trovare risposte e soluzioni ai dubbi più comuni.</p>
+        <p class="section-header__text w3-opacity">
+          Per chiedere altre informazioni o contattarci
+          <a href="#contact-form" class="faq__cta-link w3-text-blue">
+            scrivici direttamente</a>.</p>
+      </div>
+    </div>
+
+    <div class=" w3-container w3-border" style="padding:58px 16px">
+      <div class="w3-utente-container">
+        <div class="w3-b-container">
+          <img class="faq__category-icon faq__catgory-icon--profilo"
+               src="https://s1.immobiliare.it/assets/20220420141838/img/static-pages/contattaci/icon-profilo-utente.png"
+               alt="Profilo Utente" width="32" height="40" style="float:left;">
+          <h3 class=" image-text" style="margin:0px 0px 0px 30px" >Profilo utente</h3>
+        </div>
+        <div class="faq__1"></div>
+
+        <button onclick="myFunction('Demo1')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey">
+          Perché non riesco ad accedere al mio profilo utente?
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div id="Demo1" class="w3-container w3-hide ">
+          <p>perche sei un coglione</p>
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+
+
+  </section>
 </div>
-
-</header>
 <script>
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
+function myFunction(id) {
+  var x = document.getElementById(id);
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
   } else {
@@ -56,4 +97,6 @@ function myFunction() {
 }
 </script>
 </body>
+
+
 </html>

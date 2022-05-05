@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:width="http://www.w3.org/1999/xhtml" xmlns:font-size="http://www.w3.org/1999/xhtml">
+<head>
+  <title>FAQ</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body,h1,h2,h3 {font-family: "Lato", sans-serif}
+    .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+  </style>
+</head>
+<body style="background-color: #F0EEED">
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="homepage.html" class="w3-bar-item w3-button w3-padding-large w3-black">Home</a>
+    <a href="faq.html" class="w3-bar-item w3-button w3-padding-large w3-black">FAQ</a>
+    <a href="contattaci.html" class="w3-bar-item w3-button w3-padding-large w3-black">Contattaci</a>
+    <a href="login.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-black w3-hover-white w3-right" onclick="">Login</a>
+    <a href="Registrazione.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-black w3-hover-white w3-right" onclick="">Registrati</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="faq.html" class="w3-bar-item w3-button w3-padding-large w3-black">FAQ</a>
+    <a href="contattaci.html" class="w3-bar-item w3-button w3-padding-large w3-black">Contattaci</a>
+    <a href="login.html" class="w3-bar-item w3-button w3-padding-large w3-black w3-right">Login</a>
+    <a href="Registrazione.html" class="w3-bar-item w3-button w3-padding-large w3-black w3-right">Registrati</a>
+  </div>
+</div>
+
+
+<div class="w3-container" style="margin-top:50px">
+
+
+  <section id="filter">
+    <div class="w3-container w3-half w3-border w3-center">
+      <div class="faq__item" style="padding:15px">
+
+        <button onclick="myFunction('FAQ1')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey">
+          <strong style="color:#024059">Perché non riesco ad accedere al mio profilo utente?</strong>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div id="FAQ1" class="w3-container w3-hide">
+          <p>I motivi per cui non riesci ad accedere al tuo profilo utente su Immobiliare.it possono essere due:</p>
+          <p>&nbsp;</p>
+          <p>• Non hai effettuato la registrazione oppure il processo stesso non è andato a buon fine:
+            in tal caso devi registrarti o ripetere il processo, visitando <strong>
+              <a href="https://www.Immobiliare.it/registrazione-privato">questa pagina</a></strong>;</p>
+          <p>• La password inserita non è corretta: è possibile reimpostarla visitando <strong>
+            <a href="https://www.Immobiliare.it/recupera-password">questa pagina</a></strong>.</p>
+          <p class="faq__cta">Non abbiamo risposto alla tua domanda oppure vuoi contattarci?
+            <a href="#contact-form" class="faq__cta-link">Clicca qui</a></p>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="w3-container w3-half w3-border w3-center">
+      <div class="faq__item" style="padding:15px">
+
+        <button onclick="myFunction('FAQ2')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey">
+          <strong style="color:#024059">Perché non riesco ad accedere al mio profilo utente?</strong>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div id="FAQ2" class="w3-container w3-hide">
+          <p>I motivi per cui non riesci ad accedere al tuo profilo utente su Immobiliare.it possono essere due:</p>
+          <p>&nbsp;</p>
+          <p>• Non hai effettuato la registrazione oppure il processo stesso non è andato a buon fine:
+            in tal caso devi registrarti o ripetere il processo, visitando <strong>
+              <a href="https://www.Immobiliare.it/registrazione-privato">questa pagina</a></strong>;</p>
+          <p>• La password inserita non è corretta: è possibile reimpostarla visitando <strong>
+            <a href="https://www.Immobiliare.it/recupera-password">questa pagina</a></strong>.</p>
+          <p class="faq__cta">Non abbiamo risposto alla tua domanda oppure vuoi contattarci?
+            <a href="#contact-form" class="faq__cta-link">Clicca qui</a></p>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+</div>
+
+
+
+<script>
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:width="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:width="http://www.w3.org/1999/xhtml" xmlns:font-size="http://www.w3.org/1999/xhtml">
 <head>
   <title>FAQ</title>
   <meta charset="UTF-8">
@@ -13,7 +13,7 @@
     .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
   </style>
 </head>
-<body>
+<body style="background-color: #F0EEED">
 
 <!-- Navbar -->
 <div class="w3-top">
@@ -36,54 +36,337 @@
 </div>
 
 <!-- HERO PAGE SECTION-->
-
-<div class="w3-container">
-  <section id="page-hero" >
-    <div class="w3-displey-container w3-center" style="padding:58px 30px">
+<section id="initial_image">
+<div class="w3-container" style="padding: 30px 20px; background-color: #F0EEED">
+  <div id="page-hero" >
+    <div class="w3-displey-container w3-center" >
       <img src="https://tonucci.com/wp-content/uploads/2018/05/Call-centre.jpg"
-           class="w3-round " alt="Assistenza" style="width: 50%;">
+           class="w3-round " alt="Assistenza" style="width: 100%; opacity:0.8">
       <div class="w3-display-bottommiddle w3-container">
-        <h1 class="hero__title raleway w3-text-white" >Assistenza e contatti</h1>
+        <h1 style="font-size:40px;text-decoration-style: solid;">
+          Assistenza e contatti</h1>
       </div>
     </div>
-  </section>
+  </div>
+</div>
+</section>
 
-  <section id="faq-page">
+
+<section id="faq-page">
+
+  <div class="w3-container" style="padding: 10px 50px; background-color: #F0EEED">
     <div class="w3-container ">
       <div class="w3-container w3-center">
         <h2 class="w3-title w3-opacity">Domande Frequenti</h2>
         <p class="section-header__text w3-opacity">
           Hai una domanda? Qui puoi trovare risposte e soluzioni ai dubbi più comuni.</p>
+        <p>&nbsp;</p>
         <p class="section-header__text w3-opacity">
           Per chiedere altre informazioni o contattarci
-          <a href="contattaci.html" class="faq__cta-link w3-text-blue">
+          <a href="contattaci.html" class="faq__cta-link w3-text-#28698F">
             scrivici direttamente</a>.</p>
       </div>
     </div>
 
-    <div class=" w3-container w3-border" style="padding:58px 16px">
+
+  </div>
+  <!-- container di tutti i tipi delle faq -->
+  <div class="w3-container " style="padding:50px 200px; background-color: #F0EEED" >
+
+    <!-- sezione 1 faq -->
+    <div class=" w3-container w3-border" style="padding:40px; background-color: white">
       <div class="w3-utente-container">
-        <div class="w3-b-container">
-          <img class="faq__category-icon faq__catgory-icon--profilo"
-               src="https://s1.immobiliare.it/assets/20220420141838/img/static-pages/contattaci/icon-profilo-utente.png"
-               alt="Profilo Utente" width="32" height="40" style="float:left;">
-          <h3 class="w3-padding-16 image-text" style="margin:0px 0px 0px 30px" >Profilo utente</h3>
-        </div>
-        <div class="faq__1"></div>
-
-        <button onclick="myFunction('Demo1')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey">
-          Perché non riesco ad accedere al mio profilo utente?
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div id="Demo1" class="w3-container w3-hide ">
-          <p>Probabilmente non sei registrato al sito</p>
+        <div class="w3-b-container" >
+          <div style="float:left; margin-right:15px; margin-top:10px">
+            <img class="faq__category-icon faq__catgory-icon--profilo"
+                 src="https://cdn.icon-icons.com/icons2/1848/PNG/512/user_116431.png"
+                 alt="Profilo Utente"
+                 style="height:40px; width:40px">
+          </div> <h3 class="w3-padding-16 image-text" >Profilo utente</h3>
         </div>
 
+        <div class="faq__item" style="padding:15px">
+
+          <button onclick="myFunction('FAQ1')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey">
+            <strong style="color:#024059">Perché non riesco ad accedere al mio profilo utente?</strong>
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div id="FAQ1" class="w3-container w3-hide">
+            <p>I motivi per cui non riesci ad accedere al tuo profilo utente su Immobiliare.it possono essere due:</p>
+            <p>&nbsp;</p>
+            <p>• Non hai effettuato la registrazione oppure il processo stesso non è andato a buon fine:
+              in tal caso devi registrarti o ripetere il processo, visitando <strong>
+                <a href="https://www.Immobiliare.it/registrazione-privato">questa pagina</a></strong>;</p>
+            <p>• La password inserita non è corretta: è possibile reimpostarla visitando <strong>
+              <a href="https://www.Immobiliare.it/recupera-password">questa pagina</a></strong>.</p>
+            <p class="faq__cta">Non abbiamo risposto alla tua domanda oppure vuoi contattarci?
+              <a href="#contact-form" class="faq__cta-link">Clicca qui</a></p>
+          </div>
+        </div>
+
+
+        <div class="faq__item" style="padding: 15px">
+
+          <button onclick="myFunction('FAQ2')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey">
+            <strong style="color:#024059">Come faccio a disattivare/attivare la ricezione delle newsletter?</strong>
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div id="FAQ2" class="w3-container w3-hide ">
+            <p>Se desideri cancellarti dalla newsletter di Immobiliare.it,
+              puoi farlo dalla tua area personale accessibile da <strong>
+                <a href="https://www.Immobiliare.it/accedi">questa pagina</a></strong>.</p>
+            <p>&nbsp;</p>
+            <p>Una volta effettuato il login, è sufficiente cliccare su "modifica profilo" e togliere la spunta alla voce "Desidero ricevere la newsletter Indomio News".
+              Metti la spunta alla medesima voce se invece vuoi ricevere la newsletter di Immobiliare.it nella tua casella di posta.</p>
+            <p class="faq__cta">Non abbiamo risposto alla tua domanda oppure vuoi contattarci?
+              <a href="#contact-form" class="faq__cta-link">Clicca qui</a></p>
+          </div>
+        </div>
+
+
+        <div class="faq__item" style="padding: 15px">
+
+          <button onclick="myFunction('FAQ3')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey">
+            <strong style="color:#024059">Come faccio a modificare/disattivare il servizio di notifica nuovi annunci?</strong>
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div id="FAQ3" class="w3-container w3-hide ">
+            <p>Per modificare o disattivare il servizio di notifica nuovi annunci accedi all'area personale,
+              inserendo indirizzo email e password scelti al momento della registrazione.</p>
+            <p>&nbsp;</p>
+            <p>Accedi dunque alla sezione Ricerche e scegli la ricerca che vuoi cancellare. Cliccando sul tasto "..."
+              e scegliendo la voce "Elimina" la ricerca verrà cancellata e con essa anche il servizio di "Ricevi annunci".</p>
+            <p class="faq__cta">Non abbiamo risposto alla tua domanda oppure vuoi contattarci?
+              <a href="#contact-form" class="faq__cta-link">Clicca qui</a></p>
+          </div>
+        </div>
+
+        <div class="faq__item" style="padding: 15px">
+
+          <button onclick="myFunction('FAQ4')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey">
+            <strong style="color:#024059">Come faccio a eliminare il mio profilo ed i miei dati personali?</strong>
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div id="FAQ4" class="w3-container w3-hide ">
+            <p>Per cancellare il tuo profilo utente su Immobiliare.it
+              accedi al tuo profilo, inserendo indirizzo email e password scelti al momento della registrazione.</p>
+            <p>In fondo alla pagina del profilo personale, clicca su "Elimina profilo" per rimuovere definitivamente il profilo utente.
+              Questa operazione comporta la definitiva rimozione dei dati personali dell'utente dai nostri sistemi.</p>
+            <p>&nbsp;</p>
+            <p>Per avere maggiori informazioni sulla privacy e sul trattamento dei dati personali puoi consultare <strong>
+              <a href="https://www.Immobiliare.it/terms/privacy/">questa pagina</a></strong></p>
+            <p class="faq__cta">Non abbiamo risposto alla tua domanda oppure vuoi contattarci?
+              <a href="#contact-form" class="faq__cta-link">Clicca qui</a></p>
+          </div>
+        </div>
       </div>
-
     </div>
 
+    <!-- secondo border faq -->
+
+    <div class=" w3-container w3-border " style="padding:60px 15px; margin-top:35px; background-color: white">
+      <div class="w3-annunci-container">
+        <div class="w3-b-container" >
+          <div style="float:left; margin-right:15px; margin-top:10px; margin-left:15px" >
+            <img class="faq__category-icon faq__catgory-icon--profilo"
+                 src="https://www.blogsicilia.it/wp-content/uploads/sites/2/2018/02/casa.jpg?w=626"
+                 alt="Profilo Utente"
+                 style="height:50px; width:50px">
+          </div> <h3 class="w3-padding-16 image-text" >Annunci</h3>
+        </div>
+
+        <div class="faq__item" style="padding:15px">
+
+          <button onclick="myFunction('FAQ5')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey">
+            <strong style="color:#024059">Come faccio a pubblicare un annuncio? Quanto costa?</strong>
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div id="FAQ5" class="w3-container w3-hide">
+            <p class="p1">Per pubblicare il tuo annuncio devi prima registrarti gratuitamente su Immobiliare.it.
+              Successivamente puoi scegliere se inserire il tuo immobile direttamente dal sito o dalle App disponibili per iOS e Android.</p>
+            <p class="p1">Immobiliare.it offre a tutti i privati la possibilità di pubblicare un annuncio gratuitamente.
+              Nel caso in cui dovessi vendere o affittare il tuo immobile, infatti, nessuna provvigione sarà dovuta a Immobiliare.it.</p>
+            <p class="p1">&nbsp;</p>
+            <p class="p1">Se desideri dare alla tua proposta immobiliare una visibilità ancor maggiore oppure se devi inserire più di un annuncio,
+              ti consigliamo una di queste formule speciali:</p>
+            <p class="p1">&nbsp;</p>
+            <p class="p1"><span>•</span> Opzione “Premium” al costo di 24,95 euro per 90 giorni, o di 44,95 euro per 180 giorni.
+              L’annuncio sarà posizionato più in alto negli elenchi di ricerca rispetto agli annunci “base” gratuiti e sarà possibile nascondere il prezzo e l’indirizzo esatto.</p>
+            <p class="p1"><span>•</span> Opzione “Top” al costo di 99,95 euro per 90 giorni, o di 179,95 per 180 giorni. L'annuncio comparirà prima dei "Premium" nei risultati di ricerca,
+              sarà contrassegnato dal badge "TOP" e avrà la foto di dimensione maggiore rispetto agli altri. Sarà inoltre possibile nascondere il prezzo e l’indirizzo esatto.
+              Il tuo annuncio sarà pubblicizzato anche sui canali social del sito e su altri portali partner.</p>
+            <p class="p1">&nbsp;</p>
+            <p class="p1">Per passare dalla pubblicazione base gratuita a uno dei pacchetti sopra elencati devi semplicemente accedere alla tua area personale, selezionare la voce “annunci" e "pubblicati” e cliccare quindi sulla scritta “promuovi” che trovi in basso a destra.
+              Qui potrai scegliere il tipo di pubblicazione e la modalità di pagamento desiderata (Paypal oppure bonifico bancario).</p>
+            <p class="faq__cta">Non abbiamo risposto alla tua domanda oppure vuoi contattarci?
+              <a href="#contact-form" class="faq__cta-link">Clicca qui</a></p>
+          </div>
+        </div>
+
+
+        <div class="faq__item" style="padding: 15px">
+
+          <button onclick="myFunction('FAQ6')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey">
+            <strong style="color:#024059">Come faccio a modificare/cancellare un annuncio che ho pubblicato?</strong>
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div id="FAQ6" class="w3-container w3-hide ">
+
+            <p>Per modificare o cancellare un annuncio da Immobiliare.it,
+              accedi all'area personale inserendo indirizzo email e password scelti al momento della registrazione.</p>
+            <p>&nbsp;</p>
+            <p>Una volta effettuato il login, seleziona la voce "Annunci pubblicati".
+              Cliccando sul tasto "..." vicino all'inserzione, è possibile scegliere le voci "Modifica" oppure "Elimina".</p>
+            <p class="faq__cta">Non abbiamo risposto alla tua domanda oppure vuoi contattarci?
+              <a href="#contact-form" class="faq__cta-link">Clicca qui</a></p>
+          </div>
+        </div>
+
+
+        <div class="faq__item" style="padding: 15px">
+
+          <button onclick="myFunction('FAQ7')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey">
+            <strong style="color:#024059">Posso pubblicare un annuncio senza il mio nome/numero di telefono?</strong>
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div id="FAQ7" class="w3-container w3-hide ">
+
+            <p>Quando inserisci il tuo annuncio su Immobiliare.it il tuo nome e il numero di telefono vengono automaticamente nascosti.</p>
+            <p>Se invece desideri renderli visibili, durante la fase di pubblicazione, nella sezione "Contatti"
+              puoi spuntare le caselle relativa alla voce "Nome e Cognome" e "Telefono".
+              Potrai modificare le impostazioni anche dopo la pubblicazione dell'annuncio, direttamente dal tuo profilo personale.</p>
+            <p>Dopo aver apportato le modifiche, ricorda di cliccare su "Salva" in fondo alla sezione.</p>
+            <p class="faq__cta">Non abbiamo risposto alla tua domanda oppure vuoi contattarci?
+              <a href="#contact-form" class="faq__cta-link">Clicca qui</a></p>
+          </div>
+        </div>
+
+
+        <div class="faq__item" style="padding: 15px">
+
+          <button onclick="myFunction('FAQ8')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey">
+            <strong style="color:#024059">Posso pubblicare un annuncio senza mostrare il mio indirizzo email?</strong>
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div id="FAQ8" class="w3-container w3-hide ">
+
+            <p>L'indirizzo email è obbligatorio in fase di inserimento annuncio, ma non verrà mai mostrato ai visitatori di Immobiliare.it.
+              Gli utenti interessati al tuo immobile compileranno un modulo con i propri dati e questo genererà automaticamente una email
+              inviata alla tua casella di posta elettronica.</p>
+            <p class="faq__cta">Non abbiamo risposto alla tua domanda oppure vuoi contattarci?
+              <a href="#contact-form" class="faq__cta-link">Clicca qui</a></p>
+          </div>
+        </div>
+
+        <div class="faq__item" style="padding: 15px">
+
+          <button onclick="myFunction('FAQ9')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey">
+            <strong style="color:#024059">Se elimino il mio annuncio, posso pubblicarne uno nuovo gratuitamente?</strong>
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div id="FAQ9" class="w3-container w3-hide ">
+            <p>Se hai rimosso il tuo vecchio annuncio, puoi pubblicarne uno nuovo gratuitamente.
+              Su Immobiliare.it ai privati è sempre concesso avere un solo annuncio gratuito.</p>
+            <p class="faq__cta">Non abbiamo risposto alla tua domanda oppure vuoi contattarci?
+              <a href="#contact-form" class="faq__cta-link">Clicca qui</a></p>
+          </div>
+        </div>
+
+        <div class="faq__item" style="padding: 15px">
+
+          <button onclick="myFunction('FAQ10')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey">
+            <strong style="color:#024059">Posso pubblicare un annuncio relativo ad un immobile localizzato all'estero?</strong>
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div id="FAQ10" class="w3-container w3-hide ">
+            <p>Puoi pubblicare su Immobiliare.it annunci di immobili residenziali che non sono in Italia,
+              purchè questi si trovino in uno dei seguenti Paesi: Belgio, Bulgaria, Croazia, Francia,
+              Germania, Lussemburgo, Polonia, Portogallo, Serbia, Slovacchia, Spagna, Svizzera, Ungheria.</p>
+            <p>&nbsp;</p>
+            <p>In futuro tale possibilità sarà estesa anche ad altri Paesi.</p>
+            <p class="faq__cta">Non abbiamo risposto alla tua domanda oppure vuoi contattarci?
+              <a href="#contact-form" class="faq__cta-link">Clicca qui</a></p>
+          </div>
+        </div>
+
+        <div class="faq__item" style="padding: 15px">
+
+          <button onclick="myFunction('FAQ11')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey">
+            <strong style="color:#024059">Come faccio a sapere quante volte è stato visualizzato il mio annuncio?</strong>
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div id="FAQ11" class="w3-container w3-hide ">
+            <p>Per sapere quante volte è stato visualizzato un annuncio da te pubblicato, accedi all'area personale,
+              inserendo indirizzo email e password scelti al momento della registrazione. Nella sezione "Annunci Pubblicati",
+              in corrispondenza della foto del tuo annuncio, viene mostrato il numero di visite che la tua inserzione ha ricevuto.</p>
+            <p>Periodicamente ti invieremo, inoltre, un'email con le statistiche settimanali relative al tuo annuncio.</p>
+            <p class="faq__cta">Non abbiamo risposto alla tua domanda oppure vuoi contattarci?
+              <a href="#contact-form" class="faq__cta-link">Clicca qui</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- sezione 3 faq -->
+
+    <div class=" w3-container w3-border" style="padding:60px 15px; margin-top:35px;background-color: white">
+      <div class="w3-altro-container">
+        <div class="w3-b-container" >
+          <div style="float:left; margin-right:15px; margin-top:10px; margin-left:15px" >
+            <img class="faq__category-icon faq__catgory-icon--profilo"
+                 src="https://cdn-icons-png.flaticon.com/512/61/61499.png"
+                 alt="Profilo Utente"
+                 style="height:50px; width:50px">
+          </div> <h3 class="w3-padding-16 image-text" >Altro</h3>
+        </div>
+
+        <div class="faq__item" style="padding:15px">
+
+          <button onclick="myFunction('FAQ12')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey" >
+            <strong style="color:#024059">Come posso avere informazioni su un immobile che ho visto sul sito? </strong>
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div id="FAQ12" class="w3-container w3-hide">
+            <p>Per avere qualsiasi tipo di informazione devi rivolgerti direttamente all’inserzionista dell'annuncio,
+              tramite il modulo di contatto oppure telefonicamente, qualora il suo numero sia visibile.</p>
+            <p class="faq__cta">Non abbiamo risposto alla tua domanda oppure vuoi contattarci?
+              <a href="#contact-form" class="faq__cta-link">Clicca qui</a></p>
+          </div>
+        </div>
+
+
+        <div class="faq__item" style="padding: 15px">
+
+          <button onclick="myFunction('FAQ13')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey">
+            <strong style="color:#024059">Quanto vale il mio immobile?</strong>
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div id="FAQ13" class="w3-container w3-hide ">
+            <p>Immobiliare.it offre un servizio automatico di valutazione del tuo immobile, accessibile a <strong>
+              <a href="https://www.Immobiliare.it/valutazione_immobiliare.php">questa pagina</a></strong>.</p>
+            <p>&nbsp;</p>
+            <p>Una volta compilati i dati relativi all'immobile avrai anche la possibilità di richiedere
+              la consulenza gratuita di un agente immobiliare attraverso l'apposito modulo.</p>
+            <p>&nbsp;</p>
+            <p>Il servizio è totalmente gratuito.</p>
+            <p class="faq__cta">Non abbiamo risposto alla tua domanda oppure vuoi contattarci?
+              <a href="#contact-form" class="faq__cta-link">Clicca qui</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   </section>
+
+<section id="contact-section" >
+  <header id="contact_area" class="w3-container w3-center" style="background-color: #F0EEED; margin-bottom:15px">
+    <h2 class="section-header__title raleway">Non hai trovato ciò che cercavi?</h2>
+    <form action="contattaci.html">
+    <button id="open-contact-form" class="w3-botton w3-black">Clicca qui</button>
+    </form>
+  </header>
+</section>
 
 </div>
 

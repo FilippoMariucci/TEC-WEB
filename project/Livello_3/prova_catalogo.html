@@ -36,41 +36,48 @@
 </div>
 
 
-<div class="w3-container" style="margin-top:50px">
-
+<div class="w3-container" style="margin-top:50px; padding:150px" >
 
   <section id="filter">
-    <div class="w3-container w3-half w3-border w3-center">
+    <div class="w3-container w3-half ">
       <div class="faq__item" style="padding:15px">
 
-        <button onclick="myFunction('FAQ1')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey">
-          <strong style="color:#024059">Perché non riesco ad accedere al mio profilo utente?</strong>
-          <i class="fa fa-caret-down"></i>
+        <button onclick="accordions('FAQ1')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey
+         w3-center w3-border w3-border-black">
+          <strong style="color:#024059">Appartamenti</strong>
+          <i class="fa fa-caret-down w3-right"></i>
         </button>
-        <div id="FAQ1" class="w3-container w3-hide">
-          <p>I motivi per cui non riesci ad accedere al tuo profilo utente su Immobiliare.it possono essere due:</p>
-          <p>&nbsp;</p>
-          <p>• Non hai effettuato la registrazione oppure il processo stesso non è andato a buon fine:
-            in tal caso devi registrarti o ripetere il processo, visitando <strong>
-              <a href="https://www.Immobiliare.it/registrazione-privato">questa pagina</a></strong>;</p>
-          <p>• La password inserita non è corretta: è possibile reimpostarla visitando <strong>
-            <a href="https://www.Immobiliare.it/recupera-password">questa pagina</a></strong>.</p>
-          <p class="faq__cta">Non abbiamo risposto alla tua domanda oppure vuoi contattarci?
-            <a href="#contact-form" class="faq__cta-link">Clicca qui</a></p>
+
+        <!-- filtri appartamento -->
+
+        <div id="FAQ1" class="w3-container w3-hide w3-border w3-border-black " style="background:white">
+        <div class="w3-row w3-section">
+          <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-map-marker "></i></div>
+          <div class="w3-rest">
+            <input class="w3-input w3-border w3-border-black" name="first" type="text" placeholder="Luogo">
+          </div>
         </div>
       </div>
+      </div>
 
-
+      <div class="w3-dropdown-click">
+        <button onclick="dropdown()" class="w3-button w3-black"></button>
+        <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
+          <a href="#" class="w3-bar-item w3-button">Link 1</a>
+          <a href="#" class="w3-bar-item w3-button">Link 2</a>
+          <a href="#" class="w3-bar-item w3-button">Link 3</a>
+        </div>
+      </div>
     </div>
 
-    <div class="w3-container w3-half w3-border w3-center">
+    <div class="w3-container w3-half  w3-center">
       <div class="faq__item" style="padding:15px">
 
-        <button onclick="myFunction('FAQ2')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey">
-          <strong style="color:#024059">Perché non riesco ad accedere al mio profilo utente?</strong>
-          <i class="fa fa-caret-down"></i>
+        <button onclick="accordions('FAQ2')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey w3-center w3-border w3-border-black">
+          <strong style="color:#024059">Posti letto</strong>
+          <i class="fa fa-caret-down w3-right"></i>
         </button>
-        <div id="FAQ2" class="w3-container w3-hide">
+        <div id="FAQ2" class="w3-container w3-hide w3-border w3-border-black " style="background:white">
           <p>I motivi per cui non riesci ad accedere al tuo profilo utente su Immobiliare.it possono essere due:</p>
           <p>&nbsp;</p>
           <p>• Non hai effettuato la registrazione oppure il processo stesso non è andato a buon fine:
@@ -91,8 +98,19 @@
 
 
 <script>
-function myFunction(id) {
+function accordions(id) {
   var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+<script>
+function dropdown() {
+  var x = document.getElementById("Demo");
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
   } else {

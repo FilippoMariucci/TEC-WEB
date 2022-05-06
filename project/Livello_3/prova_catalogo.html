@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://it.freepik.com/icone-gratis/forchetta-e-coltello-sagome_723009.htm">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <style>
     body,h1,h2,h3 {font-family: "Lato", sans-serif}
     .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
@@ -21,52 +20,52 @@
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="homepage.html" class="w3-bar-item w3-button w3-padding-large w3-black">Home</a>
-    <a href="faq.html" class="w3-bar-item w3-button w3-padding-large w3-black">FAQ</a>
-    <a href="contattaci.html" class="w3-bar-item w3-button w3-padding-large w3-black">Contattaci</a>
-    <a href="login.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-black w3-hover-white w3-right">Login</a>
-    <a href="Registrazione.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-black w3-hover-white w3-right">Registrati</a>
+    <a href="../Homepage/homepage.html" class="w3-bar-item w3-button w3-padding-large w3-black">Home</a>
+    <a href="../Homepage/faq.html" class="w3-bar-item w3-button w3-padding-large w3-black">FAQ</a>
+    <a href="../Homepage/contattaci.html" class="w3-bar-item w3-button w3-padding-large w3-black">Contattaci</a>
+    <a href="../Homepage/login.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-black w3-hover-white w3-right">Login</a>
+    <a href="../Homepage/Registrazione.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-black w3-hover-white w3-right">Registrati</a>
   </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="faq.html" class="w3-bar-item w3-button w3-padding-large w3-black">FAQ</a>
-    <a href="contattaci.html" class="w3-bar-item w3-button w3-padding-large w3-black">Contattaci</a>
-    <a href="login.html" class="w3-bar-item w3-button w3-padding-large w3-black w3-right">Login</a>
-    <a href="Registrazione.html" class="w3-bar-item w3-button w3-padding-large w3-black w3-right">Registrati</a>
+    <a href="../Homepage/faq.html" class="w3-bar-item w3-button w3-padding-large w3-black">FAQ</a>
+    <a href="../Homepage/contattaci.html" class="w3-bar-item w3-button w3-padding-large w3-black">Contattaci</a>
+    <a href="../Homepage/login.html" class="w3-bar-item w3-button w3-padding-large w3-black w3-right">Login</a>
+    <a href="../Homepage/Registrazione.html" class="w3-bar-item w3-button w3-padding-large w3-black w3-right">Registrati</a>
   </div>
 </div>
 
 
-<div class="w3-container" style="margin-top:50px; padding:150px" >
+<div class="w3-container" style="margin-top:50px; padding:150px">
 
   <section id="filter">
-    <div class="w3-container w3-half ">
+    <div class="w3-container w3-half w3-center">
       <div class="faq__item" style="padding:15px">
 
         <button onclick="accordions('appartamenti')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey
-         w3-center w3-border w3-border-black">
+        w3-center w3-border w3-border-black" style="border-radius: 10px">
           <strong style="color:#024059">Appartamenti</strong>
-          <i class="fa fa-caret-down w3-right"></i>
+          <i class="fa fa-caret-down " style="float: right"></i>
         </button>
 
           <!-- Inizio menu hide -->
 
-        <div id="appartamenti" class="w3-container w3-hide w3-border w3-border-black " style="background:white">
+        <div id="appartamenti" class="w3-container w3-hide w3-border w3-border-black" style="background-color: #F0EEED;
+        border-radius: 10px">
 
           <!-- Luogo -->
           <div class="w3-section w3-center"><i class="w3-xxlarge fa fa-map-marker" style="padding-right: 16px"></i>
-              <input class="w3-border w3-border-black" name="first" type="text" style="width: 256px" placeholder="Luogo">
+              <input class="w3-border w3-border-grey" name="location" type="text" style="width: 256px" placeholder="Luogo">
           </div>
 
           <!-- prezzo -->
-          <div class="w3-section w3-center"><i class="w3-xxlarge fa fa-euro"></i>
-            &ensp;
+          <div class="w3-section w3-center"><i class="w3-xxlarge fa fa-euro" style="padding-right: 16px"></i>
             <label>Prezzo da </label>
-            <input class="w3-border" type="number" style="width: 100px;" name="from">
+            <input class="w3-border w3-border-grey" type="number" style="width: 100px" name="from">
             <label> € a </label>
-            <input class="w3-border" type="number" style="width: 100px;" name="to">
-            €
+            <input class="w3-border w3-border-grey" type="number" style="width: 100px" name="to">
+            <label>€</label>
           </div>
 
           <!-- prezzo alternativo
@@ -89,80 +88,145 @@
         </div> -->
 
           <!-- DIMENSIONE-->
-          <div class="w3-section w3-center"><i class="w3-xxlarge	fa fa-crop"></i>
+          <div class="w3-section w3-center"><i class="w3-xxlarge	fa fa-crop" style="padding-right: 16px"></i>
            <label>Dimensione</label>
-            <input class="w3-border" type="number" style="width: 100px;" name="dimension">
-            mq
+            <input class="w3-border w3-border-grey" type="number" style="width: 100px;" name="dimension">
+            <label>mq</label>
           </div>
 
           <!--NUM CAMERE-->
-            <div class="w3-section w3-center"><i class="w3-xxlarge glyphicon glyphicon-bed"></i>
-              <label>N. Camere presenti</label>
-              <input class="w3-border" type="number" style="width: 100px;" name="room">
-            </div>
+          <div class="w3-section w3-center"><i class="w3-xxlarge fa fa-bed" style="padding-right: 16px"></i>
+            <label>N. Camere presenti</label>
+            <input class="w3-border w3-border-grey" type="number" style="width: 100px;" name="room">
+          </div>
 
           <!--PRESENZA CUCINA-->
-          <div class="w3-section w3-center"><i class="w3-xxlarge fa fa-cutlery"></i>
-            &ensp;Cucina
-            <input class="w3-radio w3-center" type="radio" name="kitchen_y" value="true" checked>
+          <div class="w3-section w3-center"><i class="w3-xxlarge fa fa-cutlery" style="padding-right: 16px"></i>
+            <label>Cucina</label>
+            <input type="radio" name="kitchen" value="true" checked>
             <label>Si</label>
             &emsp;
-            <input class="w3-radio w3-center" type="radio" name="kitchen_n" value="false">
+            <input type="radio" name="kitchen" value="false">
             <label>No</label>
           </div>
 
           <!--PRESENZA LOCALE RICREATIVO-->
-          <div class="w3-section w3-center"><i class="w3-xxlarge fa fa-gamepad"></i>
-            &ensp;Locale Ricreativo
-            <input class="w3-radio w3-center" type="radio" name="living_y" value="true" checked>
+          <div class="w3-section w3-center"><i class="w3-xxlarge fa fa-gamepad" style="padding-right: 16px"></i>
+            <label>Locale Ricreativo</label>
+            <input type="radio" name="living" value="true" checked>
             <label>Si</label>
-            &emsp;
-            <input class="w3-radio w3-center" type="radio" name="living_n" value="false">
+            &ensp;
+            <input type="radio" name="living" value="false">
             <label>No</label>
           </div>
 
           <!--NUMERO BAGNI-->
-          <div class="w3-section w3-center"><i class="w3-xxlarge fa fa-bath"></i>
+          <div class="w3-section w3-center"><i class="w3-xxlarge fa fa-bath" style="padding-right: 16px"></i>
             <label>Numero bagni</label>
-            <input class="w3-border" type="number" style="width: 128px" name="bath">
+            <input class="w3-border w3-border-grey" type="number" style="width: 128px" name="bath">
           </div>
 
           <!--PERIODO LOCAZIONE-->
-          <div class="w3-section w3-center"><i class="w3-xxlarge fa fa-home"></i>
-            &ensp;
+          <div class="w3-section w3-center"><i class="w3-xxlarge fa fa-home" style="padding-right: 16px"></i>
             <label>Periodo di locazione dal</label>
-            <input class="w3-border" type="date" style="width: 100px;" name="from">
+            <input class="w3-border w3-border-grey" type="date" style="width: 100px;" name="from">
             <label>  al </label>
-            <input class="w3-border" type="date" style="width: 100px;" name="to">
+            <input class="w3-border w3-border-grey" type="date" style="width: 100px;" name="to">
           </div>
 
-          <button class="w3-btn w3-center w3-ripple w3-black w3-hover-grey">Filtra e cerca</button><br>
+          <div class="w3-section w3-center">
+            <input type="submit" value="Filtra e cerca" name="filter" style="color: #024059;width: 128px">
+          </div>
+
         </div>
-
-
 
       </div>
 
-
     </div>
 
-    <div class="w3-container w3-half  w3-center">
+    <div class="w3-container w3-half w3-center">
       <div class="faq__item" style="padding:15px">
 
-        <button onclick="accordions('posti_letto')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey w3-center w3-border w3-border-black">
+        <button onclick="accordions('posti_letto')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey
+        w3-center w3-border w3-border-black" style="border-radius: 10px">
           <strong style="color:#024059">Posti letto</strong>
           <i class="fa fa-caret-down w3-right"></i>
         </button>
-        <div id="posti_letto" class="w3-container w3-hide w3-border w3-border-black " style="background:white">
-          <p>I motivi per cui non riesci ad accedere al tuo profilo utente su Immobiliare.it possono essere due:</p>
-          <p>&nbsp;</p>
-          <p>• Non hai effettuato la registrazione oppure il processo stesso non è andato a buon fine:
-            in tal caso devi registrarti o ripetere il processo, visitando <strong>
-              <a href="https://www.Immobiliare.it/registrazione-privato">questa pagina</a></strong>;</p>
-          <p>• La password inserita non è corretta: è possibile reimpostarla visitando <strong>
-            <a href="https://www.Immobiliare.it/recupera-password">questa pagina</a></strong>.</p>
-          <p class="faq__cta">Non abbiamo risposto alla tua domanda oppure vuoi contattarci?
-            <a href="#contact-form" class="faq__cta-link">Clicca qui</a></p>
+        <div id="posti_letto" class="w3-container w3-hide w3-border w3-border-black " style="background-color: #F0EEED;
+        border-radius: 10px">
+
+          <!-- LUOGO -->
+          <div class="w3-section w3-center"><i class="w3-xxlarge fa fa-map-marker" style="padding-right: 16px"></i>
+            <input class="w3-border w3-border-grey" name="location" type="text" style="width: 256px" placeholder="Luogo">
+          </div>
+
+          <!-- TIPI DI STANZA -->
+          <div class="w3-section w3-center"><i class="w3-xxlarge fa fa-bed" style="padding-right: 16px"></i>
+            <label>Tipo di stanza</label>
+            <input type="radio" name="bedroom" value="one" checked>
+            <label>Singola</label>
+            &ensp;
+            <input type="radio" name="bedroom" value="two">
+            <label>Doppia</label>
+            &ensp;
+            <input type="radio" name="bedroom" value="more">
+            <label>Piu' di due persone</label>
+          </div>
+
+          <!-- prezzo -->
+          <div class="w3-section w3-center"><i class="w3-xxlarge fa fa-euro" style="padding-right: 16px"></i>
+            <label>Prezzo da </label>
+            <input class="w3-border w3-border-grey" type="number" style="width: 100px" name="from">
+            <label> € a </label>
+            <input class="w3-border w3-border-grey" type="number" style="width: 100px" name="to">
+            <label>€</label>
+          </div>
+
+          <!-- DIMENSIONE-->
+          <div class="w3-section w3-center"><i class="w3-xxlarge	fa fa-crop" style="padding-right: 16px"></i>
+           <label>Dimensione</label>
+            <input class="w3-border w3-border-grey" type="number" style="width: 100px;" name="dimension">
+            <label>mq</label>
+          </div>
+
+          <!-- NUM POSTI LETTO TOTALI -->
+          <div class="w3-section w3-center"><i class="w3-xxlarge fa fa-bed" style="padding-right: 16px"></i>
+            <label>N. Posti letto totali presenti</label>
+            <input class="w3-border w3-border-grey" type="number" style="width: 100px;" name="num_bed">
+          </div>
+
+          <!-- DISPONIBILITA' ANGOLO STUDIO-->
+          <div class="w3-section w3-center"><i class="w3-xxlarge fa fa-book" style="padding-right: 16px"></i>
+            <label>Angolo studio</label>
+            <input type="radio" name="study" value="true" checked>
+            <label>Si</label>
+            &ensp;
+            <input type="radio" name="study" value="false">
+            <label>No</label>
+          </div>
+
+          <!--PRESENZA BAGNO PRIVATO-->
+          <div class="w3-section w3-center"><i class="w3-xxlarge fa fa-bath" style="padding-right: 16px"></i>
+            <label>Bagno privato</label>
+            <input type="radio" name="p_bath" value="true" checked>
+            <label>Si</label>
+            &ensp;
+            <input type="radio" name="p_bath" value="false">
+            <label>No</label>
+          </div>
+
+          <!--PERIODO LOCAZIONE-->
+          <div class="w3-section w3-center"><i class="w3-xxlarge fa fa-home" style="padding-right: 16px"></i>
+            <label>Periodo di locazione dal</label>
+            <input class="w3-border w3-border-grey" type="date" style="width: 100px;" name="from">
+            <label>  al </label>
+            <input class="w3-border w3-border-grey" type="date" style="width: 100px;" name="to">
+          </div>
+
+          <div class="w3-section w3-center">
+            <input type="submit" value="Filtra e cerca" name="filter" style="color: #024059;width: 128px">
+          </div>
+
         </div>
       </div>
 

@@ -13,7 +13,7 @@
       background-size: cover;
       position: relative
     }
-    .w3-bar {font-family: "Montserrat", sans-serif}
+    .w3-bar{font-family: "Montserrat", sans-serif}
   </style>
 </head>
 
@@ -34,31 +34,37 @@ V97P&itok=StU2n694">
 </div>
 
 <div class="w3-container w3-content w3-white w3-center w3-padding-64 w3-border" style="max-width:600px;max-height: 450px">
-    <h2>Registrazione</h2>
-    <p>
-    <label>Username</label>
-    <input class="w3-input w3-grey"  type="text" name="first" required>
-    </p>
+    <h1>Registrazione</h1>
+    <div class="w3-container" style="text-align: left">
+      <h2>
+        <label>Username</label>
+        <input type="text" name="first" style="height: 32px" required>
+      </h2>
 
-    <p>
-    <label>Password</label>
-    <input class="w3-input w3-grey"  type="text" name="psw" required>
-    </p>
+      <h3>
+        <label>Password</label>
+        <input type="password" name="psw" style="height: 32px" required>
+      </h3>
 
-    <p>
-    <label>Conferma Password</label>
-    <input class="w3-input w3-grey" type="text" name="confirm" required>
-    </p>
+      <h4>
+        <label>Conferma Password</label>
+        <input type="password" name="confirm" style="height: 32px" required>
+      </h4>
 
-    <p>
-    <input class="w3-radio w3-center" type="radio" name="role" value="level2" checked>
-    <label>Locatore</label>
-    &emsp;
-    <input class="w3-radio w3-center" type="radio" name="role" value="level3">
-    <label>Locatario</label></p>
+    </div>
 
-    <p>
-    <button class="w3-btn w3- center w3-ripple w3-black w3-hover-grey">Registrati</button></p><br>
+    <h5>
+      <input type="radio" name="role" checked>
+      <label>Locatore</label>
+      &emsp;
+      <input type="radio" name="role">
+      <label>Locatario</label>
+    </h5>
+
+    <h6>
+      <input type="submit" value="Registrati" name="submit">
+    </h6>
+
 </div>
 
 </body>

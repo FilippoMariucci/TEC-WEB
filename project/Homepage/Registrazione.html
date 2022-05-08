@@ -13,7 +13,7 @@
       background-size: cover;
       position: relative
     }
-    .w3-bar{font-family: "Montserrat", sans-serif}
+    .w3-bar,h1,h2,h3,h4,h5,h6{font-family: "Montserrat", sans-serif}
   </style>
 </head>
 
@@ -36,9 +36,11 @@ V97P&itok=StU2n694">
 <div class="w3-container w3-content w3-white w3-center w3-padding-64 w3-border" style="max-width:600px;max-height: 450px">
     <h1>Registrazione</h1>
     <div class="w3-container" style="text-align: left">
+
       <h2>
         <label>Username</label>
         <input type="text" name="first" style="height: 32px" required>
+        <a href="showPwd()" class="fa fa-eyes"></a>
       </h2>
 
       <h3>
@@ -66,6 +68,18 @@ V97P&itok=StU2n694">
     </h6>
 
 </div>
+
+
+<script>
+  function showPwd() {
+        var input = document.getElementById('pwd');
+        if (input.type === "password") {
+          input.type = "text";
+        } else {
+          input.type = "password";
+        }
+      }
+</script>
 
 </body>
 </html>

@@ -13,7 +13,7 @@
       background-size: cover;
       position: relative
     }
-    .w3-bar,h1,h2,h3,h4,h5,h6{font-family: "Montserrat", sans-serif}
+    .w3-bar{font-family: "Montserrat", sans-serif}
   </style>
 </head>
 
@@ -24,55 +24,47 @@ V97P&itok=StU2n694">
 
 <!-- Navbar--->
 <div class="w3-top">
+
   <div class="w3-bar w3-black w3-card w3-large">
     <a href="homepage.html" class="w3-bar-item w3-button w3-padding-large w3-black">Home</a>
   </div>
 
-  <!-- Navbar on small screens--->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-  </div>
 </div>
 
-<div class="w3-container w3-content w3-white w3-center w3-padding-64 w3-border" style="max-width:600px;max-height: 450px">
+<div class="w3-container w3-content w3-white w3-center w3-padding-64 w3-border" style="max-width:600px;max-height: 400px">
     <h1>Registrazione</h1>
-    <div class="w3-container" style="text-align: left">
-
-      <h2>
-        <label>Username</label>
-        <input type="text" name="first" style="height: 32px" required>
-        <a href="showPwd()" class="fa fa-eyes"></a>
-      </h2>
-
-      <h3>
-        <label>Password</label>
-        <input type="password" name="psw" style="height: 32px" required>
-      </h3>
-
-      <h4>
-        <label>Conferma Password</label>
-        <input type="password" name="confirm" style="height: 32px" required>
-      </h4>
-
+    <div class="w3-section w3-left-align">
+      <input type="text" name="first" style="width: 550px;max-height: 32px" placeholder="Username" required>
     </div>
 
-    <h5>
+    <div class="w3-section w3-left-align">
+      <input id="pwd" type="password" name="psw" style="width: 500px;max-height: 32px" placeholder="Password" required>
+        <button class="fa fa-eye" onclick="showPwd('pwd')"></button>
+    </div>
+
+    <div class="w3-section w3-left-align">
+      <input id="pwd1" type="password" name="confirm" style="width: 500px;max-height: 32px" placeholder="Conferma Password" required>
+        <button class="fa fa-eye" onclick="showPwd('pwd1')"></button>
+    </div>
+
+    <div class="w3-section w3-center">
       <input type="radio" name="role" checked>
       <label>Locatore</label>
       &emsp;
       <input type="radio" name="role">
       <label>Locatario</label>
-    </h5>
+    </div>
 
-    <h6>
+    <div class="w3-section w3-center">
       <input type="submit" value="Registrati" name="submit">
-    </h6>
+    </div>
 
 </div>
 
 
 <script>
-  function showPwd() {
-        var input = document.getElementById('pwd');
+  function showPwd(id) {
+        var input = document.getElementById(id);
         if (input.type === "password") {
           input.type = "text";
         } else {

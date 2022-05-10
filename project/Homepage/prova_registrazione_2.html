@@ -12,29 +12,29 @@
          <div class="title">
             Sign Up
          </div>
-         <form action="registrazione.php" method="post">
+         <form action="registrazione.php" method="POST">
 
            <!-- username  -->
             <div class="field">
-               <input type="text" name="txtUsername" id="txtUsername" required>
+               <input type="text" name="txtUsername"  required>
                <label>Username</label>
             </div>
 
            <!-- password  -->
             <div class="field">
-               <input type="password" name="txtPassword" id="txtPassword"required>
+               <input type="password" name="txtPassword"  required>
                <label>Password</label>
             </div>
 
            <!-- nome  -->
            <div class="field">
-               <input type="text" name="txtNome" id="txtNome" required>
+               <input type="text" name="txtNome"  required>
                <label>Nome</label>
             </div>
 
            <!-- cognome  -->
            <div class="field">
-               <input type="text" name="txtCognome" id="txtCognome"required>
+               <input type="text" name="txtCognome"  required>
                <label>Cognome</label>
             </div>
 
@@ -70,13 +70,13 @@
            <!-- data di nascita -->
            <div class="field">
              <p>Data di Nascita:</p>
-               <input type="date" name="date" id="date"required>
+               <input type="date" name="date"  required>
 
             </div>
 
            <!-- telefono -->
            <div class="field" style="margin-top: 40px">
-               <input type="text"name="txtTelefono" id="txtTelefono" required >
+               <input type="text" name="txtTelefono"  required >
                <label>Recapito Telefonico</label>
             </div>
 
@@ -104,12 +104,13 @@
 
 
             <div class="field">
-               <input type="submit" value="Login">
+               <input type="submit" value="Submit" name="submit">
             </div>
             <div class="signup-link">
                Sei già registrato? <a href="login.html"> &nbsp Sign in now</a>
             </div>
-         </form>
+                    </form>
+
       </div>
    </body>
 </html>

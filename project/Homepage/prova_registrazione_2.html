@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Login Form Design | CodeLab</title>
+      <link rel="stylesheet" href="/TEC-WEB1/css/style.css">
+   </head>
+   <body background="/TEC-WEB1/img/sfondo_sign_up.jpg">
+
+
+      <div class="wrapper">
+         <div class="title">
+            Sign Up
+         </div>
+         <form action="#" method="post">
+
+           <!-- username  -->
+            <div class="field">
+               <input type="text" required>
+               <label>Username</label>
+            </div>
+
+           <!-- password  -->
+            <div class="field">
+               <input type="password" required>
+               <label>Password</label>
+            </div>
+
+           <!-- nome  -->
+           <div class="field">
+               <input type="text" required>
+               <label>Nome</label>
+            </div>
+
+           <!-- cognome  -->
+           <div class="field">
+               <input type="text" required>
+               <label>Cognome</label>
+            </div>
+
+           <!-- sesso -->
+
+           <div class="form-group" style="margin-top: 10px">
+                <label>Sesso:</label>
+                <div>
+                  <label for="male" class="radio-inline"
+                    ><input
+                      type="radio"
+                      name="gender"
+                      value="m"
+                      id="male"
+                    />Maschio</label>
+                  <label for="female" class="radio-inline" style="margin-left: 10px"
+                    ><input
+                      type="radio"
+                      name="gender"
+                      value="f"
+                      id="female"
+                    />Femmina</label>
+                  <label for="others" class="radio-inline" style="margin-left: 10px"
+                    ><input
+                      type="radio"
+                      name="gender"
+                      value="o"
+                      id="others"
+                    />Altro</label>
+                </div>
+              </div>
+
+           <!-- data di nascita -->
+           <div class="field">
+             <p>Data di Nascita:</p>
+               <input type="date" required>
+
+            </div>
+
+           <!-- telefono -->
+           <div class="field" style="margin-top: 40px">
+               <input type="text" required>
+               <label>Recapito Telefonico</label>
+            </div>
+
+           <!-- ruolo -->
+
+           <div class="form-group" style="margin-top: 10px">
+                <label>Ruolo:</label>
+                <div>
+                  <label for="locatore" class="radio-inline"
+                    ><input
+                      type="radio"
+                      name="ruolo"
+                      value="le"
+                      id="locatore"
+                    />Locatore</label>
+                  <label for="locatario" class="radio-inline" style="margin-left: 10px"
+                    ><input
+                      type="radio"
+                      name="ruolo"
+                      value="lo"
+                      id="locatario"
+                    />Locatario</label>
+                </div>
+              </div>
+
+
+
+
+
+            <div class="field">
+               <input type="submit" value="Login">
+            </div>
+            <div class="signup-link">
+               Non hai un account? <a href="Registrazione.html"> &nbsp Signup now</a>
+            </div>
+         </form>
+      </div>
+   </body>
+</html>

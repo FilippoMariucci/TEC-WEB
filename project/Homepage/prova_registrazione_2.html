@@ -12,29 +12,29 @@
          <div class="title">
             Sign Up
          </div>
-         <form action="#" method="post">
+         <form action="registrazione.php" method="post">
 
            <!-- username  -->
             <div class="field">
-               <input type="text" required>
+               <input type="text" name="txtUsername" id="txtUsername" required>
                <label>Username</label>
             </div>
 
            <!-- password  -->
             <div class="field">
-               <input type="password" required>
+               <input type="password" name="txtPassword" id="txtPassword"required>
                <label>Password</label>
             </div>
 
            <!-- nome  -->
            <div class="field">
-               <input type="text" required>
+               <input type="text" name="txtNome" id="txtNome" required>
                <label>Nome</label>
             </div>
 
            <!-- cognome  -->
            <div class="field">
-               <input type="text" required>
+               <input type="text" name="txtCognome" id="txtCognome"required>
                <label>Cognome</label>
             </div>
 
@@ -70,13 +70,13 @@
            <!-- data di nascita -->
            <div class="field">
              <p>Data di Nascita:</p>
-               <input type="date" required>
+               <input type="date" name="date" id="date"required>
 
             </div>
 
            <!-- telefono -->
            <div class="field" style="margin-top: 40px">
-               <input type="text" required>
+               <input type="text"name="txtTelefono" id="txtTelefono" required >
                <label>Recapito Telefonico</label>
             </div>
 
@@ -103,14 +103,11 @@
               </div>
 
 
-
-
-
             <div class="field">
                <input type="submit" value="Login">
             </div>
             <div class="signup-link">
-               Non hai un account? <a href="Registrazione.html"> &nbsp Signup now</a>
+               Sei già registrato? <a href="login.html"> &nbsp Sign in now</a>
             </div>
          </form>
       </div>

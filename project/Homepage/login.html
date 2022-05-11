@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
    <head>
-      <meta charset="utf-8">
-      <title>Login Form Design | CodeLab</title>
-      <link rel="stylesheet" href="/TEC-WEB1/css/style.css">
+     <meta charset="utf-8">
+     <title>Login Form Design | CodeLab</title>
+     <link rel="stylesheet" href="../../css/style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <style>
+       span{
+        position: absolute;
+        right: 15px;
+        transform: translate(0, -50%);
+        top: 50%;
+        cursor: pointer;
+       }
+       .fa{
+        font-size: 20px;
+        color: #7a797e;
+       }
+     </style>
    </head>
 
 
 
-   <body background="/TEC-WEB1/img/sfondo_log_in.jpg">
+   <body background="../../img/sfondo_log_in.jpg">
 
 
 
@@ -25,6 +39,9 @@
             <div class="field">
                <input type="password" required>
                <label>Password</label>
+              <span>
+                <i class="fa fa-eye" aria-hidden="true" id="eye" onclick="toggle()"></i>
+              </span>
             </div>
             <div class="content">
                <div class="checkbox">
@@ -43,6 +60,21 @@
             </div>
          </form>
       </div>
+   <script>
+        var state= false;
+        function toggle(){
+          if (state){
+            document.getElementById("password").setAttribute("type", "password");
+            state= false;
+            document.getElementById("eye").style.color= '#7a797e';
+          }
+          else {
+             document.getElementById("password").setAttribute("type", "text");
+             state= true;
+             document.getElementById("eye").style.color= '#5887ef';
+          }
+        }
+      </script>
    </body>
 </html>
 

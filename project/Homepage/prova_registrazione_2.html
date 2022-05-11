@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
    <head>
-      <meta charset="utf-8">
-      <title>Login Form Design | CodeLab</title>
-      <link rel="stylesheet" href="/TEC-WEB1/css/style.css">
+     <meta charset="utf-8">
+     <title>Login Form Design | CodeLab</title>
+     <link rel="stylesheet" href="../../css/style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <style>
+       span{
+        position: absolute;
+        right: 15px;
+        transform: translate(0, -50%);
+        top: 50%;
+        cursor: pointer;
+       }
+       .fa{
+        font-size: 20px;
+        color: #7a797e;
+       }
+     </style>
    </head>
-   <body background="/TEC-WEB1/img/sfondo_sign_up.jpg">
+   <body background="../../img/sfondo_sign_up.jpg">
 
+   <!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="faq.html" class="w3-bar-item w3-button w3-padding-large w3-black">FAQ</a>
+    <a href="contattaci.html" class="w3-bar-item w3-button w3-padding-large w3-black">Contattaci</a>
+    <a href="login.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-black w3-hover-white w3-right">Login</a>
+    <a href="prova_registrazione_2.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-black w3-hover-white w3-right">Registrati</a>
+    <a href="../Livello_3/prova_catalogo.html" class="fa fa-search w3-bar-item w3-button w3-xlarge w3-padding-large w3-black w3-hover-white w3-right"></a>
+  </div>
 
       <div class="wrapper">
          <div class="title">
@@ -22,8 +50,11 @@
 
            <!-- password  -->
             <div class="field">
-               <input type="password" name="txtPassword"  required>
-               <label>Password</label>
+              <input type="password" name="txtPassword" id="password" required>
+              <label>Password</label>
+              <span>
+                <i class="fa fa-eye" aria-hidden="true" id="eye" onclick="toggle()"></i>
+              </span>
             </div>
 
            <!-- nome  -->
@@ -109,8 +140,22 @@
             <div class="signup-link">
                Sei già registrato? <a href="login.html"> &nbsp Sign in now</a>
             </div>
-                    </form>
-
+         </form>
       </div>
+      <script>
+        var state= false;
+        function toggle(){
+          if (state){
+            document.getElementById("password").setAttribute("type", "password");
+            state= false;
+            document.getElementById("eye").style.color= '#7a797e';
+          }
+          else {
+             document.getElementById("password").setAttribute("type", "text");
+             state= true;
+             document.getElementById("eye").style.color= '#5887ef';
+          }
+        }
+      </script>
    </body>
 </html>

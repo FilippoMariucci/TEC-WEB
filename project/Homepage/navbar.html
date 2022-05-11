@@ -3,42 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1:0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="../../css/nav_style.css">
+  <link rel="stylesheet" type="text/css" href="../../css/home_style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <nav>
-    <div class="logo">
-      <p>home</p>
-    </div>
-    <ul>
-      <li><a href="login.html" class="active">home</a></li>
-      <li><a>Ciao, "nomeutente"</a></li>
+  <header>
+    <nav>
+    <label class="logo">Affittacamere</label>
+    <ul id="nav">
+      <li><a href="#" class="active">home</a></li>
+      <li><a href="#">faq</a></li>
+      <li><a href="#">contattaci</a></li>
+      <li><p>"ciao, nomeutente"</p></li>
+      <li><i class="fa fa-sign-out" aria-hidden="true"></i></li>
     </ul>
-    <i class="fa fa-sign-out" aria-hidden="true"></i>
-  </nav>
-  <script>
-   function navbar(){
-      if (login() === true){
+    <label id="icon">
+      <i class="fa fa-bars" aria-hidden="true" onclick="show_nav()"></i>
+    </label>
+    </nav>
 
-      }
-      else{
-          <nav>
-            <div class="logo">
-              <p>home</p>
-             </div>
-            <ul>
-              <li><a href="login.html" class="active">home</a></li>
-              <li><a href="login.html">login</a></li>
-              <li><a href="prova_registrazione.html">registrati</a></li>
-            </ul>
-          </nav>
-      }
+    <div class="mySlides">
+      <img src="../../img/app1.jpg" alt="appartamento">
+    </div>
+    <div class="mySlides">
+      <img src="../../img/app2.jpg" alt="appartamento">
+    </div>
+    <div class="mySlides">
+      <img src="../../img/app3.jpg" alt="appartamento">
+    </div>
+  </header>
+  <h1>CHI SIAMO?</h1>
+  <p>Sei uno studente alla ricerca di un appartamento o un posto letto nella città in cui studi? Sei
+  un locatore che vuole creare un annuncio per il proprio immobile? Allora questo è il posto giusto per te!
+  Registrati o effettua il login al sito per usufruire di tutti i nostri servizi. Affittare un appartamento o
+  trovarne uno non è mai stato così semplice, basta un click! Se hai qualche dubbio visita la sezione apposita
+  dedicata alle FAQ e non esitare a contattarci, saremo lieti di rispondere a tutte le tue domande.</p>
+
+  <script>
+   function show_nav(){
+     var x = document.getElementById("nav");
+     if(x.style.left === "0%"){
+       x.style.left = "-100%";
+     }
+     else{
+       x.style.left = "0%";
+     }
    }
-   function login(){
-    return true;
-   }
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {
+    myIndex = 1
+  }
+  x[myIndex - 1].style.display = "block";
+  setTimeout(carousel, 4000);
+}
   </script>
 </body>
 </html>

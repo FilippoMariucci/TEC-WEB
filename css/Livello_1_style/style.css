@@ -5,20 +5,14 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-html,body{
-  display: grid;
-  height: 80%;
-  width: 100%;
-  place-items: center;
-  background-size: cover;
-  /* background: linear-gradient(-135deg, #c850c0, #4158d0); */
-}
+
 ::selection{
   background: #4158d0;
   color: #fff;
 }
 .wrapper{
   width: 380px;
+  position: static;
   background: #fff;
   border-radius: 15px;
   box-shadow: 0 15px 20px rgba(0,0,0,0.1);

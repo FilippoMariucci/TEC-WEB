@@ -5,10 +5,13 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 header{
-  padding-top: 130px;
-  padding-left: 800px;
+  padding-top: 100px;
+  padding-left: 630px;
   padding-bottom: 50px;
+  position: relative;
+
 }
 span{
   position: absolute;
@@ -55,6 +58,7 @@ span{
   border: 1px solid lightgrey;
   border-radius: 25px;
   transition: all 0.3s ease;
+  position: relative;
 }
 .wrapper form .field input:focus,
 form .field input:valid{

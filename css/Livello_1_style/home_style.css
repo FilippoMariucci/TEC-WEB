@@ -1,0 +1,25 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+header{
+  background-color: rgba(135,206,250,0.1);
+}
+
+.description{
+  background-color: rgba(135,206,250,0.1);
+}
+img{
+  padding-left: 300px;
+  padding-right: 300px;
+  padding-top: 80px;
+  height: 880px;
+  width: 100%;
+}
+.description h1{
+  padding-left: 300px;
+  padding-top: 50px;
+}
+.description p{
+  padding: 40px 300px;
+}

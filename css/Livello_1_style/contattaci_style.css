@@ -1,0 +1,19 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: rgba(135,206,250,0.1);
+}
+header{
+  padding-top: 100px;
+  text-align: center;
+}
+header i{
+  padding-top: 10px;
+  margin-right: 5px;
+}
+header img{
+  padding-top: 10px;
+}

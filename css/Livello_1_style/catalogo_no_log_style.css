@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+header{
+  padding-top: 100px;
+}
+.location{
+  position: relative;
+  float: left;
+  margin-left: 100px;
+}
+.price{
+  position: relative;
+  float: left;
+}
+.tipologia{
+  position: relative;
+  float: left;
+}
+.period{
+  position: relative;
+  float: left;
+}

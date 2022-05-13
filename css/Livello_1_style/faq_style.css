@@ -79,6 +79,8 @@ img{
   border-style: groove;
   cursor: pointer;
   float: left;
+  width: 100%;
+  display: block;
 }
 
 /* Dropdown button on hover & focus */

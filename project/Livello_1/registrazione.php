@@ -36,6 +36,7 @@
                 $stmt->bind_param("sssssiss",$username,$password,$nome,$cognome,$data,$telefono,$sesso,$ruolo );
                 if ($stmt->execute()) {
                     echo "New record inserted sucessfully.";
+                    header('location: login.html');
                 }
                 else {
                     echo $stmt->error;

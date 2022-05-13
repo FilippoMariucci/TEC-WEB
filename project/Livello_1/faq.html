@@ -4,47 +4,38 @@
   <title>FAQ</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" type="text/css" href="../../css/nav_style.css">
+  <link rel="stylesheet" type="text/css" href="../../css/footer.css">
+  <link rel="stylesheet" type="text/css" href="../../css/Livello_1_style/faq_style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-    body,h1,h2,h3 {font-family: "Lato", sans-serif}
-    .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
-  </style>
 </head>
-<body style="background-color: #F0EEED">
+<body>
 
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="homepage.html" class="w3-bar-item w3-button w3-padding-large w3-black">Home</a>
-    <a href="faq.html" class="w3-bar-item w3-button w3-padding-large w3-black">FAQ</a>
-    <a href="contattaci.html" class="w3-bar-item w3-button w3-padding-large w3-black">Contattaci</a>
-    <a href="login.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-black w3-hover-white w3-right" onclick="">Login</a>
-    <a href="Registrazione.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-black w3-hover-white w3-right" onclick="">Registrati</a>
-    <a href="../Livello_3/catalogo.html" class=" fa fa-search w3-bar-item w3-button w3-xlarge w3-padding-large w3-black w3-hover-white w3-right" onclick=""></a>
+<!-- NAVBAR-->
 
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="faq.html" class="w3-bar-item w3-button w3-padding-large w3-black">FAQ</a>
-    <a href="contattaci.html" class="w3-bar-item w3-button w3-padding-large w3-black">Contattaci</a>
-    <a href="login.html" class="w3-bar-item w3-button w3-padding-large w3-black w3-right">Login</a>
-    <a href="Registrazione.html" class="w3-bar-item w3-button w3-padding-large w3-black w3-right">Registrati</a>
-  </div>
-</div>
+  <nav>
+    <label class="logo">Affittacamere</label>
+    <ul id="nav">
+      <li><a href="home_no_log.html">home</a></li>
+      <li><a href="faq.html" class="active">faq</a></li>
+      <li><a href="contattaci_no_log.html">contattaci</a></li>
+      <li><a href="../Livello_3/prova_catalogo.html">catalogo</a></li>
+      <li><a href="#">registrati</a></li>
+      <li><a href="login.html">login</a></li>
+    </ul>
+    <label id="icon">
+      <i class="fa fa-bars" aria-hidden="true" onclick="show_nav()"></i>
+    </label>
+  </nav>
 
 <!-- HERO PAGE SECTION-->
 <section id="initial_image">
-<div class="w3-container" style="padding: 30px 20px; background-color: #F0EEED">
+<div class="container">
   <div id="page-hero" >
-    <div class="w3-displey-container w3-center" >
+    <div class="home_section" >
       <img src="https://tonucci.com/wp-content/uploads/2018/05/Call-centre.jpg"
-           class="w3-round " alt="Assistenza" style="width: 100%; opacity:0.8">
-      <div class="w3-display-bottommiddle w3-container">
+           alt="Assistenza">
+      <div class="text_assistenza">
         <h1 style="font-size:40px;text-decoration-style: solid;">
           Assistenza e contatti</h1>
       </div>
@@ -56,14 +47,14 @@
 
 <section id="faq-page">
 
-  <div class="w3-container" style="padding: 10px 50px; background-color: #F0EEED">
-    <div class="w3-container ">
-      <div class="w3-container w3-center">
-        <h2 class="w3-title w3-opacity">Domande Frequenti</h2>
-        <p class="section-header__text w3-opacity">
+  <div class="container_2">
+    <div>
+      <div>
+        <h2 class="domande">Domande Frequenti</h2>
+        <p>
           Hai una domanda? Qui puoi trovare risposte e soluzioni ai dubbi più comuni.</p>
         <p>&nbsp;</p>
-        <p class="section-header__text w3-opacity">
+        <p>
           Per chiedere altre informazioni o contattarci
           <a href="contattaci.html" class="faq__cta-link w3-text-#28698F">
             scrivici direttamente</a>.</p>
@@ -73,27 +64,30 @@
 
   </div>
   <!-- container di tutti i tipi delle faq -->
-  <div class="w3-container " style="padding:50px 200px; background-color: #F0EEED" >
+  <div class="container_faq">
 
     <!-- sezione 1 faq -->
-    <div class=" w3-container w3-border" style="padding:40px; background-color: white">
-      <div class="w3-utente-container">
-        <div class="w3-b-container" >
+    <div class="sezione_1">
+      <div>
+        <div>
           <div style="float:left; margin-right:15px; margin-top:10px">
-            <img class="faq__category-icon faq__catgory-icon--profilo"
-                 src="https://cdn.icon-icons.com/icons2/1848/PNG/512/user_116431.png"
-                 alt="Profilo Utente"
-                 style="height:40px; width:40px">
-          </div> <h3 class="w3-padding-16 image-text" >Profilo utente</h3>
+            <i class="fa fa-user-o" aria-hidden="true"></i>
+
+          </div> <h3 class="image-text" >Profilo utente</h3>
         </div>
 
-        <div class="faq__item" style="padding:15px">
 
-          <button onclick="myFunction('FAQ1')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey">
-            <strong style="color:#024059">Perché non riesco ad accedere al mio profilo utente?</strong>
+
+            <div class="dropdown">
+
+          <button onclick="myFunction('FAQ1')" class="dropbtn">
+            <div class="testo" style="text-align: left">
+              <strong style="color:#024059">Perché non riesco ad accedere al mio profilo utente? hfhsfiuhirehuirehfhifhurhrhrirrurruure</strong>
             <i class="fa fa-caret-down"></i>
+            </div>
+
           </button>
-          <div id="FAQ1" class="w3-container w3-hide">
+          <div id="FAQ1" class="dropdown-content">
             <p>I motivi per cui non riesci ad accedere al tuo profilo utente su Immobiliare.it possono essere due:</p>
             <p>&nbsp;</p>
             <p>• Non hai effettuato la registrazione oppure il processo stesso non è andato a buon fine:
@@ -104,16 +98,17 @@
             <p class="faq__cta">Non abbiamo risposto alla tua domanda oppure vuoi contattarci?
               <a href="#contact-form" class="faq__cta-link">Clicca qui</a></p>
           </div>
-        </div>
+         </div>
 
 
-        <div class="faq__item" style="padding: 15px">
 
-          <button onclick="myFunction('FAQ2')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey">
+            <div class="dropdown">
+
+          <button onclick="myFunction('FAQ2')" class="dropbtn">
             <strong style="color:#024059">Come faccio a disattivare/attivare la ricezione delle newsletter?</strong>
             <i class="fa fa-caret-down"></i>
           </button>
-          <div id="FAQ2" class="w3-container w3-hide ">
+          <div id="FAQ2" class="dropdown-content">
             <p>Se desideri cancellarti dalla newsletter di Immobiliare.it,
               puoi farlo dalla tua area personale accessibile da <strong>
                 <a href="https://www.Immobiliare.it/accedi">questa pagina</a></strong>.</p>
@@ -126,13 +121,14 @@
         </div>
 
 
-        <div class="faq__item" style="padding: 15px">
 
-          <button onclick="myFunction('FAQ3')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey">
+            <div class="dropdown">
+
+          <button onclick="myFunction('FAQ3')" class="dropbtn">
             <strong style="color:#024059">Come faccio a modificare/disattivare il servizio di notifica nuovi annunci?</strong>
             <i class="fa fa-caret-down"></i>
           </button>
-          <div id="FAQ3" class="w3-container w3-hide ">
+          <div id="FAQ3" class="dropdown-content">
             <p>Per modificare o disattivare il servizio di notifica nuovi annunci accedi all'area personale,
               inserendo indirizzo email e password scelti al momento della registrazione.</p>
             <p>&nbsp;</p>
@@ -143,13 +139,15 @@
           </div>
         </div>
 
-        <div class="faq__item" style="padding: 15px">
 
-          <button onclick="myFunction('FAQ4')" class="w3-btn w3-block w3-white w3-left-align w3-hover-grey">
+
+            <div class="dropdown">
+
+          <button onclick="myFunction('FAQ4')" class="dropbtn">
             <strong style="color:#024059">Come faccio a eliminare il mio profilo ed i miei dati personali?</strong>
             <i class="fa fa-caret-down"></i>
           </button>
-          <div id="FAQ4" class="w3-container w3-hide ">
+          <div id="FAQ4" class="dropdown-content">
             <p>Per cancellare il tuo profilo utente su Immobiliare.it
               accedi al tuo profilo, inserendo indirizzo email e password scelti al momento della registrazione.</p>
             <p>In fondo alla pagina del profilo personale, clicca su "Elimina profilo" per rimuovere definitivamente il profilo utente.
@@ -161,8 +159,15 @@
               <a href="#contact-form" class="faq__cta-link">Clicca qui</a></p>
           </div>
         </div>
+
+
       </div>
-    </div>
+
+     </div>
+
+
+
+
 
     <!-- secondo border faq -->
 
@@ -373,14 +378,17 @@
 </div>
 
 <script>
-function accordions(id) {
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction(id) {
   var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
+  if(x.className.indexOf("show") == -1){
+    x.className+= "show";
+  } else{
+    x.className = x.className.replace("show", "");
   }
 }
+
 </script>
 
 </body>

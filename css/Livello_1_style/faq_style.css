@@ -64,7 +64,7 @@ img{
   background-color: #F0EEED;
 }
 
-.sezione_1{
+.sezione{
   padding:40px;
   background-color: white;
   border-style: groove;
@@ -72,11 +72,12 @@ img{
 
 /* Dropdown Button */
 .dropbtn {
-  background-color: #3498DB;
-  color: white;
+  background-color: grey;
+  color: orange;
+  border: violet;
+  border-style: groove;
   padding: 10px 300px;
   font-size: 16px;
-  border-style: groove;
   cursor: pointer;
   float: left;
   width: 100%;
@@ -97,25 +98,29 @@ img{
 }
 
 /* Dropdown Content (Hidden by Default) */
-.dropdown-content {
+.messi {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: black;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   z-index: 1;
+  padding-top: 20px;
+  border: groove;
+  margin-top: 25px;
 }
 
 /* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
+.messi p {
+  color: green;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  margin-left: 25px;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd}
+.messi a:hover {background-color: #ddd}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}

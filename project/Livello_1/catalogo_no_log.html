@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Catalogo</title>
+  <link rel="stylesheet" type="text/css" href="../../css/nav_style.css">
+  <link rel="stylesheet" type="text/css" href="../../css/Livello_1_style/catalogo_no_log_style.css">
+</head>
+<body>
+
+  <!--NAVBAR-->
+  <nav>
+    <label class="logo">Affittacamere</label>
+    <ul id="nav">
+      <li><a href="home_no_log.html">home</a></li>
+      <li><a href="faq.html">faq</a></li>
+      <li><a href="contattaci_no_log.html">contattaci</a></li>
+      <li><a href="#" class="active">catalogo</a></li>
+      <li><a href="registrazione.html">registrati</a></li>
+      <li><a href="login.html">login</a></li>
+    </ul>
+    <label id="icon">
+      <i class="fa fa-bars" aria-hidden="true" onclick="show_nav()"></i>
+    </label>
+  </nav>
+  <header>
+    <div class="container">
+      <div class="location">
+        <input type="text" name="location" placeholder="Luogo">
+      </div>
+      <div class="price">
+        <input type="number" name="from" placeholder="da">
+        <i class="fa fa-euro"></i>
+        <input type="number" name="to" placeholder="a">
+        <i class="fa fa-euro"></i>
+      </div>
+      <div class="tipologia">
+        <label>Appartamento</label>
+        <input type="radio" name="appartamento">
+        <label>Posto Letto</label>
+        <input type="radio" name="posto_letto">
+      </div>
+      <div class="period">
+        <label>DA</label>
+        <input type="date" name="from">
+        <label>A</label>
+        <input type="date" name="to">
+      </div>
+    </div>
+
+
+  </header>
+
+
+  <!--SCRIPT-->
+  <script>
+    function show_nav(){
+      var x = document.getElementById("nav");
+      if(x.style.left === "0%"){
+        x.style.left = "-100%";
+      }
+      else{
+        x.style.left = "0%";
+      }
+    }
+  </script>
+</body>
+</html>

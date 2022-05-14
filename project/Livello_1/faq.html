@@ -81,9 +81,9 @@
         <div class="dropdown">
 
           <button onclick="myFunction('FAQ1')" class="dropbtn">
-            <div class="testo" style="text-align: left">
-              <strong style="color:#024059; padding-right: 130px; padding-left: 50px">Perché non riesco ad accedere al mio profilo utente? </strong>
-              <i class="fa fa-caret-down"></i>
+            <div class="testo" style=" padding-left: 50px;padding-right: 130px;">
+              <strong>Perché non riesco ad accedere al mio profilo utente?</strong>
+              <i class="fa fa-caret-down" style="color: white"></i>
             </div>
           </button>
           <div id="FAQ1" class="messi">
@@ -106,8 +106,11 @@
         <div class="dropdown">
 
           <button onclick="myFunction('FAQ2')" class="dropbtn">
-            <strong style="color:#024059">Come faccio a disattivare/attivare la ricezione delle newsletter?</strong>
-            <i class="fa fa-caret-down"></i>
+            <div class="testo" style="padding-right: 85px">
+              <strong>Come faccio a disattivare/attivare la ricezione delle newsletter?</strong>
+            <i class="fa fa-caret-down" style="float: right"></i>
+            </div>
+
           </button>
           <div id="FAQ2" class="messi">
             <p>Se desideri cancellarti dalla newsletter di Immobiliare.it,
@@ -126,8 +129,11 @@
         <div class="dropdown">
 
           <button onclick="myFunction('FAQ3')" class="dropbtn">
-            <strong style="color:#024059">Come faccio a modificare/disattivare il servizio di notifica nuovi annunci?</strong>
+            <div class="testo">
+              <strong>Come faccio a modificare/disattivare il servizio di notifica nuovi annunci?</strong>
             <i class="fa fa-caret-down"></i>
+            </div>
+
           </button>
           <div id="FAQ3" class="messi">
             <p>Per modificare o disattivare il servizio di notifica nuovi annunci accedi all'area personale,
@@ -145,8 +151,11 @@
         <div class="dropdown">
 
           <button onclick="myFunction('FAQ4')" class="dropbtn">
-            <strong style="color:#024059">Come faccio a eliminare il mio profilo ed i miei dati personali?</strong>
+            <div class="testo" style="padding-right: 100px">
+              <strong>Come faccio a eliminare il mio profilo ed i miei dati personali?</strong>
             <i class="fa fa-caret-down"></i>
+            </div>
+
           </button>
           <div id="FAQ4" class="messi">
             <p>Per cancellare il tuo profilo utente su Immobiliare.it
@@ -379,14 +388,12 @@
 </div>
 
 <script>
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
 function myFunction(id) {
   var x = document.getElementById(id);
-  if(x.className.indexOf("show") == -1){
-    x.className+= "show";
-  } else{
-    x.className = x.className.replace("show", "");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
   }
 }
 

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.container{
+  margin: 200px;
+  border: 1px solid;
+  background-color: green;
+  height: 600px;
+}
+.area{
+  margin-top: 50px;
+  width: 100%;
+  border: 1px solid;
+  height: 50px;
+}
+.area i{
+  position: absolute;
+  width: 30px;
+
+}
+.area h1{
+  float: left;
+  margin-left: 5px;
+}
+.messaggi button{
+  float: left;
+  cursor: pointer;
+  margin-left: 100px;
+  margin-top: 30px;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 300px;
+  height: 200px;
+  padding: 20px;
+}
+.messaggi i{
+  float: left;
+  position: relative;
+}
+.messaggi .fa{
+  color: #34495e;
+
+}
+.messaggi p{
+  float: left;
+}
+.annunci button{
+  float: left;
+  cursor: pointer;
+  margin-left: 150px;
+  margin-top: 30px;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 300px;
+  height: 200px;
+  padding: 20px;
+}
+.account button{
+  float: left;
+  cursor: pointer;
+  margin-left: 150px;
+  margin-top: 30px;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 300px;
+  height: 200px;
+  padding: 20px;
+}

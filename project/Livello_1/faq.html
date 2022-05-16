@@ -81,9 +81,9 @@
         <div class="dropdown">
 
           <button onclick="myFunction('FAQ1')" class="dropbtn">
-            <div class="testo" style=" padding-left: 50px;padding-right: 130px;">
+            <div class="testo" style=" padding-left: 50px;padding-right: 125px;">
               <strong>Perché non riesco ad accedere al mio profilo utente?</strong>
-              <i class="fa fa-caret-down" style="color: white"></i>
+              <i class="fa fa-caret-down"></i>
             </div>
           </button>
           <div id="FAQ1" class="messi">
@@ -192,7 +192,7 @@
         <div class="dropdown" >
 
           <button onclick="myFunction('FAQ5')" class="dropbtn">
-            <div class="testo">
+            <div class="testo" style="padding-right: 105px; padding-left: 50px">
               <strong >Come faccio a pubblicare un annuncio? Quanto costa?</strong>
             <i class="fa fa-caret-down"></i>
             </div>
@@ -223,7 +223,7 @@
         <div class="dropdown" >
 
           <button onclick="myFunction('FAQ6')" class="dropbtn">
-            <div class="testo">
+            <div class="testo" style="padding-right: 30px">
               <strong >Come faccio a modificare/cancellare un annuncio che ho pubblicato?</strong>
             <i class="fa fa-caret-down"></i>
             </div>
@@ -244,7 +244,7 @@
         <div class="dropdown" >
 
           <button onclick="myFunction('FAQ7')" class="dropbtn">
-            <div class="testo">
+            <div class="testo" style="padding-right: 30px">
               <strong >Posso pubblicare un annuncio senza il mio nome/numero di telefono?</strong>
             <i class="fa fa-caret-down"></i>
             </div>
@@ -265,7 +265,7 @@
         <div class="dropdown" >
 
           <button onclick="myFunction('FAQ8')" class="dropbtn">
-            <div class="testo">
+            <div class="testo" style="padding-right: 38px">
               <strong>Posso pubblicare un annuncio senza mostrare il mio indirizzo email?</strong>
             <i class="fa fa-caret-down"></i>
             </div>
@@ -318,7 +318,7 @@
         <div class="dropdown">
 
           <button onclick="myFunction('FAQ11')" class="dropbtn">
-            <div class="testo">
+            <div class="testo" style="padding-right: 20px">
               <strong>Come faccio a sapere quante volte è stato visualizzato il mio annuncio?</strong>
             <i class="fa fa-caret-down"></i>
             </div>
@@ -343,14 +343,14 @@
       <div>
         <div>
           <div style="float:left; margin-right:15px; margin-top:10px; margin-left:15px" >
-            <<i class="fa fa-user-o" aria-hidden="true" style="font-size: 45px"></i>
+            <i class="fa fa-user-o" aria-hidden="true" style="font-size: 45px"></i>
           </div> <h3 class="image-text" style="padding-top: 25px">Altro</h3>
         </div>
 
         <div class="dropdown" >
 
           <button onclick="myFunction('FAQ12')" class="dropbtn" >
-            <div class="testo">
+            <div class="testo" style="padding-right: 30px">
               <strong>Come posso avere informazioni su un immobile che ho visto sul sito? </strong>
             <i class="fa fa-caret-down"></i>
             </div>
@@ -367,8 +367,8 @@
         <div class="dropdown">
 
           <button onclick="myFunction('FAQ13')" class="dropbtn">
-            <div class="testo">
-              <strong>Quanto vale il mio immobile?</strong>
+            <div class="testo" style="padding-right: 348px">
+              <strong style="text-align: center">Quanto vale il mio immobile?</strong>
             <i class="fa fa-caret-down"></i>
             </div>
           </button>
@@ -390,15 +390,31 @@
   </section>
 
 <section id="contact-section" >
-  <header id="contact_area" class="w3-container w3-center" style="background-color: #F0EEED; margin-bottom:15px">
+  <div  class="contact_area" align="center">
+
     <h2 class="section-header__title raleway">Non hai trovato ciò che cercavi?</h2>
-    <form action="contattaci.html">
-    <button id="open-contact-form" class="w3-botton w3-black">Clicca qui</button>
-    </form>
-  </header>
+      <form action="contattaci.html">
+    <button id="open-contact-form" class="contact_button">Clicca qui</button>
+        </form>
+
+  </div>
+
 </section>
 
-</div>
+
+<footer>
+    <div class="link">
+      <a href="faq.html">FAQ</a>
+      <a href="contattaci.html">Contattaci</a>
+    </div>
+    <div class="creator">
+      <h3>Powered By</h3>
+      <p>Mariucci Filippo</p>
+      <p>Olivieri Giorgio</p>
+      <p>Palmieri Giovanni</p>
+      <p>Sisi Mattia</p>
+    </div>
+  </footer>
 
 <script>
 function myFunction(id) {

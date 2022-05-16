@@ -45,8 +45,6 @@ img{
 .text_assistenza{
   margin-top: 20px;
   text-align: center;
-  opacity: 0.6;
-
 }
 
 .container_2{
@@ -56,7 +54,7 @@ img{
 }
 
 .domande{
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
 .container_faq{
@@ -68,6 +66,11 @@ img{
   padding:40px;
   background-color: white;
   border-style: groove;
+  margin-top: 10px;
+}
+
+.sezione h3{
+  font-size: 20px;
 }
 
 /* Dropdown Button */
@@ -81,6 +84,11 @@ img{
   float: left;
   width: 100%;
   display: block;
+}
+
+.dropbtn i{
+  color: white;
+  margin-left: 3px;
 }
 
 
@@ -127,6 +135,22 @@ img{
 
 .testo i{
   font-size: 20px;
+}
+
+.contact_area{
+  background-color: #F0EEED;
+  margin-bottom:15px;
+
+}
+
+.contact_button{
+  background-color: #34495e;
+  color: #F0EEED;
+  padding: 10px 20px;
+  border: black;
+  border-style: groove;
+  margin-top: 10px;
+  margin-bottom: 50px;
 }
 
 

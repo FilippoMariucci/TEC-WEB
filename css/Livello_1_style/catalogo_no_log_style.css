@@ -6,22 +6,126 @@
   font-family: 'Poppins', sans-serif;
 }
 header{
-  padding-top: 100px;
+  margin-top: 100px;
+  height: 650px;
 }
 .location{
+  margin-top: 100px;
+  margin-left: 380px;
+  margin-bottom: 100px;
+  height: 60px;
+  width: 300px;
+  background: rgba(52, 73, 94, 0.2);
+  padding: 10px;
   position: relative;
   float: left;
-  margin-left: 100px;
+  border-top: 1px solid#34495e;
+  border-left: 1px solid #34495e;
+  border-bottom: 1px solid #34495e;
+  border-radius: 60px 0 0 60px;
 }
-.price{
-  position: relative;
-  float: left;
+.location input{
+  width: 100%;
+  height: 100%;
 }
 .tipologia{
+  height: 60px;
+  width: 200px;
+  background: rgba(52, 73, 94, 0.2);
+  padding: 5px;
   position: relative;
   float: left;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: left;
+  border-top: 1px solid #34495e;
+  border-bottom: 1px solid #34495e;
 }
-.period{
-  position: relative;
+.dropbtn{
   float: left;
+  height: 60px;
+  width: 250px;
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 10px;
+  background-color: rgba(52, 73, 94, 0.2);
+  border: 1px solid #34495e;
+}
+.dropbtn p{
+  margin-top: 10px;
+}
+.dropbtn i{
+  color: black;
+  float:right;
+  transform: translate(-10px, -15px);
+  cursor: pointer;
+}
+.tendina{
+  border-right: 1px solid #34495e;
+  border-bottom: 1px solid #34495e;
+  border-left: 1px solid #34495e;
+  background: rgba(52, 73, 94, 0.2);
+  height: 90px;
+  width: 250px;
+  position: absolute;
+  padding: 15px;
+  margin-top: 160px;
+  margin-left: 880px;
+  text-align: center;
+  display: none;
+}
+.tendina input{
+  margin-top: 10px;
+
+}
+.dropbtn2{
+  float: left;
+  height: 60px;
+  width: 250px;
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 10px;
+  background-color: rgba(52, 73, 94, 0.2);
+  border-top: 1px solid #34495e;
+  border-bottom: 1px solid #34495e;
+  border-right: 1px solid #34495e;
+  border-left: none;
+}
+.tendina2{
+  border-right: 1px solid #34495e;
+  border-bottom: 1px solid #34495e;
+  border-left: 1px solid #34495e;
+  background: rgba(52, 73, 94, 0.2);
+  height: 90px;
+  width: 250px;
+  position: absolute;
+  padding: 15px;
+  margin-top: 160px;
+  margin-left: 1130px;
+  text-align: center;
+  display: none;
+}
+.dropbtn2 p{
+  margin-top: 10px;
+}
+.dropbtn2 i{
+  color: black;
+  float:right;
+  transform: translate(-10px, -15px);
+  cursor: pointer;
+}
+.send button{
+  float: left;
+  margin-top: 100px;
+  height: 60px;
+  width: 60px;
+  background-color: rgba(52, 73, 94, 0.2);
+  border-right: 1px solid #34495e;
+  border-top: 1px solid #34495e;
+  border-bottom: 1px solid #34495e;
+  border-left: none;
+  cursor: pointer;
+  border-radius: 0 60px 60px 0;
 }

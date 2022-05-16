@@ -5,6 +5,7 @@
   <title>Catalogo</title>
   <link rel="stylesheet" type="text/css" href="../../css/nav_style.css">
   <link rel="stylesheet" type="text/css" href="../../css/Livello_1_style/catalogo_no_log_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -23,31 +24,49 @@
       <i class="fa fa-bars" aria-hidden="true" onclick="show_nav()"></i>
     </label>
   </nav>
+
   <header>
-    <div class="container">
-      <div class="location">
-        <input type="text" name="location" placeholder="Luogo">
-      </div>
-      <div class="price">
-        <input type="number" name="from" placeholder="da">
-        <i class="fa fa-euro"></i>
-        <input type="number" name="to" placeholder="a">
-        <i class="fa fa-euro"></i>
-      </div>
-      <div class="tipologia">
-        <label>Appartamento</label>
-        <input type="radio" name="appartamento">
-        <label>Posto Letto</label>
-        <input type="radio" name="posto_letto">
-      </div>
-      <div class="period">
-        <label>DA</label>
-        <input type="date" name="from">
-        <label>A</label>
-        <input type="date" name="to">
-      </div>
+
+    <div class="location">
+      <input type="text" placeholder="Luogo">
     </div>
 
+    <div class="tipologia">
+      <input type="radio" name="tipo" checked>
+      <label>Appartamento</label><br>
+      <input type="radio" name="tipo">
+      <label>Posto Letto</label>
+    </div>
+
+    <button id="btn" onclick="myFunction('drop', 'btn'); bordo('drop', 'drop2')" class="dropbtn">
+      <p>Periodo di Locazione</p>
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div id="drop" class="tendina">
+      <label>DA
+        <input type="date">
+      </label><br>
+      <label>A
+        <input type="date">
+      </label>
+    </div>
+
+    <button id="btn2" onclick="myFunction('drop2', 'btn2'); bordo('drop', 'drop2')" class="dropbtn2">
+      <p>Fascia di Prezzo</p>
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div id="drop2" class="tendina2">
+      <label>DA €
+        <input type="number">
+      </label><br>
+      <label>A €
+        <input type="number">
+      </label>
+    </div>
+
+    <div class="send">
+      <button class="fa fa-search" type="submit" name="submit"></button>
+    </div>
 
   </header>
 
@@ -61,6 +80,26 @@
       }
       else{
         x.style.left = "0%";
+      }
+    }
+    function myFunction(id1, id2) {
+      var x = document.getElementById(id1);
+      var y = document.getElementById(id2);
+      if (x.style.display === "none") {
+        x.style.display = "block";
+        y.style.borderBottom = "none"
+      } else {
+        x.style.display = "none";
+        y.style.borderBottom = "1px solid #34495e"
+      }
+    }
+    function bordo(id1, id2){
+      var x = document.getElementById(id1);
+      var y = document.getElementById(id2);
+      if((x.style.display === "block") && (y.style.display === "block")){
+        y.style.borderLeft = "none"
+      } else{
+        y.style.borderLeft = "1px solid #34495e"
       }
     }
   </script>

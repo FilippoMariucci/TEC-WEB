@@ -76,8 +76,7 @@ img{
 /* Dropdown Button */
 .dropbtn {
   background-color: #34495e;
-  border: black;
-  border-style: groove;
+  border: groove black;
   padding: 10px 300px;
   font-size: 16px;
   cursor: pointer;

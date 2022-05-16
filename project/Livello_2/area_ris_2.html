@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../../css/nav_style.css">
+  <link rel="stylesheet" type="text/css" href="../../css/footer.css">
+  <link rel="stylesheet" type="text/css" href="../../css/Livello_2_style/area_ris_2_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <nav>
+    <label class="logo">Affittacamere</label>
+    <ul id="nav">
+      <li><a href="../Livello_1/home_log.html" class="active">home</a></li>
+      <li><a href="faq.html">faq</a></li>
+      <li><a href="contattaci_log.html">contattaci</a></li>
+      <li><a href="../Livello_3/prova_catalogo.html">catalogo</a></li>
+      <li><h2>"ciao, nomeutente"</h2></li>
+      <li><i class="fa fa-sign-out" aria-hidden="true"></i></li>
+    </ul>
+    <label id="icon">
+      <i class="fa fa-bars" aria-hidden="true" onclick="show_nav()"></i>
+    </label>
+  </nav>
+
+  <header>
+
+    <div class="container">
+
+      <div class="area">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <h1>Area Riservata</h1>
+      </div>
+
+      <div class="messaggi">
+        <button>
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <p>Visualizza i tuoi messaggi</p>
+        </button>
+      </div>
+
+      <div class="annunci">
+        <button>
+          <i class="fa fa-home" aria-hidden="true"></i>
+          <p>Visualizza i tuoi annunci</p>
+        </button>
+      </div>
+
+      <div class="account">
+        <button>
+          <i class="fa fa-user" aria-hidden="true"></i>
+          <p>Visualizza e/o modifica il tuo account</p>
+        </button>
+      </div>
+
+    </div>
+
+  </header>
+
+  <footer>
+    <div class="link">
+      <a href="faq.html">FAQ</a>
+      <a href="contattaci.html">Contattaci</a>
+    </div>
+    <div class="creator">
+      <h3>Powered By</h3>
+      <p>Mariucci Filippo</p>
+      <p>Olivieri Giorgio</p>
+      <p>Palmieri Giovanni</p>
+      <p>Sisi Mattia</p>
+    </div>
+  </footer>
+
+  <script>
+    function show_nav(){
+      var x = document.getElementById("nav");
+      if(x.style.left === "0%"){
+        x.style.left = "-100%";
+      }
+      else{
+        x.style.left = "0%";
+      }
+    }
+  </script>
+
+</body>
+</html>

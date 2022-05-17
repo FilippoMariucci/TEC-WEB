@@ -17,8 +17,21 @@
       <li><a href="faq.html">faq</a></li>
       <li><a href="contattaci_log.html">contattaci</a></li>
       <li><a href="../Livello_3/prova_catalogo.html">catalogo</a></li>
-      <li><h2>"Ciao, NomeUtente"</h2></li>
-      <li><i class="fa fa-sign-out" aria-hidden="true"></i></li>
+      <li>
+       <li><?php session_start(); ?>
+        <?php
+           if(isset($_SESSION['valid'])) {
+              include("connection_1.php");
+              $result = mysqli_query($mysqli, "SELECT * FROM utente2");
+        ?>
+        <a href="../Livello_2/area_ris_2.html" style="padding:10px; color:orange"> Welcome <?php echo $_SESSION['name'] ?></a>
+        <?php
+          } else {
+              echo "You must be logged in to view this page.<br/><br/>";
+               echo "<a href='login.html'>Login</a> | <a href='registrazione.html'>Register</a>";
+          }
+         ?></li>
+      <li><a href="logout.php" class="fa fa-sign-out"></a></li>
     </ul>
     <label id="icon">
       <i class="fa fa-bars" aria-hidden="true" onclick="show_nav()"></i>
@@ -89,3 +102,4 @@
 </script>
 </body>
 </html>
+

@@ -15,11 +15,26 @@
     <ul id="nav">
       <li><a href="#" class="active">home</a></li>
       <li><a href="faq.html">faq</a></li>
-      <li><a href="contattaci_no_log.html">contattaci</a></li>
-      <li><a href="catalogo_no_log.html">catalogo</a></li>
-      <li><a href="registrazione.html">registrati</a></li>
-      <li><a href="login.html">login</a></li>
+      <li><a href="contattaci_log.html">contattaci</a></li>
+      <li><a href="../Livello_3/prova_catalogo.html">catalogo</a></li>
+      <li><?php session_start(); ?>
+        <?php
+           if(isset($_SESSION['valid'])) {
+              include("connection_1.php");
+              $result = mysqli_query($mysqli, "SELECT * FROM utente2");
+        ?>
+        <a href="../Livello_3/area_ris_3.html" style="padding:10px; color:chaky"> Welcome <?php echo $_SESSION['name'] ?></a>
+        <?php
+          } else {
+              echo "You must be logged in to view this page.<br/><br/>";
+               echo "<a href='login.html'>Login</a> | <a href='registrazione.html'>Register</a>";
+          }
+         ?></li>
+      <li><a href="logout.php" style="color: red">Logout</a> </li>
     </ul>
+
+
+
     <label id="icon">
       <i class="fa fa-bars" aria-hidden="true" onclick="show_nav()"></i>
     </label>
@@ -69,7 +84,7 @@
       else{
         x.style.left = "0%";
       }
-      }
+    }
     var myIndex = 0;
     carousel();
 
@@ -89,3 +104,4 @@
 </script>
 </body>
 </html>
+

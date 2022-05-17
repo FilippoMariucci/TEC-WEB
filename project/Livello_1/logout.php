@@ -4,4 +4,4 @@ session_start();
 session_unset();
 session_destroy();
 
-header("Location: login.html");
+header("Location: home_no_log.html");

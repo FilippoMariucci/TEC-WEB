@@ -28,14 +28,18 @@ if(isset($_POST['submit'])) {
             $_SESSION['valid'] = $validuser;
             $_SESSION['name'] = $row['name'];
             $_SESSION['id'] = $row['id'];
+            $_SESSION['ruolo'] = $row['ruolo'];
+
         } else {
             echo "Invalid username or password.";
             echo "<br/>";
             echo "<a href='login_1.php'>Go back</a>";
         }
 
-        if(isset($_SESSION['valid'])) {
-            header('Location: home_log.php');
+        if(isset($_SESSION['valid']) && ($_SESSION['ruolo'])=='le' ) {
+            header('Location: home_log_le.php');
+        } else{
+            header('Location: home_log_lo.php');
         }
     }
 } else {

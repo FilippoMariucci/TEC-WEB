@@ -36,10 +36,10 @@ if(isset($_POST['submit'])) {
             echo "<a href='login_1.php'>Go back</a>";
         }
 
-        if(isset($_SESSION['valid']) && ($_SESSION['ruolo'])=='le' ) {
+        if(isset($_SESSION['valid'])  ) {
             header('Location: home_log_le.php');
         } else{
-            header('Location: home_log_lo.php');
+            echo "error";
         }
     }
 } else {

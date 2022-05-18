@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="../../css/Livello_1_style/home_style.css">
   <link rel="stylesheet" type="text/css" href="../../css/footer.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="../../js/check.js"></script>
 </head>
 <body>
   <nav>
@@ -20,15 +21,18 @@
       <li>
        <li><?php session_start(); ?>
         <?php
-           if(isset($_SESSION['valid'])) {
+           if(isset($_SESSION['valid']) && ($_SESSION['ruolo']) =='le') {
               include("connection_1.php");
               $result = mysqli_query($mysqli, "SELECT * FROM utente2");
         ?>
         <a href="../Livello_2/area_ris_2.html" style="padding:10px; color:orange"> Welcome <?php echo $_SESSION['name'] ?></a>
         <?php
           } else {
-              echo "You must be logged in to view this page.<br/><br/>";
-               echo "<a href='login.html'>Login</a> | <a href='registrazione.html'>Register</a>";
+              include("connection_1.php");
+              $result = mysqli_query($mysqli, "SELECT * FROM utente2");
+              ?>
+              <a href="../Livello_3/area_ris_3.html" style="padding:10px; color:orange"> Welcome <?php echo $_SESSION['name'] ?></a>
+              <?php
           }
          ?></li>
       <li><a href="logout.php" class="fa fa-sign-out"></a></li>

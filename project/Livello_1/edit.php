@@ -58,7 +58,7 @@ if(isset($_POST['update']))
         $result = mysqli_query($mysqli, "UPDATE utente2 SET name='$name', username='$user', password='$pass', cognome='$cogn', data='$date', telefono='$tel', sesso='$sex', ruolo='$role' WHERE id=$id");
 
         //redirectig to the display page. In our case, it is view.php
-        header("Location: view.php");
+        header("Location: login.html");
     }
 }
 ?>

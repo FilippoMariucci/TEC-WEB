@@ -37,7 +37,7 @@ if(isset($_POST['submit'])) {
         }
 
         if(isset($_SESSION['valid'])  ) {
-            header('Location: home_log_le.php');
+            header('Location: home_log.php');
         } else{
             echo "error";
         }

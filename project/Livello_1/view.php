@@ -20,7 +20,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM utente2 WHERE id=".$_SESSION['id'
 </head>
 
 <body>
-<a href="index.php">Home</a> | <a href="add.html">Add New Data</a> | <a href="logout.php">Logout</a>
+<a href="home_log.php">Home</a> | <a href="logout.php">Logout</a>
 <br/><br/>
 
 <table width='80%' border=0>

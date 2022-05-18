@@ -58,7 +58,7 @@ if(isset($_POST['update']))
         $result = mysqli_query($mysqli, "UPDATE utente2 SET name='$name', username='$user', password='$pass', cognome='$cogn', data='$date', telefono='$tel', sesso='$sex', ruolo='$role' WHERE id=$id");
 
         //redirectig to the display page. In our case, it is view.php
-        header("Location: login.html");
+        header("Location: view.php");
     }
 }
 ?>
@@ -87,7 +87,7 @@ while($res = mysqli_fetch_array($result))
 </head>
 
 <body>
-    <a href="index.php">Home</a> | <a href="view.php">View Products</a> | <a href="logout.php">Logout</a>
+    <a href="index.php">Home</a> | <a href="logout.php">Logout</a>
     <br/><br/>
 
     <form name="form1" method="post" action="edit.php">

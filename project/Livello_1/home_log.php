@@ -64,10 +64,7 @@
 
 
   <footer>
-    <div class="link">
-      <a href="faq.html">FAQ</a>
-      <a href="contattaci.html">Contattaci</a>
-    </div>
+
     <div class="creator">
       <h3>Powered By</h3>
       <p>Mariucci Filippo</p>

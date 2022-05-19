@@ -43,8 +43,8 @@ header{
   background-color: white;
   border: 1px solid grey;
   border-radius: 5px;
-  width: 300px;
-  height: 200px;
+  width: 250px;
+  height: 150px;
   padding: 20px;
 }
 .statistiche i{
@@ -65,8 +65,8 @@ header{
   background-color: white;
   border: 1px solid grey;
   border-radius: 5px;
-  width: 300px;
-  height: 200px;
+  width: 250px;
+  height: 150px;
   padding: 20px;
 }
 .account i{
@@ -77,5 +77,28 @@ header{
   color: #34495e;
 }
 .account p{
+  color: #34495e;
+}
+
+.faq button{
+  float: left;
+  cursor: pointer;
+  margin-left: 150px;
+  margin-top: 30px;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 250px;
+  height: 150px;
+  padding: 20px;
+}
+.faq i{
+  position: relative;
+  font-size: 80px;
+}
+.faq .fa{
+  color: #34495e;
+}
+.faq p{
   color: #34495e;
 }

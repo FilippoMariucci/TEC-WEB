@@ -1,6 +1,6 @@
-/* 
+/*
 
-Journey Template 
+Journey Template
 http://www.templatemo.com/tm-511-journey
 
 Primary color (light blue)  : #69c6ba
@@ -24,7 +24,7 @@ a:focus {
 
 p:last-child { margin-bottom: 0; }
 
-.tm-page-wrap { 
+.tm-page-wrap {
     max-width: 1400px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
     background: white;
@@ -32,7 +32,7 @@ p:last-child { margin-bottom: 0; }
 
 .tm-container-outer {
     max-width: 1400px;
-    margin: 0 auto;    
+    margin: 0 auto;
 }
 
 .tm-content-box { box-shadow: 0 0 3px rgba(0, 0, 0, 0.15); }
@@ -86,8 +86,8 @@ p:last-child { margin-bottom: 0; }
 .tm-top-bar a { color: black; }
 
 .navbar-brand {
-	font-size: 2.2rem;    
-    text-transform: uppercase;    
+	font-size: 2.2rem;
+    text-transform: uppercase;
 }
 
 .navbar {
@@ -103,7 +103,7 @@ p:last-child { margin-bottom: 0; }
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(104, 199, 187)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
-.navbar-toggler { 
+.navbar-toggler {
     border-color: rgb(104, 199, 187);
     border-radius: 0;
     cursor: pointer;
@@ -131,18 +131,18 @@ p:last-child { margin-bottom: 0; }
     background: rgba(0, 0, 0, 0.7);
 }
 .tm-banner-bg {
-    background: url(../img/banner.jpg) center top no-repeat;    
+    background: url(../img/banner.jpg) center top no-repeat;
     min-height: 720px;
     position: relative;
 }
-.tm-banner-row { 
+.tm-banner-row {
     position: relative;
     z-index: 100;
     justify-content: center;
     padding-top: 100px;
 }
 .tm-banner-row-header { text-align: center; }
-.tm-down-arrow-link { 
+.tm-down-arrow-link {
     color: white;
     background-color: #69c6ba;
     border-radius: 50%;
@@ -184,7 +184,7 @@ label { font-weight: 700; }
     cursor: pointer;
     display: inline-block;
     font-size: 0.85rem;
-    font-weight: 400;  
+    font-weight: 400;
     padding: 12px 20px;
 }
 
@@ -253,7 +253,7 @@ label { font-weight: 700; }
 
 .tm-slideshow-description-left {
     margin-left: auto;
-    margin-right: -42px;    
+    margin-right: -42px;
 }
 
 .tm-position-relative { position: relative; }
@@ -268,7 +268,7 @@ label { font-weight: 700; }
 .slick-prev:active,
 .slick-next:focus,
 .slick-next:active {
-    background: rgba(0,0,0,0.5);    
+    background: rgba(0,0,0,0.5);
 }
 
 .slick-prev:before, .slick-next:before { font-size: 22px; }
@@ -278,7 +278,7 @@ label { font-weight: 700; }
     background: #69c6ba;
 }
 
-.tm-slideshow-highlight .slick-prev:hover, 
+.tm-slideshow-highlight .slick-prev:hover,
 .tm-slideshow-highlight .slick-next:hover {
     background: #c66995;
 }
@@ -353,7 +353,7 @@ label { font-weight: 700; }
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
-    transition: all 0.3s ease;    
+    transition: all 0.3s ease;
 }
 
 .tm-tab-link:hover,
@@ -380,7 +380,7 @@ label { font-weight: 700; }
 .tm-recommended-title {
     font-size: 1.2rem;
     font-weight: 600;
-    text-transform: uppercase;    
+    text-transform: uppercase;
 }
 
 .tm-recommended-img { width: 270px; }
@@ -390,7 +390,7 @@ label { font-weight: 700; }
     width: 500px;
 }
 
-.tm-recommended-price-box {    
+.tm-recommended-price-box {
     background-color: #69c6ba;
     background-image: url(../img/button-curve.png);
     background-repeat: no-repeat;
@@ -439,7 +439,7 @@ footer {
     background: #69c6ba;
     padding-top: 40px;
     padding-bottom: 40px;
-    text-align: center;    
+    text-align: center;
     font-size: 0.8rem;
 }
 
@@ -479,7 +479,7 @@ footer p { color: white; }
 .tm-name-container,
 .tm-email-container {
     width: 210px;
-    float: left;    
+    float: left;
 }
 
 .tm-email-container { margin-left: 10px; }
@@ -550,14 +550,14 @@ footer p { color: white; }
 
 @media screen and (max-width: 986px) {
     .tm-slideshow-section { flex-direction: column; }
-    
+
     .tm-slideshow,
     .tm-slideshow-description {
         width: 100%;
         max-width: 700px;
     }
 
-    .tm-slideshow-description {        
+    .tm-slideshow-description {
         margin-right: auto;
         margin-left: auto;
     }
@@ -616,7 +616,7 @@ footer p { color: white; }
 
     .tm-recommended-price-box {
         width: 270px;
-        height: 180px;        
+        height: 180px;
         position: relative;
         overflow: hidden;
         padding-left: 0;
@@ -634,7 +634,7 @@ footer p { color: white; }
         background: url(../img/button-curve.png) 0 0 no-repeat;
         -webkit-transform: rotate(90deg);
         transform: rotate(90deg);
-        background-size: auto 100%;      
+        background-size: auto 100%;
     }
 
     .tm-recommended-price-box,
@@ -657,5 +657,5 @@ footer p { color: white; }
     .tm-form-group-2,
     .tm-form-group-3 {
         width: 100%;
-    }    
+    }
 }

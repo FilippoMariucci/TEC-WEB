@@ -78,8 +78,8 @@
 
     <div class="tab-content clearfix" style="background: white;">
 
-                    <!-- Tab 1 -->
-                    <?php session_start(); ?>
+
+<?php session_start(); ?>
 
 <?php
 //including the database connection file
@@ -118,9 +118,6 @@ $result = mysqli_query($mysqli, "SELECT * FROM alloggio ORDER BY id_alloggio DES
 }
 ?>
 
-                </div>
-
-    </div>
 
 
 

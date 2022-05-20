@@ -36,95 +36,101 @@
       <div class="title">
         Sign Up
       </div>
-      <form action="register_1.php" method="POST">
 
-        <!-- nome  -->
+      <form action="registrazione_alloggio.php" method="POST" enctype="multipart/form-data">
+
+        <!-- descrizione  -->
         <div class="field">
-          <input type="text" name="name"  required>
-          <label>Nome</label>
+          <input type="text" name="descrizione"  required>
+          <label>Descrizione</label>
         </div>
 
-        <!-- username  -->
+        <!-- città  -->
         <div class="field">
-          <input type="text" name="username"  required>
-          <label>Username</label>
+          <input type="text" name="citta"  required>
+          <label>Città</label>
         </div>
 
-        <!-- password  -->
+        <!-- via  -->
         <div class="field">
-          <input type="password" name="password" id="password" required>
-          <label>Password</label>
-          <span>
-            <i class="fa fa-eye" aria-hidden="true" id="eye" onclick="toggle()"></i>
-          </span>
+          <input type="text" name="via"  required>
+          <label>Via</label>
         </div>
 
 
 
-        <!-- cognome  -->
+        <!-- numero civico  -->
         <div class="field">
-          <input type="text" name="cognome"  required>
-          <label>Cognome</label>
+          <input type="text" name="numero_civico"  required>
+          <label>Numero Civico</label>
         </div>
 
-        <!-- sesso -->
+        <!-- dimensioni -->
 
-        <div class="form-group" style="margin-top: 10px">
-          <label>Sesso:</label>
-          <div>
-            <label for="male" class="radio-inline">
-              <input
-                type="radio"
-                name="sesso"
-                value="m"
-                id="male">Maschio</label>
-            <label for="female" class="radio-inline" style="margin-left: 10px">
-              <input
-                type="radio"
-                name="sesso"
-                value="f"
-                id="female"/>Femmina</label>
-            <label for="others" class="radio-inline" style="margin-left: 10px">
-              <input
-                type="radio"
-                name="sesso"
-                value="o"
-                id="others"/>Altro</label>
-          </div>
-        </div>
-
-        <!-- data di nascita -->
         <div class="field">
-          <p>Data di Nascita:</p>
-          <input type="date" name="data"  required>
-
+          <input type="text" name="dimensioni"  required>
+          <label>Dimensioni</label>
         </div>
 
-        <!-- telefono -->
-        <div class="field" style="margin-top: 40px">
-          <input type="text" name="telefono"  required >
-          <label>Recapito Telefonico</label>
+        <!-- numeri posti letto -->
+        <div class="field">
+          <input type="text" name="num_posti_letto_tot"  required>
+          <label>Numeri Posti Letto</label>
         </div>
 
-        <!-- ruolo -->
-
-        <div class="form-group" style="margin-top: 10px">
-          <label>Ruolo:</label>
-          <div>
-            <label for="locatore" class="radio-inline">
-              <input
-                type="radio"
-                name="ruolo"
-                value="le"
-                id="locatore"/>Locatore</label>
-            <label for="locatario" class="radio-inline" style="margin-left: 10px">
-              <input
-                type="radio"
-                name="ruolo"
-                value="lo"
-                id="locatario"/>Locatario</label>
-          </div>
+        <!-- data inizio -->
+        <div class="field">
+          <p>Data di Inizio:</p>
+          <input type="date" name="data_inizio"  required>
         </div>
+
+        <!-- data fine -->
+        <div class="field">
+          <p>Data di Fine:</p>
+          <input type="date" name="data_fine"  required>
+        </div>
+
+        <!-- vincoli -->
+        <div class="field">
+          <input type="text" name="vincoli"  required>
+          <label>Vincoli</label>
+        </div>
+
+        <!-- disponibilità -->
+        <div class="field">
+          <input type="text" name="disponibilita"  required>
+          <label>Disponibilità</label>
+        </div>
+
+        <!-- wi-fi -->
+        <div class="field">
+          <input type="text" name="wi_fi"  required>
+          <label>WI-FI</label>
+        </div>
+
+        <!-- parcheggio -->
+        <div class="field">
+          <input type="text" name="parcheggio"  required>
+          <label>Parcheggio</label>
+        </div>
+
+        <!-- cucina -->
+        <div class="field">
+          <input type="text" name="cucina"  required>
+          <label>Cucina</label>
+        </div>
+
+        <!-- elettrodomestici -->
+        <div class="field">
+          <input type="text" name="elettrodomestici"  required>
+          <label>Elettrodomestici</label>
+        </div>
+
+
+    Select Image File to Upload:
+    <input type="file" name="file">
+
+
 
         <div class="field">
           <input type="submit" value="Submit" name="submit">
@@ -133,6 +139,10 @@
           Sei già registrato? <a href="login.html"> &nbsp Sign in now</a>
         </div>
       </form>
+
+
+
+
     </div>
   </header>
 
@@ -167,11 +177,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-

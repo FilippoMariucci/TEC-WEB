@@ -7,6 +7,7 @@ include_once("connection_1.php");
 
 //fetching data in descending order (lastest entry first)
 $result = mysqli_query($mysqli, "SELECT * FROM alloggio ORDER BY id_alloggio DESC");
+
 ?>
 
 <html>
@@ -21,14 +22,15 @@ $result = mysqli_query($mysqli, "SELECT * FROM alloggio ORDER BY id_alloggio DES
 
 <?php
     while($res = mysqli_fetch_array($result)) {
+    $imageURL = '../../uploads/'.$res["file_name"];
 ?>
 
     <div class="tm-recommended-place">
 
       <div class="tm-recommended-description-box">
-        <img src = "data:image/png;base64,' . base64_encode($row['img']) . '" width = "50px" height = "50px"/>
+        <img src="<?php echo $imageURL; ?>" style="padding:10%"/>
         <h3 class="tm-recommended-title"> <?php echo "<h3>".$res['descrizione']."</h3>" ?></h3>
-        <p class="tm-text-highlight"><?php echo "<p>".$res['città']."</p>" ?></p>
+        <p class="tm-text-highlight"><?php echo "<p>".$res['citta']."</p>" ?></p>
         <p class="tm-text-gray"> <?php echo "<p>".$res['via']."</p>" ?></p>
       </div>
       <a href="#" class="tm-recommended-price-box">

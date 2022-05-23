@@ -15,7 +15,7 @@
     <label class="logo">Affittacamere per Studenti</label>
     <ul id="nav">
       <li><a href="index.html">home</a></li>
-      <li><a href="faq.html">faq</a></li>
+      <li><a href="faq.php">faq</a></li>
       <li><a href="contattaci_no_log.html">contattaci</a></li>
       <li><a href="#" class="active">catalogo</a></li>
       <li><a href="registrazione.html">registrati</a></li>

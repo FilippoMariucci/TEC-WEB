@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>CATALOGO</title>
   <link rel="stylesheet" type="text/css" href="../../css/nav_style.css">
+  <link rel="stylesheet" type="text/css" href="../../css/footer.css">
   <link rel="stylesheet" type="text/css" href="../../css/Livello_1_style/catalogo_no_log_style.css">
   <link rel="stylesheet" type="text/css" href="../../css/templatemo-style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -70,8 +71,6 @@
     </div>
 
 
-
-
   </header>
 
   <div class="giggi" style="margin-left: 50px; margin-right: 50px">
@@ -118,9 +117,19 @@ $result = mysqli_query($mysqli, "SELECT * FROM alloggio ORDER BY id_alloggio DES
 }
 ?>
 
-
-
-
+  <footer>
+    <div class="describe">
+      <p>Scarica la guida al sito</p>
+      <a href="#" class="fa fa-download" aria-hidden="true" download></a>
+    </div>
+    <div class="creator">
+      <h3>Powered By</h3>
+      <p>Mariucci Filippo</p>
+      <p>Olivieri Giorgio</p>
+      <p>Palmieri Giovanni</p>
+      <p>Sisi Mattia</p>
+    </div>
+  </footer>
 
   <!--SCRIPT-->
   <script>

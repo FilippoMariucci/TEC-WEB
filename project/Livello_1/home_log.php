@@ -64,7 +64,10 @@
 
 
   <footer>
-
+    <div class="describe">
+      <p>Scarica la guida al sito</p>
+      <a href="#" class="fa fa-download" aria-hidden="true" download></a>
+    </div>
     <div class="creator">
       <h3>Powered By</h3>
       <p>Mariucci Filippo</p>

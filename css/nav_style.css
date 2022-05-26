@@ -18,10 +18,10 @@ nav{
   position: relative;
 }
 label.logo{
-  font-size: 35px;
+  font-size: 30px;
   font-weight: bold;
   color: white;
-  padding: 0 100px;
+  padding: 0 3%;
   line-height: 80px;
   font-family: montserrat, sans-serif;
 }

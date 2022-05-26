@@ -13,11 +13,11 @@
   <nav>
     <label class="logo">Affittacamere</label>
     <ul id="nav">
-      <li><a href="../Livello_1/home_log.html" class="active">home</a></li>
-      <li><a href="faq.html">faq</a></li>
-      <li><a href="contattaci_log.html">contattaci</a></li>
+      <li><a href="../Livello_1/home_log.php">home</a></li>
+      <li><a href="../Livello_1/faq.php">faq</a></li>
+      <li><a href="../Livello_1/contattaci_log.html">contattaci</a></li>
       <li><a href="../Livello_3/prova_catalogo.html">catalogo</a></li>
-      <li><h2>"ciao, nomeutente"</h2></li>
+      <li><h2 class="active">"ciao, nomeutente"</h2></li>
       <li><i class="fa fa-sign-out" aria-hidden="true"></i></li>
     </ul>
     <label id="icon">
@@ -50,14 +50,21 @@
         </button>
       </div>
 
+      <div class="faq">
+        <button>
+          <i class="fa fa-question" aria-hidden="true"></i>
+          <a href="view_faq.php" class="active"><p>Visualizza e/o modifica FAQ</p></a>
+        </button>
+      </div>
+
     </div>
 
   </header>
 
   <footer>
-    <div class="link">
-      <a href="faq.html">FAQ</a>
-      <a href="contattaci.html">Contattaci</a>
+    <div class="describe">
+      <p>Scarica la guida al sito</p>
+      <a href="#" class="fa fa-download" aria-hidden="true" download></a>
     </div>
     <div class="creator">
       <h3>Powered By</h3>

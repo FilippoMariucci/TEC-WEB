@@ -4,7 +4,7 @@
 </head>
 
 <body>
-    <a href="index_1.php">Home</a> <br />
+    <a href="home_no_log.html">Home</a> <br />
     <?php
     include("connection_1.php");
 
@@ -39,3 +39,6 @@
     ?>
 </body>
 </html>
+
+
+

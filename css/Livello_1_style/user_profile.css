@@ -181,13 +181,12 @@
    box-shadow: var(--box-shadow);
    text-align: center;
    width: 700px;
-   text-align: center;
-   border-radius: 5px;
+  border-radius: 5px;
 }
 
 .update-profile form img{
    height: 200px;
-   width: 200p;
+   width: 200px;
    border-radius: 50%;
    object-fit: cover;
    margin-bottom: 5px;

@@ -2,19 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Catalogo</title>
+  <title>CATALOGO</title>
   <link rel="stylesheet" type="text/css" href="../../css/nav_style.css">
+  <link rel="stylesheet" type="text/css" href="../../css/footer.css">
   <link rel="stylesheet" type="text/css" href="../../css/Livello_1_style/catalogo_no_log_style.css">
+  <link rel="stylesheet" type="text/css" href="../../css/templatemo-style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
   <!--NAVBAR-->
   <nav>
-    <label class="logo">Affittacamere</label>
+    <label class="logo">Affittacamere per Studenti</label>
     <ul id="nav">
-      <li><a href="home_no_log.html">home</a></li>
-      <li><a href="faq.html">faq</a></li>
+      <li><a href="index.html">home</a></li>
+      <li><a href="faq.php">faq</a></li>
       <li><a href="contattaci_no_log.html">contattaci</a></li>
       <li><a href="#" class="active">catalogo</a></li>
       <li><a href="registrazione.html">registrati</a></li>
@@ -32,7 +34,7 @@
     </div>
 
     <div class="tipologia">
-      <input type="radio" name="tipo" checked>
+      <input type="radio" name="tipo">
       <label>Appartamento</label><br>
       <input type="radio" name="tipo">
       <label>Posto Letto</label>
@@ -68,8 +70,66 @@
       <button class="fa fa-search" type="submit" name="submit"></button>
     </div>
 
+
   </header>
 
+  <div class="giggi" style="margin-left: 50px; margin-right: 50px">
+
+    <div class="tab-content clearfix" style="background: white;">
+
+
+<?php session_start(); ?>
+
+<?php
+//including the database connection file
+include_once("connection_1.php");
+
+//fetching data in descending order (lastest entry first)
+$result = mysqli_query($mysqli, "SELECT * FROM alloggio ORDER BY id_alloggio DESC");
+
+?>
+
+
+
+<?php
+    while($res = mysqli_fetch_array($result)) {
+    $imageURL = '../../uploads/'.$res["file_name"];
+?>
+
+    <div class="tm-recommended-place">
+     <img src="<?php echo $imageURL; ?>" width="15%" height="12%" align="left" style="float:left; margin_left:0"/>
+      <div class="tm-recommended-description-box">
+
+        <h3 class="tm-recommended-title"> <?php echo "<h3>".$res['descrizione']."</h3>" ?></h3>
+        <p class="tm-text-highlight"><?php echo "<p>".$res['citta']."</p>" ?></p>
+        <p class="tm-text-gray"> <?php echo "<p>".$res['via']."</p>" ?></p>
+      </div>
+      <a href="#" class="tm-recommended-price-box">
+        <p class="tm-recommended-price"><?php echo "<p>".$res['numero_civico']."</p>" ?></p>
+        <p class="tm-recommended-price-link"><?php echo "<p>".$res['dimensioni']."</p>" ?> </p>
+      </a>
+
+    </div>
+
+    <?php
+
+
+}
+?>
+
+  <footer>
+    <div class="describe">
+      <p>Scarica la guida al sito</p>
+      <a href="#" class="fa fa-download" aria-hidden="true" download></a>
+    </div>
+    <div class="creator">
+      <h3>Powered By</h3>
+      <p>Mariucci Filippo</p>
+      <p>Olivieri Giorgio</p>
+      <p>Palmieri Giovanni</p>
+      <p>Sisi Mattia</p>
+    </div>
+  </footer>
 
   <!--SCRIPT-->
   <script>
@@ -103,5 +163,6 @@
       }
     }
   </script>
+
 </body>
 </html>

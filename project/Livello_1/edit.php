@@ -87,7 +87,7 @@ while($res = mysqli_fetch_array($result))
 </head>
 
 <body>
-    <a href="index.php">Home</a> | <a href="view.php">View Products</a> | <a href="logout.php">Logout</a>
+    <a href="index.php">Home</a> | <a href="logout.php">Logout</a>
     <br/><br/>
 
     <form name="form1" method="post" action="edit.php">

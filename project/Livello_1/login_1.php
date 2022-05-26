@@ -18,16 +18,17 @@ if(isset($_POST['submit'])) {
         echo "<br/>";
         echo "<a href='login.html'>Go back</a>";
     } else {
-        $result = mysqli_query($mysqli, "SELECT * FROM utente2 WHERE username='$user' AND password='$pass'")
+        $result = mysqli_query($mysqli, "SELECT * FROM users WHERE username='$user' AND password='$pass'")
         or die("Could not execute the select query.");
 
         $row = mysqli_fetch_assoc($result);
 
         if(is_array($row) && !empty($row)) {
             $validuser = $row['username'];
+            $_SESSION['username'] = $_POST['username'];
             $_SESSION['valid'] = $validuser;
             $_SESSION['name'] = $row['name'];
-            $_SESSION['id'] = $row['id'];
+            $_SESSION['userid'] = $row['id'];
             $_SESSION['ruolo'] = $row['ruolo'];
         } else {
             echo "Invalid username or password.";

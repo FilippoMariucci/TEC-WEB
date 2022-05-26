@@ -67,7 +67,7 @@ if(isset($_POST['update']))
 $id = $_GET['id'];
 
 //selecting data associated with this particular id
-$result = mysqli_query($mysqli, "SELECT * FROM utente2 WHERE id=$id");
+$result = mysqli_query($mysqli, "SELECT * FROM users WHERE id=$id");
 
 while($res = mysqli_fetch_array($result))
 {

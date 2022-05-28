@@ -25,7 +25,7 @@
               include("connection_1.php");
               $result = mysqli_query($mysqli, "SELECT * FROM utente2");
         ?>
-        <a href="../Livello_2/area_ris_2.html" style="padding:10px; color:orange"> Welcome <?php echo $_SESSION['name'] ?></a>
+        <a href="../Livello_2/area_ris_2.php" style="padding:10px; color:orange"> Welcome <?php echo $_SESSION['name'] ?></a>
         <?php
           } else {
               include("connection_1.php");

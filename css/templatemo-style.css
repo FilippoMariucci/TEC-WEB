@@ -375,6 +375,7 @@ label { font-weight: 700; }
     align-items: stretch;
     justify-content: space-around;
     margin-bottom: 25px;
+  background-color: red;
 }
 
 .tm-recommended-title {
@@ -604,12 +605,14 @@ footer p { color: white; }
         margin-left: auto;
         margin-right: auto;
         width: 270px;
+      background-color: red;
     }
 
     .tm-recommended-price,
     .tm-recommended-price-link {
         position: relative;
         z-index: 1000;
+      background-color: red;
     }
 
     .tm-recommended-price { padding-top: 50px; }

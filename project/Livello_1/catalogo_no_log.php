@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<?php
+ ?>
   <meta charset="UTF-8">
   <title>CATALOGO</title>
   <link rel="stylesheet" type="text/css" href="../../css/nav_style.css">
   <link rel="stylesheet" type="text/css" href="../../css/footer.css">
   <link rel="stylesheet" type="text/css" href="../../css/Livello_1_style/catalogo_no_log_style.css">
-  <link rel="stylesheet" type="text/css" href="../../css/templatemo-style.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style><?php include '../../css/Livello_1_style/catalogo_no_log_style.css'; ?></style>
 </head>
 <body>
 
@@ -27,7 +31,7 @@
     </label>
   </nav>
 
-  <header>
+  <div class="filter">
 
     <div class="location">
       <input type="text" placeholder="Luogo">
@@ -71,14 +75,12 @@
     </div>
 
 
-  </header>
+  </div>
 
   <div class="giggi" style="margin-left: 50px; margin-right: 50px">
 
     <div class="tab-content clearfix" style="background: white;">
 
-
-<?php session_start(); ?>
 
 <?php
 //including the database connection file
@@ -96,17 +98,18 @@ $result = mysqli_query($mysqli, "SELECT * FROM alloggio ORDER BY id_alloggio DES
     $imageURL = '../../uploads/'.$res["file_name"];
 ?>
 
-    <div class="tm-recommended-place">
-     <img src="<?php echo $imageURL; ?>" width="15%" height="12%" align="left" style="float:left; margin_left:0"/>
-      <div class="tm-recommended-description-box">
+    <div class="container_home">
 
-        <h3 class="tm-recommended-title"> <?php echo "<h3>".$res['descrizione']."</h3>" ?></h3>
-        <p class="tm-text-highlight"><?php echo "<p>".$res['citta']."</p>" ?></p>
-        <p class="tm-text-gray"> <?php echo "<p>".$res['via']."</p>" ?></p>
+     <img class="img_home" src="<?php echo $imageURL; ?>"/>
+      <div class="description">
+
+        <h3 class="h3_home" <?php echo "<h3>".$res['descrizione']."</h3>" ?></h3>
+        <p class="p_home"<?php echo "<p>".$res['citta']."</p>" ?></p>
+        <p class="p_home" <?php echo "<p>".$res['via']."</p>" ?></p>
       </div>
-      <a href="#" class="tm-recommended-price-box">
-        <p class="tm-recommended-price"><?php echo "<p>".$res['numero_civico']."</p>" ?></p>
-        <p class="tm-recommended-price-link"><?php echo "<p>".$res['dimensioni']."</p>" ?> </p>
+      <a href="#" class="price_box">
+        <p class="p_home_price" <?php echo "<p>".$res['numero_civico']."</p>" ?></p>
+        <p class="p_home_price" <?php echo "<p>".$res['dimensioni']."</p>" ?> </p>
       </a>
 
     </div>

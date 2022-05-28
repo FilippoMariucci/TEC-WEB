@@ -104,10 +104,11 @@ $result = mysqli_query($mysqli, "SELECT * FROM alloggio ORDER BY id_alloggio DES
       <div class="description">
 
         <h3 class="h3_home" <?php echo "<h3>".$res['descrizione']."</h3>" ?></h3>
+        <p class="p_home"<?php echo "<p>".$res['id_alloggio']."</p>" ?></p>
         <p class="p_home"<?php echo "<p>".$res['citta']."</p>" ?></p>
         <p class="p_home" <?php echo "<p>".$res['via']."</p>" ?></p>
       </div>
-      <a href="#" class="price_box">
+      <a href=" open_alloggio('<?php echo "".$res['id_alloggio']."" ?>')" class="price_box">
         <p class="p_home_price" <?php echo "<p>".$res['numero_civico']."</p>" ?></p>
         <p class="p_home_price" <?php echo "<p>".$res['dimensioni']."</p>" ?> </p>
       </a>
@@ -164,6 +165,11 @@ $result = mysqli_query($mysqli, "SELECT * FROM alloggio ORDER BY id_alloggio DES
       } else{
         y.style.borderLeft = "1px solid #34495e"
       }
+    }
+
+    function open_alloggio(id){
+    $_SESSION['id_alloggio'] = id ;
+    window.location="prenotazione_no_log.php"
     }
   </script>
 

@@ -39,7 +39,7 @@ if(isset($_POST['title'], $_POST['recip'], $_POST['message']))
 		$title = mysqli_real_escape_string($mysqli, $otitle);
 		$recip = mysqli_real_escape_string($mysqli, $orecip);
 		$message = mysqli_real_escape_string($mysqli, $omessage);
-		$dn1 = mysqli_fetch_array(mysqli_query($mysqli,'select count(id) as recip, id as recipid, (select count(*) from pm) as npm from utente2 where username="'.$recip.'"'));
+		$dn1 = mysqli_fetch_array(mysqli_query($mysqli,'select count(id) as recip, id as recipid, (select count(*) from pm) as npm from users where username="'.$recip.'"'));
 		if($dn1['recip']==1)
 		{
 			if($dn1['recipid']!=$_SESSION['userid'])

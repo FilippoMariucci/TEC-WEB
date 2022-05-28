@@ -49,6 +49,7 @@
             echo "Registration successfully";
             echo "<br/>";
             echo "<a href='login.html'>Login</a>";
+
             }
 
         }else{

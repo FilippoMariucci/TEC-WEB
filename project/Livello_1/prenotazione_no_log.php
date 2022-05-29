@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="../../css/Livello_1_style/home_style.css">
   <link rel="stylesheet" type="text/css" href="../../css/footer.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="catalogo_no_log.php">
 </head>
 <body>
   <nav>
@@ -28,10 +29,9 @@
   <?php
 //including the database connection file
 include_once("connection_1.php");
-
 //fetching data in descending order (lastest entry first)
-$result = mysqli_query($mysqli, "SELECT * FROM alloggio WHERE id_alloggio = $segno");
-
+  echo $_COOKIE["test"];
+ $result = mysqli_query($mysqli, "SELECT * FROM alloggio WHERE id_alloggio = '$COOKIE["test"]'");
 ?>
 
 
@@ -63,8 +63,6 @@ $result = mysqli_query($mysqli, "SELECT * FROM alloggio WHERE id_alloggio = $seg
 
 }
 ?>
-
-
 
   <footer>
     <div class="describe">
@@ -107,5 +105,6 @@ $result = mysqli_query($mysqli, "SELECT * FROM alloggio WHERE id_alloggio = $seg
       setTimeout(carousel, 4000);
     }
 </script>
+
 </body>
 </html>

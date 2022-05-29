@@ -30,7 +30,7 @@
 include_once("connection_1.php");
 
 //fetching data in descending order (lastest entry first)
-$result = mysqli_query($mysqli, "SELECT * FROM alloggio WHERE 'id_alloggio'===6");
+$result = mysqli_query($mysqli, "SELECT * FROM alloggio WHERE id_alloggio = $segno");
 
 ?>
 

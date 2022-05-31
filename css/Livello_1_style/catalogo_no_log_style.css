@@ -21,7 +21,7 @@
   border-top: 1px solid#34495e;
   border-left: 1px solid #34495e;
   border-bottom: 1px solid #34495e;
-  border-radius: 60px 0 0 60px;
+  border-radius: 20px 0 0 20px;
 }
 .location input{
   width: 100%;
@@ -127,7 +127,7 @@
   border-bottom: 1px solid #34495e;
   border-left: none;
   cursor: pointer;
-  border-radius: 0 60px 60px 0;
+  border-radius: 0 20px 20px 0;
 }
 
 .filter{
@@ -160,7 +160,7 @@ float: left;
 }
 
 .price_box{
-float: right;
+  float: right;
 }
 
 
@@ -172,3 +172,7 @@ float: right;
   font-size: 100%;
 }
 
+.view{
+  float: right;
+  font-size: 40%;
+}

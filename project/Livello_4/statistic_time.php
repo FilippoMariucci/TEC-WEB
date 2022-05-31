@@ -2,23 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>HOMEPAGE</title>
+  <title>Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="../../css/nav_style.css">
   <link rel="stylesheet" type="text/css" href="../../css/Livello_1_style/home_style.css">
   <link rel="stylesheet" type="text/css" href="../../css/footer.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="../../js/check.js"></script>
 </head>
 <body>
   <nav>
-    <label class="logo">Affittacamere per Studenti</label>
+    <label class="logo">Affittacamere</label>
     <ul id="nav">
       <li><a href="#" class="active">home</a></li>
-      <li><a href="faq.php">faq</a></li>
-      <li><a href="contattaci_no_log.html">contattaci</a></li>
-      <li><a href="catalogo_no_log.php">catalogo</a></li>
-      <li><a href="registrazione.html">registrati</a></li>
-      <li><a href="login.html">login</a></li>
+      <li><a href="faq.html">faq</a></li>
+      <li><a href="contattaci_log.html">contattaci</a></li>
+      <li><a href="../Livello_3/prova_catalogo.html">catalogo</a></li>
+      <li>
+       <li><?php session_start(); ?>
+        <?php
+           if(isset($_SESSION['valid']) && ($_SESSION['ruolo']) =='le') {
+              include("../Livello_1/connection_1.php");
+              $result = mysqli_query($mysqli, "SELECT * FROM users");
+        ?>
+        <a href="../Livello_2/area_ris_2.php" style="padding:10px; color:orange"> Welcome <?php echo $_SESSION['name'] ?></a>
+        <?php
+          } else {
+              include("connection_1.php");
+              $result = mysqli_query($mysqli, "SELECT * FROM users");
+              ?>
+              <a href="../Livello_3/area_ris_3.html" style="padding:10px; color:orange"> Welcome <?php echo $_SESSION['name'] ?></a>
+              <?php
+          }
+         ?></li>
+      <li><a href="logout.php" class="fa fa-sign-out"></a></li>
     </ul>
     <label id="icon">
       <i class="fa fa-bars" aria-hidden="true" onclick="show_nav()"></i>
@@ -27,10 +44,10 @@
 
   <?php
 //including the database connection file
-include_once("connection_1.php");
+include_once("../Livello_1/connection_1.php");
 
 //fetching data in descending order (lastest entry first)
-$result = mysqli_query($mysqli, "SELECT * FROM alloggio WHERE 'id_alloggio'==='5'");
+$result = mysqli_query($mysqli, "SELECT * FROM alloggio WHERE data_inizio == ");
 
 ?>
 
@@ -41,28 +58,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM alloggio WHERE 'id_alloggio'==='5
     $imageURL = '../../uploads/'.$res["file_name"];
 ?>
 
-    <div class="container_home">
 
-     <img class="img_home" src="<?php echo $imageURL; ?>"/>
-      <div class="description">
-
-        <h3 class="h3_home" <?php echo "<h3>".$res['descrizione']."</h3>" ?></h3>
-        <p class="p_home"<?php echo "<p>".$res['id_alloggio']."</p>" ?></p>
-        <p class="p_home"<?php echo "<p>".$res['citta']."</p>" ?></p>
-        <p class="p_home" <?php echo "<p>".$res['via']."</p>" ?></p>
-      </div>
-      <a href="prenotazione_no_log.html" class="price_box">
-        <p class="p_home_price" <?php echo "<p>".$res['numero_civico']."</p>" ?></p>
-        <p class="p_home_price" <?php echo "<p>".$res['dimensioni']."</p>" ?> </p>
-      </a>
-
-    </div>
-
-    <?php
-
-
-}
-?>
 
 
 
@@ -89,7 +85,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM alloggio WHERE 'id_alloggio'==='5
       else{
         x.style.left = "0%";
       }
-      }
+    }
     var myIndex = 0;
     carousel();
 

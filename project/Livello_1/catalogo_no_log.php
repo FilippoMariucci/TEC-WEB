@@ -31,57 +31,17 @@
     </label>
   </nav>
 
-  <div class="filter">
-
-    <div class="location">
-      <input type="text" placeholder="Luogo">
-    </div>
-
-    <div class="tipologia">
-      <input type="radio" name="tipo">
-      <label>Appartamento</label><br>
-      <input type="radio" name="tipo">
-      <label>Posto Letto</label>
-    </div>
-
-    <button id="btn" onclick="myFunction('drop', 'btn'); bordo('drop', 'drop2')" class="dropbtn">
-      <p>Periodo di Locazione</p>
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div id="drop" class="tendina">
-      <label>DA
-        <input type="date">
-      </label><br>
-      <label>A
-        <input type="date">
-      </label>
-    </div>
-
-    <button id="btn2" onclick="myFunction('drop2', 'btn2'); bordo('drop', 'drop2')" class="dropbtn2">
-      <p>Fascia di Prezzo</p>
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div id="drop2" class="tendina2">
-      <label>DA €
-        <input type="number">
-      </label><br>
-      <label>A €
-        <input type="number">
-      </label>
-    </div>
-
-    <div class="send">
-      <button class="fa fa-search" type="submit" name="submit"></button>
-    </div>
+  <?php
 
 
-  </div>
-
-  <div class="giggi" style="margin-left: 50px; margin-right: 50px">
-
-    <div class="tab-content clearfix" style="background: white;">
 
 
+
+?>
+
+
+
+<body>
 <?php
 //including the database connection file
 include_once("connection_1.php");
@@ -89,17 +49,19 @@ include_once("connection_1.php");
 //fetching data in descending order (lastest entry first)
 $result = mysqli_query($mysqli, "SELECT * FROM alloggio ORDER BY id_alloggio DESC");
 
-?>
 
 
 
-<?php
+
+
     while($res = mysqli_fetch_array($result)) {
     $imageURL = '../../uploads/'.$res["file_name"];
+
 ?>
 
-    <div class="container_home">
+   <div class="container_home">
 
+    <div onclick="window.location.href='sproduct.html';" class="product col-lg-3 col-md-4 col-12 text-center">
      <img class="img_home" src="<?php echo $imageURL; ?>"/>
       <div class="description">
 
@@ -108,11 +70,15 @@ $result = mysqli_query($mysqli, "SELECT * FROM alloggio ORDER BY id_alloggio DES
         <p class="p_home"<?php echo "<p>".$res['citta']."</p>" ?></p>
         <p class="p_home" <?php echo "<p>".$res['via']."</p>" ?></p>
       </div>
-      <a href=" open_alloggio('<?php echo "".$res['id_alloggio']."" ?>')" class="price_box">
+      <div class="price_box">
         <p class="p_home_price" <?php echo "<p>".$res['numero_civico']."</p>" ?></p>
         <p class="p_home_price" <?php echo "<p>".$res['dimensioni']."</p>" ?> </p>
-      </a>
+      </div>
 
+      <div class="view">
+        <button onclick="open_alloggio('<?php echo $res['id_alloggio'] ?>')">Visualizza</button>
+      </div>
+      </div>
     </div>
 
     <?php
@@ -120,6 +86,10 @@ $result = mysqli_query($mysqli, "SELECT * FROM alloggio ORDER BY id_alloggio DES
 
 }
 ?>
+</body>
+
+
+
 
   <footer>
     <div class="describe">
@@ -167,10 +137,9 @@ $result = mysqli_query($mysqli, "SELECT * FROM alloggio ORDER BY id_alloggio DES
       }
     }
 
-    function open_alloggio(id){
-    $_SESSION['id_alloggio'] = id ;
-    window.location="prenotazione_no_log.php"
-    }
+
+
+
   </script>
 
 </body>

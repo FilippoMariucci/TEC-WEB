@@ -23,13 +23,13 @@
         <?php
            if(isset($_SESSION['valid']) && ($_SESSION['ruolo']) =='le') {
               include("connection_1.php");
-              $result = mysqli_query($mysqli, "SELECT * FROM utente2");
+              $result = mysqli_query($mysqli, "SELECT * FROM users");
         ?>
         <a href="../Livello_2/area_ris_2.php" style="padding:10px; color:orange"> Welcome <?php echo $_SESSION['name'] ?></a>
         <?php
           } else {
               include("connection_1.php");
-              $result = mysqli_query($mysqli, "SELECT * FROM utente2");
+              $result = mysqli_query($mysqli, "SELECT * FROM users");
               ?>
               <a href="../Livello_3/area_ris_3.html" style="padding:10px; color:orange"> Welcome <?php echo $_SESSION['name'] ?></a>
               <?php

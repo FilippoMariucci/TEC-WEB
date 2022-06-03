@@ -114,7 +114,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM alloggio ORDER BY id_alloggio DES
       </div>
 
       <div class="view">
-        <button onclick="open_alloggio('<?php echo $res['id_alloggio'] ?>')">Visualizza</button>
+
       </div>
     </div>
 
@@ -169,14 +169,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM alloggio ORDER BY id_alloggio DES
         y.style.borderLeft = "1px solid #34495e"
       }
     }
-    function open_alloggio(id_alloggio){
-      <?php
-        $segno = id_alloggio;
-        setcookie("test","$segno");
-      ?>
-      window.alert(<?php echo $_COOKIE["$value"]?>);
-      window.location=("prenotazione_no_log.php");
-    }
+
   </script>
 
 </body>

@@ -33,7 +33,7 @@ include('../Livello_1/connection_1.php');
       <li><a href="../Livello_1/home_log.php" class="active">home</a></li>
       <li><a href="../Livello_1/faq.php">faq</a></li>
       <li><a href="../Livello_1/contattaci_log.html">contattaci</a></li>
-      <li><a href="../Livello_3/prova_catalogo.html">catalogo</a></li>
+      <li><a href="../Livello_1/catalogo_no_log.php">catalogo</a></li>
       <li><h2>"ciao, nomeutente"</h2></li>
       <li><i class="fa fa-sign-out" aria-hidden="true"></i></li>
     </ul>

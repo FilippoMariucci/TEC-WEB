@@ -31,6 +31,7 @@
     </label>
   </nav>
 
+<header>
   <div class="filter">
 
     <div class="location">
@@ -95,17 +96,17 @@ $result = mysqli_query($mysqli, "SELECT * FROM alloggio ORDER BY id_alloggio DES
 
 <?php
     while($res = mysqli_fetch_array($result)) {
-    $imageURL = '../../uploads/'.$res["file_name"];
+    $imageURL = '../../uploads/'.$res['foto'];
 ?>
 
     <div class="container_home">
 
-     <img class="img_home" src="<?php echo $imageURL; ?>"/>
+     <img class="img_home" src="<?php echo $res['foto']; ?>"/>
       <div class="description">
 
         <h3 class="h3_home" <?php echo "<h3>".$res['descrizione']."</h3>" ?></h3>
         <p class="p_home"<?php echo "<p>".$res['id_alloggio']."</p>" ?></p>
-        <p class="p_home"<?php echo "<p>".$res['citta']."</p>" ?></p>
+        <p class="p_home"<?php echo "<p>".$res['città']."</p>" ?></p>
         <p class="p_home" <?php echo "<p>".$res['via']."</p>" ?></p>
       </div>
       <div class="price_box">
@@ -123,6 +124,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM alloggio ORDER BY id_alloggio DES
 
 }
 ?>
+</header>
 
   <footer>
     <div class="describe">

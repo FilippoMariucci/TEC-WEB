@@ -24,6 +24,16 @@ if(isset($_POST['search']))
 }
 
 
+if(isset($_POST['from_date']) && isset($_POST['to_date']))
+{
+  $from_date = $_POST['from_date'];
+  $to_date = $_POST['to_date'];
+  $query = "SELECT * FROM alloggio WHERE data_inizio BETWEEN '$from_date' AND '$to_date' ";
+  $search_result = filterTable($query);
+  }
+
+
+
 
 // function to connect and execute the query
 function filterTable($query)
@@ -55,35 +65,31 @@ function filterTable($query)
       <label>Posto Letto</label>
     </div>
 
+
+    <form action="" method="post">
     <button id="btn" onclick="myFunction('drop', 'btn'); bordo('drop', 'drop2')" class="dropbtn">
       <p>Periodo di Locazione</p>
       <i class="fa fa-caret-down"></i>
     </button>
     <div id="drop" class="tendina">
-      <label>DA
-        <input type="date">
+      <label>Check In
+        <input type="date" name="from_date" class="form-control">
       </label><br>
-      <label>A
-        <input type="date">
+      <label>Check Out
+        <input type="date" name="to_date" class="form-control">
       </label>
     </div>
-
-    <button id="btn2" onclick="myFunction('drop2', 'btn2'); bordo('drop', 'drop2')" class="dropbtn2">
-      <p>Fascia di Prezzo</p>
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div id="drop2" class="tendina2">
-      <label>DA €
-        <input type="number">
-      </label><br>
-      <label>A €
-        <input type="number">
-      </label>
-    </div>
+    </form>
 
     <div class="send">
       <button class="fa fa-search" type="submit" name="submit"></button>
     </div>
+
+
+
+
+
+
 
 
   </div>
@@ -104,7 +110,7 @@ function filterTable($query)
       </div>
   </div>
                 <?php endwhile;?>
-            </table>
+
         </form>
 
     </body>

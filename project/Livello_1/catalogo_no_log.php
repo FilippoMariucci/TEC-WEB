@@ -184,3 +184,23 @@ $result = mysqli_query($mysqli, "SELECT * FROM alloggio ORDER BY id_alloggio DES
 
 </body>
 </html>
+
+
+
+
+    <button id="btn2" onclick="myFunction('drop2', 'btn2'); bordo('drop', 'drop2')" class="dropbtn2">
+      <p>Fascia di Prezzo</p>
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div id="drop2" class="tendina2">
+      <label>DA €
+        <input type="number">
+      </label><br>
+      <label>A €
+        <input type="number">
+      </label>
+    </div>
+
+    <div class="send">
+      <button class="fa fa-search" type="submit" name="submit"></button>
+    </div>

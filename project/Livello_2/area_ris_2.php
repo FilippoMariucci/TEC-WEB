@@ -135,12 +135,3 @@ else
 </html>
 
 
-
-if(isset($_SESSION['valid']) && ($_SESSION['name'])== 'admin') {
-            header('Location: ../Livello_4/area_ris_4.html');
-         } else if(isset($_SESSION['valid'])){
-             header('Location: home_log.php');
-             }else{
-                echo 'error';
-             }
-    }

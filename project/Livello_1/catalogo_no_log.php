@@ -34,9 +34,12 @@
 <header>
   <div class="filter">
 
+  <form action="" method="GET">
     <div class="location">
-      <input type="text" placeholder="Luogo">
+      <input type="text" name="search" required value="<?php if(isset($_GET['search'])){echo $_GET['search']; } ?>" class="form-control" placeholder="Search data">
+      <button type="submit" class="btn btn-primary">Search</button>
     </div>
+    </form>
 
     <div class="tipologia">
       <input type="radio" name="tipo">
@@ -96,17 +99,20 @@ $result = mysqli_query($mysqli, "SELECT * FROM alloggio ORDER BY id_alloggio DES
 
 <?php
     while($res = mysqli_fetch_array($result)) {
-    $imageURL = '../../uploads/'.$res['foto'];
+    $imageURL = '../../uploads/'.$res['file_name'];
 ?>
 
-    <div class="container_home">
 
-     <img class="img_home" src="<?php echo $res['foto']; ?>"/>
+
+
+      <div class="container_home">
+
+     <img class="img-responsive" src="<?php echo $imageURL; ?>"/>
       <div class="description">
 
         <h3 class="h3_home" <?php echo "<h3>".$res['descrizione']."</h3>" ?></h3>
         <p class="p_home"<?php echo "<p>".$res['id_alloggio']."</p>" ?></p>
-        <p class="p_home"<?php echo "<p>".$res['città']."</p>" ?></p>
+        <p class="p_home"<?php echo "<p>".$res['citta']."</p>" ?></p>
         <p class="p_home" <?php echo "<p>".$res['via']."</p>" ?></p>
       </div>
       <div class="price_box">
@@ -121,9 +127,11 @@ $result = mysqli_query($mysqli, "SELECT * FROM alloggio ORDER BY id_alloggio DES
 
     <?php
 
-
 }
 ?>
+
+
+
 </header>
 
   <footer>

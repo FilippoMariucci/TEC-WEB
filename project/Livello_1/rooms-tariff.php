@@ -35,6 +35,17 @@ if(isset($_POST['from_date']) && isset($_POST['to_date']))
     echo("no result found");
 }
 
+if(isset($_POST['from_price']) && isset($_POST['to_price']))
+{
+  $from_price = $_POST['from_price'];
+  $to_price = $_POST['to_price'];
+  $query = "SELECT * FROM alloggio WHERE prezzo BETWEEN '$from_price' AND '$to_price'  ";
+  $search_result = filterTable($query);
+  }
+  else {
+    echo("no result found");
+}
+
 
 
 
@@ -87,8 +98,21 @@ function filterTable($query)
 
 
 
-
-
+ <form action="" method="post">
+<button id="btn2" onclick="myFunction('drop2', 'btn2'); bordo('drop', 'drop2')" class="dropbtn2">
+      <p>Fascia di Prezzo</p>
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div id="drop2" class="tendina2">
+      <label>DA €
+        <input type="number" name="from_price" class="form-control">
+      </label><br>
+      <label>A €
+        <input type="number" name="to_price" class="form-control">
+      </label>
+      <button type="submit" name="price" class="btn btn-primary">Filter</button>
+    </div>
+    </form>
 
 
   </div>

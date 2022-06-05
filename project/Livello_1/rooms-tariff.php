@@ -28,9 +28,12 @@ if(isset($_POST['from_date']) && isset($_POST['to_date']))
 {
   $from_date = $_POST['from_date'];
   $to_date = $_POST['to_date'];
-  $query = "SELECT * FROM alloggio WHERE data_inizio BETWEEN '$from_date' AND '$to_date' ";
+  $query = "SELECT * FROM alloggio WHERE data_inizio BETWEEN '$from_date' AND '$to_date' UNION SELECT * FROM alloggio WHERE data_fine BETWEEN '$from_date' AND '$to_date' ";
   $search_result = filterTable($query);
   }
+  else {
+    echo("no result found");
+}
 
 
 
@@ -65,9 +68,8 @@ function filterTable($query)
       <label>Posto Letto</label>
     </div>
 
-
-    <form action="" method="post">
-    <button id="btn" onclick="myFunction('drop', 'btn'); bordo('drop', 'drop2')" class="dropbtn">
+  <form action="" method="post">
+     <button id="btn" onclick="myFunction('drop', 'btn'); bordo('drop', 'drop2')" class="dropbtn">
       <p>Periodo di Locazione</p>
       <i class="fa fa-caret-down"></i>
     </button>
@@ -78,12 +80,9 @@ function filterTable($query)
       <label>Check Out
         <input type="date" name="to_date" class="form-control">
       </label>
+      <button type="submit" name="date" class="btn btn-primary">Filter</button>
     </div>
-    </form>
-
-    <div class="send">
-      <button class="fa fa-search" type="submit" name="submit"></button>
-    </div>
+  </form>
 
 
 

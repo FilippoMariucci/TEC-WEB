@@ -1,0 +1,12 @@
+**Database Name: hotelms**
+
+**Developed by source code hero**
+
+**Recommended PHP Version 5.6.3 and 7.4.12**
+
+
+**Login Details**
+
+username: admin / @admin
+password: admin
+

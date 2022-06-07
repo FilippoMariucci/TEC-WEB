@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+     <meta charset="utf-8">
+     <title>Login Form Design | CodeLab</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/nav_style.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+  <link rel="stylesheet" type="text/css" href="css/Livello_1_style/login_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <style>
+       span{
+        position: absolute;
+        right: 15px;
+        transform: translate(0, -50%);
+        top: 50%;
+        cursor: pointer;
+       }
+       .fa{
+        font-size: 20px;
+        color: #7a797e;
+       }
+     </style>
+   </head>
+
+
+
+   <body>
+
+    <!-- NAVBAR-->
+
+  <nav>
+    <label class="logo">Affittacamere</label>
+    <ul id="nav">
+      <li><a href="home_no_log.html">home</a></li>
+      <li><a href="faq.html">faq</a></li>
+      <li><a href="contattaci_no_log.html">contattaci</a></li>
+      <li><a href="catalogo_no_log.php">catalogo</a></li>
+      <li><a href="registrazione.html">registrati</a></li>
+      <li><a href="login.html"class="active">login</a></li>
+    </ul>
+    <label id="icon">
+      <i class="fa fa-bars" aria-hidden="true" onclick="show_nav()"></i>
+    </label>
+  </nav>
+
+    <header>
+      <div class="wrapper">
+         <div class="title">
+            Sign In
+         </div>
+         <form action="login.php" method="post">
+            <div class="field">
+               <input type="text" name="username"   required>
+               <label>Username</label>
+            </div>
+            <div class="field" >
+               <input type="password" id="password" name="password" required>
+               <label>Password</label>
+              <span>
+                <i class="fa fa-eye" aria-hidden="true" id="eye" onclick="toggle()"></i>
+              </span>
+            </div>
+            <div class="content">
+               <div class="checkbox">
+                  <input type="checkbox" id="remember-me">
+                  <label for="remember-me">Remember me</label>
+               </div>
+               <div class="pass-link">
+                  <a href="#">Forgot password?</a>
+               </div>
+            </div>
+            <div class="field">
+               <input type="submit" value="Login" name="submit">
+            </div>
+            <div class="signup-link">
+               Non hai un account? <a href="registrazione.html"> &nbsp Signup now</a>
+            </div>
+         </form>
+      </div>
+    </header>
+
+
+
+    <!-- FOOTER-->
+
+  <footer >
+    <div class="link">
+      <a href="faq.html"><b>FAQ</b></a>
+      <a href="contattaci_no_log.html"><b>Contattaci</b></a>
+    </div>
+    <div class="creator">
+      <h3>Powered By</h3>
+      <p>Mariucci Filippo</p>
+      <p>Olivieri Giorgio</p>
+      <p>Palmieri Giovanni</p>
+      <p>Sisi Mattia</p>
+    </div>
+  </footer>
+
+   <script>
+        var state= false;
+        function toggle(){
+          if (state){
+            document.getElementById("password").setAttribute("type", "password");
+            state= false;
+            document.getElementById("eye").style.color= '#7a797e';
+          }
+          else {
+             document.getElementById("password").setAttribute("type", "text");
+             state= true;
+             document.getElementById("eye").style.color= '#5887ef';
+          }
+        }
+      </script>
+   </body>
+</html>
+

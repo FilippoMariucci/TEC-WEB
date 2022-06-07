@@ -2,23 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>HOMEPAGE</title>
+  <title>Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/nav_style.css">
   <link rel="stylesheet" type="text/css" href="css/Livello_1_style/home_style.css">
   <link rel="stylesheet" type="text/css" href="css/footer.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="js/check.js"></script>
 </head>
 <body>
   <nav>
-    <label class="logo">Affittacamere per Studenti</label>
+    <label class="logo">Affittacamere</label>
     <ul id="nav">
       <li><a href="#" class="active">home</a></li>
-      <li><a href="faq.php">faq</a></li>
-      <li><a href="contattaci_no_log.html">contattaci</a></li>
-      <li><a href="catalogo_no_log.php">catalogo</a></li>
-      <li><a href="registrazione.html">registrati</a></li>
-      <li><a href="login.php">login</a></li>
+      <li><a href="faq.html">faq</a></li>
+      <li><a href="contattaci_log.html">contattaci</a></li>
+      <li><a href="catalogo_log.php">catalogo</a></li>
+      <li>
+       <li><?php session_start(); ?>
+        <?php
+           if(isset($_SESSION['user_id']) && ($_SESSION['ruolo']) =='le') {
+              include("db.php");
+              $result = mysqli_query($connection, "SELECT * FROM user");
+        ?>
+        <a href="area_ris_2.php" style="padding:10px; color:orange"> Welcome <?php echo $_SESSION['username'] ?></a>
+        <?php
+          } else {
+              include("db.php");
+              $result = mysqli_query($connection, "SELECT * FROM user");
+              ?>
+              <a href="area_ris_3.html" style="padding:10px; color:orange"> Welcome <?php echo $_SESSION['username'] ?></a>
+              <?php
+          }
+         ?></li>
+      <li><a href="logout.php" class="fa fa-sign-out"></a></li>
     </ul>
     <label id="icon">
       <i class="fa fa-bars" aria-hidden="true" onclick="show_nav()"></i>
@@ -69,7 +86,7 @@
       else{
         x.style.left = "0%";
       }
-      }
+    }
     var myIndex = 0;
     carousel();
 
@@ -89,3 +106,4 @@
 </script>
 </body>
 </html>
+

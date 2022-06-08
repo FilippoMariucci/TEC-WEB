@@ -1,6 +1,6 @@
 <?php
 //This page display a personnal message
-include('connection_1.php');
+include('db.php');
 session_start();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -20,34 +20,34 @@ session_start();
     <body>
 
 <?php
-if(isset($_SESSION['valid']))
+if(isset($_SESSION['user_id']))
 {
 if(isset($_GET['id']))
 {
 $id = intval($_GET['id']);
-$req1 = mysqli_query($mysqli,'select title, user1, user2 from pm where id="'.$id.'" and id2="1"');
+$req1 = mysqli_query($connection,'select title, user1, user2 from pm where id="'.$id.'" and id2="1"');
 $dn1 = mysqli_fetch_array($req1);
 if(mysqli_num_rows($req1)==1)
 {
-if($dn1['user1']==$_SESSION['userid'] or $dn1['user2']==$_SESSION['userid'])
+if($dn1['user1']==$_SESSION['user_id'] or $dn1['user2']==$_SESSION['user_id'])
 {
-if($dn1['user1']==$_SESSION['userid'])
+if($dn1['user1']==$_SESSION['user_id'])
 {
-	mysqli_query($mysqli,'update pm set user1read="yes" where id="'.$id.'" and id2="1"');
+	mysqli_query($connection,'update pm set user1read="yes" where id="'.$id.'" and id2="1"');
 	$user_partic = 2;
 }
 else
 {
-	mysqli_query($mysqli,'update pm set user2read="yes" where id="'.$id.'" and id2="1"');
+	mysqli_query($connection,'update pm set user2read="yes" where id="'.$id.'" and id2="1"');
 	$user_partic = 1;
 }
-$req2 = mysqli_query($mysqli,'select pm.timestamp, pm.message, users.id as userid, users.username from pm, users where pm.id="'.$id.'" and users.id=pm.user1 order by pm.id2');
+$req2 = mysqli_query($connection,'select pm.timestamp, pm.message, user.id as userid, user.username from pm, user where pm.id="'.$id.'" and user.id=pm.user1 order by pm.id2');
 if(isset($_POST['message']) and $_POST['message']!='')
 {
 	$message = $_POST['message'];
 
-	$message = mysqli_real_escape_string($mysqli, $message);
-	if(mysqli_query($mysqli,'insert into pm (id, id2, title, user1, user2, message, timestamp, user1read, user2read)values("'.$id.'", "'.(intval(mysqli_num_rows($req2))+1).'", "", "'.$_SESSION['userid'].'", "", "'.$message.'", "'.time().'", "", "")') and mysqli_query($mysqli, 'update pm set user'.$user_partic.'read="yes" where id="'.$id.'" and id2="1"'))
+	$message = mysqli_real_escape_string($connection, $message);
+	if(mysqli_query($connection,'insert into pm (id, id2, title, user1, user2, message, timestamp, user1read, user2read)values("'.$id.'", "'.(intval(mysqli_num_rows($req2))+1).'", "", "'.$_SESSION['user_id'].'", "", "'.$message.'", "'.time().'", "", "")') and mysqli_query($connection, 'update pm set user'.$user_partic.'read="yes" where id="'.$id.'" and id2="1"'))
 	{
 ?>
 <div class="message">Your reply has successfully been sent.<br />
@@ -67,9 +67,9 @@ else
 ?>
 <div class="content">
 <?php
-if(isset($_SESSION['valid']))
+if(isset($_SESSION['user_id']))
 {
-$nb_new_pm = mysqli_fetch_array(mysqli_query($mysqli,'select count(*) as nb_new_pm from pm where ((user1="'.$_SESSION['userid'].'" and user1read="no") or (user2="'.$_SESSION['userid'].'" and user2read="no")) and id2="1"'));
+$nb_new_pm = mysqli_fetch_array(mysqli_query($connection,'select count(*) as nb_new_pm from pm where ((user1="'.$_SESSION['user_id'].'" and user1read="no") or (user2="'.$_SESSION['user_id'].'" and user2read="no")) and id2="1"'));
 $nb_new_pm = $nb_new_pm['nb_new_pm'];
 ?>
 <div class="box">
@@ -77,7 +77,7 @@ $nb_new_pm = $nb_new_pm['nb_new_pm'];
     	<a href="<?php echo $url_home; ?>">Forum Index</a> &gt; <a href="list_pm.php">List of your PMs</a> &gt; Read a PM
     </div>
 	<div class="box_right">
-    	<a href="list_pm.php">Your messages <span class="badge"><font color="#ffcccc"><?php echo $nb_new_pm; ?></font></span></a> - <a href="profile.php?id=<?php echo $_SESSION['userid']; ?>"><?php echo htmlentities($_SESSION['username'], ENT_QUOTES, 'UTF-8'); ?></a> (<a href="../Livello_1/logout.php">Logout</a>)
+    	<a href="list_pm.php">Your messages <span class="badge"><font color="#ffcccc"><?php echo $nb_new_pm; ?></font></span></a> - <a href="profile.php?id=<?php echo $_SESSION['user_id']; ?>"><?php echo htmlentities($_SESSION['username'], ENT_QUOTES, 'UTF-8'); ?></a> (<a href="../Livello_1/logout.php">Logout</a>)
     </div>
     <div class="clean"></div>
 </div>

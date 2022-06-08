@@ -1,6 +1,6 @@
 <?php
 //This page let create a new personnal message
-include('connection_1.php');
+include('db.php');
 session_start();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -20,7 +20,7 @@ session_start();
     <body>
 
 <?php
-if(isset($_SESSION['valid']))
+if(isset($_SESSION['user_id']))
 {
 $form = true;
 $otitle = '';
@@ -36,16 +36,16 @@ if(isset($_POST['title'], $_POST['recip'], $_POST['message']))
 
 	if($_POST['title']!='' and $_POST['recip']!='' and $_POST['message']!='')
 	{
-		$title = mysqli_real_escape_string($mysqli, $otitle);
-		$recip = mysqli_real_escape_string($mysqli, $orecip);
-		$message = mysqli_real_escape_string($mysqli, $omessage);
-		$dn1 = mysqli_fetch_array(mysqli_query($mysqli,'select count(id) as recip, id as recipid, (select count(*) from pm) as npm from users where username="'.$recip.'"'));
+		$title = mysqli_real_escape_string($connection, $otitle);
+		$recip = mysqli_real_escape_string($connection, $orecip);
+		$message = mysqli_real_escape_string($connection, $omessage);
+		$dn1 = mysqli_fetch_array(mysqli_query($connection,'select count(id) as recip, id as recipid, (select count(*) from pm) as npm from user where username="'.$recip.'"'));
 		if($dn1['recip']==1)
 		{
-			if($dn1['recipid']!=$_SESSION['userid'])
+			if($dn1['recipid']!=$_SESSION['user_id'])
 			{
 				$id = $dn1['npm']+1;
-				if(mysqli_query($mysqli, 'insert into pm (id, id2, title, user1, user2, message, timestamp, user1read, user2read)values("'.$id.'", "1", "'.$title.'", "'.$_SESSION['userid'].'", "'.$dn1['recipid'].'", "'.$message.'", "'.time().'", "yes", "no")'))
+				if(mysqli_query($connection, 'insert into pm (id, id2, title, user1, user2, message, timestamp, user1read, user2read)values("'.$id.'", "1", "'.$title.'", "'.$_SESSION['user_id'].'", "'.$dn1['recipid'].'", "'.$message.'", "'.time().'", "yes", "no")'))
 				{
 	?>
 	<div class="message">The PM have successfully been sent.<br />
@@ -86,7 +86,7 @@ if(isset($error))
 ?>
 <div class="content">
 <?php
-$nb_new_pm = mysqli_fetch_array(mysqli_query($mysqli,'select count(*) as nb_new_pm from pm where ((user1="'.$_SESSION['userid'].'" and user1read="no") or (user2="'.$_SESSION['userid'].'" and user2read="no")) and id2="1"'));
+$nb_new_pm = mysqli_fetch_array(mysqli_query($connection,'select count(*) as nb_new_pm from pm where ((user1="'.$_SESSION['user_id'].'" and user1read="no") or (user2="'.$_SESSION['user_id'].'" and user2read="no")) and id2="1"'));
 $nb_new_pm = $nb_new_pm['nb_new_pm'];
 ?>
 <div class="box">
@@ -94,7 +94,7 @@ $nb_new_pm = $nb_new_pm['nb_new_pm'];
     	<a href="<?php echo $url_home; ?>">Chat Index</a> &gt; <a href="list_pm.php">List of you PMs</a> &gt; New PM
     </div>
 	<div class="box_right">
-     	<a href="list_pm.php">Your messages <span class="badge"><font color="#ffcccc"><?php echo $nb_new_pm; ?></font></span></a> - <a href="profile.php?id=<?php echo $_SESSION['userid']; ?>"><?php echo htmlentities($_SESSION['username'], ENT_QUOTES, 'UTF-8'); ?></a> (<a href="../Livello_1/logout.php">Logout</a>)
+     	<a href="list_pm.php">Your messages <span class="badge"><font color="#ffcccc"><?php echo $nb_new_pm; ?></font></span></a> - <a href="profile.php?id=<?php echo $_SESSION['user_id']; ?>"><?php echo htmlentities($_SESSION['username'], ENT_QUOTES, 'UTF-8'); ?></a> (<a href="logout.php">Logout</a>)
     </div>
     <div class="clean"></div>
 </div>
@@ -106,7 +106,8 @@ $nb_new_pm = $nb_new_pm['nb_new_pm'];
         <label for="title">Title</label>
         <input type="text" class="form-control" placeholder="Title" value="<?php echo htmlentities($otitle, ENT_QUOTES, 'UTF-8'); ?>" id="title" name="title" /><br>
 
-        <label for="recip">Recipient<span class="small">(Username)</span></label>
+        <label for="recip">Username<span class="small"></span></label>
+        <p>(Inserisci lo username del locatore desiderato sotto la voce "Proprietario" o affianco  "Contatta" nella sezione dell ' alloggio selezionato)</p>
         <input type="text" class="form-control" placeholder="Recipient" value="<?php echo htmlentities($orecip, ENT_QUOTES, 'UTF-8'); ?>" id="recip" name="recip" /><br />
 
         <label for="message">Message</label>

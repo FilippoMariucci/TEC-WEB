@@ -12,11 +12,21 @@ session_start();
 if (isset($_SESSION['user_id'])){
     $user_id = $_SESSION['user_id'];
     $userQuery = "SELECT * FROM user WHERE id = '$user_id'";
+    $result_2 = mysqli_query($connection, "SELECT * FROM user");
+    $userName = $_SESSION['username'];
+    $username = mysqli_fetch_assoc($result_2);
     $result = mysqli_query($connection, $userQuery);
     $user = mysqli_fetch_assoc($result);
 }else{
     header('Location:login.php');
 }
+
+
+
+
+
+
+
 
 
 
@@ -59,7 +69,7 @@ if (isset($_SESSION['user_id'])){
             echo "<br/>";
             echo "<a href='register_1.php'>Go back</a>";
           } else {
-            mysqli_query($connection, "INSERT INTO room (room_type_id,room_no, user_id, descrizione, citta, via, numero_civico, dimensioni,data_inizio, data_fine, vincoli, wi_fi, parcheggio, cucina, elettrodomestici, file_name, uploaded_on) VALUES('$room_type_id','$room_no', '$user_id','$des', '$city', '$vi', '$num', '$dim',  '$di', '$df', '$vin',  '$wf', '$par', '$cuc', '$elett','".$fileName."', NOW())")
+            mysqli_query($connection, "INSERT INTO room (room_type_id,room_no, user_id, user_username, descrizione, citta, via, numero_civico, dimensioni,data_inizio, data_fine, vincoli, wi_fi, parcheggio, cucina, elettrodomestici, file_name, uploaded_on) VALUES('$room_type_id','$room_no', '$user_id','$userName', '$des', '$city', '$vi', '$num', '$dim',  '$di', '$df', '$vin',  '$wf', '$par', '$cuc', '$elett','".$fileName."', NOW())")
             or die("Could not execute the insert query.");
 
             echo "Registration successfully";

@@ -2,6 +2,16 @@
 
 <?php
     require_once('db.php');
+    session_start();
+    if (isset($_SESSION['user_id'])){
+    $user_id = $_SESSION['user_id'];
+    $userQuery = "SELECT * FROM user WHERE id = '$user_id'";
+    $result = mysqli_query($connection, $userQuery);
+    $user = mysqli_fetch_assoc($result);
+}else{
+    header('Location:login.php');
+}
+
     if(isset($_GET['id'])){
         $id = $_GET['id'];
         $q = "SELECT * FROM room WHERE room.room_id = $id";
@@ -9,6 +19,8 @@
         $row = mysqli_fetch_array($run);
         $imageURL = 'uploads/'.$row["file_name"];
     }
+
+
 ?>
 <div class="container">
 <h1 class="title"><?php echo $row['descrizione']; ?></h1>
@@ -53,7 +65,41 @@
   </div>
 </div>
 
+<?php
+                        $room_query = "SELECT * FROM room NATURAL JOIN room_type WHERE deleteStatus = 0 AND room_id='$id'";
+                        $rooms_result = mysqli_query($connection, $room_query);
+                        if (mysqli_num_rows($rooms_result) > 0) {
+                            while ($rooms = mysqli_fetch_assoc($rooms_result)) { ?>
+                                <tr>
+                                    <td><?php echo $rooms['room_no'] ?></td>
+                                    <td><?php echo $rooms['room_type'] ?></td>
+                                    <td>
+                                        <?php
+                                        if ($rooms['status'] == 0) {
+                                            echo '<a href="index.php?reservation_lo&room_id=' . $rooms['room_id'] . '&room_type_id=' . $rooms['room_type_id'] . '" class="btn btn-success" style="border-radius:0%">Book Room</a>';
+                                        } else {
+                                            echo '<a href="#" class="btn btn-danger" style="border-radius:0%">Booked</a>';
+                                        }
+                                        ?>
 
+
+
+                                </tr>
+                            <?php }
+                        } else {
+                            echo "No Rooms";
+                        }
+                        ?>
+
+
+<a href="signup.php">Contatta:  <?php echo $_SESSION['username'] ?></a>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 </div>
 

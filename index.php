@@ -22,6 +22,9 @@ elseif (isset($_GET['dashboard'])){
 elseif (isset($_GET['reservation'])){
     include_once "reservation.php";
 }
+elseif (isset($_GET['reservation_lo'])){
+    include_once "reservation_lo.php";
+}
 elseif (isset($_GET['staff_mang'])){
     include_once "staff_mang.php";
 }

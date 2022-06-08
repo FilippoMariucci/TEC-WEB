@@ -71,16 +71,15 @@ if (isset($_SESSION['user_id'])){
                                     <div class="help-block with-errors"></div>
                                 </div>
 
-                                <div class="field">
+
+
+         <div class="field">
           <input type="text" name="room_no"  required>
           <label>Room No</label>
         </div>
 
 
-                                <div class="field">
-          <input type="text" name="descrizione"  required>
-          <label>Room No</label>
-        </div>
+
 
 
         <!-- descrizione  -->

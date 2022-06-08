@@ -65,7 +65,7 @@ include('db.php');
         <div class="messaggi">
           <button>
             <i class="fa fa-envelope" aria-hidden="true"></i>
-            <a href="../Livello_2/list_pm.php" class="active"> <p>Visualizza i tuoi messaggi</p> <span class="badge"><font color="#ffcccc"><?php echo $nb_new_pm; ?></font></span></a>
+            <a href="list_pm.php" class="active"> <p>Visualizza i tuoi messaggi</p> <span class="badge"><font color="#ffcccc"><?php echo $nb_new_pm; ?></font></span></a>
           </button>
         </div>
 

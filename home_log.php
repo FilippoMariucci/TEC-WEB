@@ -31,7 +31,7 @@
               include("db.php");
               $result = mysqli_query($connection, "SELECT * FROM user");
               ?>
-              <a href="area_ris_3.html" style="padding:10px; color:orange"> Welcome <?php echo $_SESSION['username'] ?></a>
+              <a href="area_ris_3.php" style="padding:10px; color:orange"> Welcome <?php echo $_SESSION['username'] ?></a>
               <?php
           }
          ?></li>

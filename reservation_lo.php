@@ -257,11 +257,9 @@ if (isset($_GET['room_id'])){
                 </div>
             </div>
             <div class="modal-footer">
-                <a class="btn btn-primary" style="border-radius:60px;" href="index.php?reservation"><i class="fa fa-check-circle"></i></a>
+                <a class="btn btn-primary" style="border-radius:60px;" href="home_log.php"><i class="fa fa-check-circle"></i></a>
             </div>
         </div>
 
     </div>
 </div>
-
-

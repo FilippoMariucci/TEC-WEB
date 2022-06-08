@@ -1,6 +1,6 @@
 <?php
 //This page let display the list of personnal message of an user
-include('connection_1.php');
+include('db.php');
 session_start();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -22,11 +22,11 @@ session_start();
 
         <div class="content">
 <?php
-if(isset($_SESSION['valid']))
+if(isset($_SESSION['user_id']))
 {
-$req1 = mysqli_query($mysqli,'select m1.id, m1.title, m1.timestamp, count(m2.id) as reps, users.id as userid, users.username from pm as m1, pm as m2,users where ((m1.user1="'.$_SESSION['userid'].'" and m1.user1read="no" and users.id=m1.user2) or (m1.user2="'.$_SESSION['userid'].'" and m1.user2read="no" and users.id=m1.user1)) and m1.id2="1" and m2.id=m1.id group by m1.id order by m1.id desc');
-$req2 = mysqli_query($mysqli,'select m1.id, m1.title, m1.timestamp, count(m2.id) as reps, users.id as userid, users.username from pm as m1, pm as m2,users where ((m1.user1="'.$_SESSION['userid'].'" and m1.user1read="yes" and users.id=m1.user2) or (m1.user2="'.$_SESSION['userid'].'" and m1.user2read="yes" and users.id=m1.user1)) and m1.id2="1" and m2.id=m1.id group by m1.id order by m1.id desc');
-$nb_new_pm = mysqli_fetch_array(mysqli_query($mysqli,'select count(*) as nb_new_pm from pm where ((user1="'.$_SESSION['userid'].'" and user1read="no") or (user2="'.$_SESSION['userid'].'" and user2read="no")) and id2="1"'));
+$req1 = mysqli_query($connection,'select m1.id, m1.title, m1.timestamp, count(m2.id) as reps, user.id as userid, user.username from pm as m1, pm as m2,user where ((m1.user1="'.$_SESSION['user_id'].'" and m1.user1read="no" and user.id=m1.user2) or (m1.user2="'.$_SESSION['user_id'].'" and m1.user2read="no" and user.id=m1.user1)) and m1.id2="1" and m2.id=m1.id group by m1.id order by m1.id desc');
+$req2 = mysqli_query($connection,'select m1.id, m1.title, m1.timestamp, count(m2.id) as reps, user.id as userid, user.username from pm as m1, pm as m2,user where ((m1.user1="'.$_SESSION['user_id'].'" and m1.user1read="yes" and user.id=m1.user2) or (m1.user2="'.$_SESSION['user_id'].'" and m1.user2read="yes" and user.id=m1.user1)) and m1.id2="1" and m2.id=m1.id group by m1.id order by m1.id desc');
+$nb_new_pm = mysqli_fetch_array(mysqli_query($connection,'select count(*) as nb_new_pm from pm where ((user1="'.$_SESSION['user_id'].'" and user1read="no") or (user2="'.$_SESSION['user_id'].'" and user2read="no")) and id2="1"'));
 $nb_new_pm = $nb_new_pm['nb_new_pm'];
 ?>
 <div class="box">
@@ -34,7 +34,7 @@ $nb_new_pm = $nb_new_pm['nb_new_pm'];
     	<a href="<?php echo $url_home; ?>">Chat Index</a> &gt; List of your Personal Messages
     </div>
 	<div class="box_right">
-    	<a href="list_pm.php">Your messages <span class="badge"><font color="#ffcccc"><?php echo $nb_new_pm; ?></font></span></a> - <a href="profile.php?id=<?php echo $_SESSION['userid']; ?>"><?php echo htmlentities($_SESSION['valid'], ENT_QUOTES, 'UTF-8'); ?></a> (<a href="../Livello_1/logout.php">Logout</a>)
+    	<a href="list_pm.php">Your messages <span class="badge"><font color="#ffcccc"><?php echo $nb_new_pm; ?></font></span></a> - <a href="profile.php?id=<?php echo $_SESSION['user_id']; ?>"><?php echo htmlentities($_SESSION['user_id'], ENT_QUOTES, 'UTF-8'); ?></a> (<a href="logout.php">Logout</a>)
     </div>
     <div class="clean"></div>
 </div>

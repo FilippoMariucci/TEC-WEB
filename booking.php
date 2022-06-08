@@ -1,6 +1,6 @@
 <?php
-if (isset($_GET['room_id'])){
-    $get_room_id = $_GET['room_id'];
+if (isset($_GET['id'])){
+    $get_room_id = $_GET['id'];
     $get_room_sql = "SELECT * FROM room NATURAL JOIN room_type WHERE room_id = '$get_room_id'";
     $get_room_result = mysqli_query($connection,$get_room_sql);
     $get_room = mysqli_fetch_assoc($get_room_result);
@@ -36,7 +36,7 @@ if (isset($_GET['room_id'])){
                 <div class="response"></div>
                 <div class="col-lg-12">
                     <?php
-                    if (isset($_GET['room_id'])){?>
+                    if (isset($_GET['id'])){?>
 
                         <div class="panel panel-default">
                             <div class="panel-heading">Room Information:
@@ -194,6 +194,7 @@ if (isset($_GET['room_id'])){
 
     <div class="row">
         <div class="col-sm-12">
+            <p class="back-link">Developed By Prem Chand Saini</p>
         </div>
     </div>
 

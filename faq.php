@@ -68,10 +68,10 @@
 
  <?php
 //including the database connection file
-include_once("connection_1.php");
+include_once("db.php");
 
 //fetching data in descending order (lastest entry first)
-$result = mysqli_query($mysqli, "SELECT * FROM faq ");
+$result = mysqli_query($connection, "SELECT * FROM faq ");
 
 ?>
 
@@ -81,21 +81,12 @@ $result = mysqli_query($mysqli, "SELECT * FROM faq ");
 
   <div class="container_faq">
 
-
-        <div class="dropdown">
-
-
-          <button onclick="myFunction('FAQ1')" class="dropbtn">
-            <div class="testo" style=" padding-left: 50px;padding-right: 125px;">
-              <strong><?php echo "<strong>".$res['domanda']."</strong>" ?></strong>
-              <i class="fa fa-caret-down"></i>
-            </div>
-          </button>
-          <div id="FAQ1" class="messi">
-            <p><?php echo "<p>".$res['risposta']."</p>" ?></p>
-
-          </div>
+        <div class="domanda">
+           <p><?php echo $res['domanda'];?></p>
         </div>
+        <div class="risposta">
+           <p><?php echo $res['risposta']; ?></p>
+         </div>
 
       </div>
 

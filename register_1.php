@@ -4,7 +4,7 @@
 </head>
 
 <body>
-    <a href="home_no_log.html">Home</a> <br />
+    <a href="index.html">Home</a> <br />
     <?php
     include("db.php");
 

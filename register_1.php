@@ -6,7 +6,7 @@
 <body>
     <a href="home_no_log.html">Home</a> <br />
     <?php
-    include("connection_1.php");
+    include("db.php");
 
     if(isset($_POST['submit'])) {
         $name = $_POST['name'];
@@ -24,7 +24,7 @@
             echo "<br/>";
             echo "<a href='register_1.php'>Go back</a>";
         } else {
-            mysqli_query($mysqli, "INSERT INTO utente2(name, username, password, cognome, data, telefono, sesso, ruolo) VALUES('$name', '$user', '$pass', '$cogn', '$date', '$tel', '$sex', '$role')")
+            mysqli_query($connection, "INSERT INTO user(name, username, password, cognome, data, telefono, sesso, ruolo) VALUES('$name', '$user', '$pass', '$cogn', '$date', '$tel', '$sex', '$role')")
             or die("Could not execute the insert query.");
 
             echo "Registration successfully";

@@ -8,19 +8,19 @@
 
 <!-- form -->
 <?php
-include_once("connection_1.php");
+include_once("db.php");
 
 if(isset($_POST['search']))
 {
     $valueToSearch = $_POST['valueToSearch'];
     // search in all table columns
     // using concat mysql function
-    $query = "SELECT * FROM `alloggio` WHERE CONCAT(`citta`, `descrizione`) LIKE '%".$valueToSearch."%'";
+    $query = "SELECT * FROM `room` WHERE CONCAT(`citta`, `descrizione`) LIKE '%".$valueToSearch."%'";
     $search_result = filterTable($query);
 
 }
  else {
-    $query = "SELECT * FROM `alloggio`";
+    $query = "SELECT * FROM `room`";
     $search_result = filterTable($query);
 }
 
@@ -29,7 +29,7 @@ if(isset($_POST['from_date']) && isset($_POST['to_date']))
 {
   $from_date = $_POST['from_date'];
   $to_date = $_POST['to_date'];
-  $query = "SELECT * FROM alloggio WHERE data_inizio BETWEEN '$from_date' AND '$to_date' UNION SELECT * FROM alloggio WHERE data_fine BETWEEN '$from_date' AND '$to_date' ";
+  $query = "SELECT * FROM room WHERE data_inizio BETWEEN '$from_date' AND '$to_date' UNION SELECT * FROM alloggio WHERE data_fine BETWEEN '$from_date' AND '$to_date' ";
   $search_result = filterTable($query);
   }
   else {
@@ -40,7 +40,7 @@ if(isset($_POST['from_price']) && isset($_POST['to_price']))
 {
   $from_price = $_POST['from_price'];
   $to_price = $_POST['to_price'];
-  $query = "SELECT * FROM alloggio WHERE prezzo BETWEEN '$from_price' AND '$to_price'  ";
+  $query = "SELECT * FROM room WHERE prezzo BETWEEN '$from_price' AND '$to_price'  ";
   $search_result = filterTable($query);
   }
   else {
@@ -53,7 +53,7 @@ if(isset($_POST['from_price']) && isset($_POST['to_price']))
 // function to connect and execute the query
 function filterTable($query)
 {
-    $connect = mysqli_connect("localhost", "root", "", "tecnologieweb");
+    $connect = mysqli_connect("localhost", "root", "", "hotelms");
     $filter_Result = mysqli_query($connect, $query);
     return $filter_Result;
 }
@@ -129,9 +129,9 @@ function filterTable($query)
           <div class="info">
               <h3><?php echo $row['descrizione']; ?></h3>
               <p style="color: darkgreen;"> Size: <?php echo $row['dimensioni']; ?> sq. feet<br> Per Night: <?php echo $row['citta']; ?> Taka Only</p>
-              <a href="room-details.php?id=<?php echo $row['id_alloggio']; ?>" class="btn btn-default">Check Details</a>
-              <a href="../Livello_1/cerca.php?id=<?php echo $row['id_alloggio'];?>
-              " class="btn btn-default">Cerca</a>
+              <a href="room-details.php?id=<?php echo $row['room_id']; ?>" class="btn btn-default">Check Details</a>
+
+              <a href="aggiungi_preferiti.php?id=<?php echo $row['room_id'];?> " class="btn btn-default">Aggiungi ai Preferiti</a>
 
           </div>
       </div>

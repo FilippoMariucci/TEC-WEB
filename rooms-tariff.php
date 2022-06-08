@@ -129,7 +129,7 @@ function filterTable($query)
           <div class="info">
               <h3><?php echo $row['descrizione']; ?></h3>
               <p style="color: darkgreen;"> Size: <?php echo $row['dimensioni']; ?> sq. feet<br> Per Night: <?php echo $row['citta']; ?> Taka Only</p>
-              <a href="room-details.php?id=<?php echo $row['id_alloggio']; ?>" class="btn btn-default">Check Details</a>
+              <a href="room-details.php?id=<?php echo $row['room_id']; ?>" class="btn btn-default">Check Details</a>
 
 
 

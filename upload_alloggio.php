@@ -146,27 +146,81 @@ if (isset($_SESSION['user_id'])){
         </div>
 
         <!-- wi-fi -->
-        <div class="field">
-          <input type="text" name="wi_fi"  required>
-          <label>WI-FI</label>
+
+
+        <div class="form-group" style="margin-top: 10px">
+          <label>WI-FI:</label>
+          <div>
+            <label for="yes1" class="radio-inline">
+              <input
+                type="radio"
+                name="wi_fi"
+                value="yes"
+                id="yes1">Yes</label>
+            <label for="no1" class="radio-inline" style="margin-left: 10px">
+              <input
+                type="radio"
+                name="wi_fi"
+                value="no"
+                id="no1"/>No</label>
+          </div>
         </div>
 
         <!-- parcheggio -->
-        <div class="field">
-          <input type="text" name="parcheggio"  required>
-          <label>Parcheggio</label>
+        <div class="form-group" style="margin-top: 10px">
+          <label>Parcheggio:</label>
+          <div>
+            <label for="yes2" class="radio-inline">
+              <input
+                type="radio"
+                name="parcheggio"
+                value="yes"
+                id="yes2">Yes</label>
+            <label for="no2" class="radio-inline" style="margin-left: 10px">
+              <input
+                type="radio"
+                name="parcheggio"
+                value="no"
+                id="no2"/>No</label>
+          </div>
         </div>
 
         <!-- cucina -->
-        <div class="field">
-          <input type="text" name="cucina"  required>
-          <label>Cucina</label>
+        <div class="form-group" style="margin-top: 10px">
+          <label>Cucina:</label>
+          <div>
+            <label for="yes3" class="radio-inline">
+              <input
+                type="radio"
+                name="cucina"
+                value="yes"
+                id="yes3">Yes</label>
+            <label for="no3" class="radio-inline" style="margin-left: 10px">
+              <input
+                type="radio"
+                name="cucina"
+                value="no"
+                id="no3"/>No</label>
+          </div>
         </div>
 
         <!-- elettrodomestici -->
-        <div class="field">
-          <input type="text" name="elettrodomestici"  required>
-          <label>Elettrodomestici</label>
+        <div class="form-group" style="margin-top: 10px">
+          <label>Parcheggio:</label>
+          <div>
+            <label for="yes4" class="radio-inline">
+              <input
+                type="radio"
+                name="elettrodomestici"
+                value="yes"
+                id="yes4">Yes</label>
+            <label for="no4" class="radio-inline" style="margin-left: 10px">
+              <input
+                type="radio"
+                name="elettrodomestici"
+                value="no"
+                id="no4"/>No</label>
+          </div>
         </div>
 
 

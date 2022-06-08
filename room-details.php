@@ -1,11 +1,11 @@
 <?php include 'header.php';?>
 
 <?php
-    require_once('connection_1.php');
+    require_once('db.php');
     if(isset($_GET['id'])){
         $id = $_GET['id'];
-        $q = "SELECT * FROM alloggio WHERE alloggio.id_alloggio = $id";
-        $run = mysqli_query($mysqli, $q);
+        $q = "SELECT * FROM room WHERE room.room_id = $id";
+        $run = mysqli_query($connection, $q);
         $row = mysqli_fetch_array($run);
         $imageURL = 'uploads/'.$row["file_name"];
     }

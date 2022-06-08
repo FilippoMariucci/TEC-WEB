@@ -34,7 +34,7 @@ $nb_new_pm = $nb_new_pm['nb_new_pm'];
     	<a href="<?php echo $url_home; ?>">Chat Index</a> &gt; List of your Personal Messages
     </div>
 	<div class="box_right">
-    	<a href="list_pm.php">Your messages <span class="badge"><font color="#ffcccc"><?php echo $nb_new_pm; ?></font></span></a> - <a href="profile.php?id=<?php echo $_SESSION['user_id']; ?>"><?php echo htmlentities($_SESSION['user_id'], ENT_QUOTES, 'UTF-8'); ?></a> (<a href="logout.php">Logout</a>)
+    	<a href="list_pm.php">Your messages <span class="badge"><font color="#ffcccc"><?php echo $nb_new_pm; ?></font></span></a> - <a href="home_log.php?user_id=<?php echo $_SESSION['user_id']; ?>"><?php echo htmlentities($_SESSION['user_id'], ENT_QUOTES, 'UTF-8'); ?></a> (<a href="logout.php">Logout</a>)
     </div>
     <div class="clean"></div>
 </div>

@@ -63,10 +63,10 @@ img{
 }
 
 .sezione{
-  padding:40px;
+  padding:10%;
   background-color: white;
-  border-style: groove;
-  margin-top: 10px;
+  border: groove black;
+  margin-top: 1%;
 }
 
 .sezione h3{
@@ -75,7 +75,7 @@ img{
 
 /* Dropdown Button */
 .dropbtn {
-  background-color: #34495e;
+  background-color: red;
   border: groove black;
   padding: 10px 300px;
   font-size: 16px;

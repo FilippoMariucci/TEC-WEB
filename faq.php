@@ -80,14 +80,17 @@ $result = mysqli_query($connection, "SELECT * FROM faq ");
 ?>
 
   <div class="container_faq">
-
+  <h1> Domanda:  <?php echo $res['id_faq'];?></h1>
+<div class="sezione">
         <div class="domanda">
            <p><?php echo $res['domanda'];?></p>
         </div>
-        <div class="risposta">
+
+
+        <div class="sezione">
            <p><?php echo $res['risposta']; ?></p>
          </div>
-
+</div>
       </div>
 
  <?php

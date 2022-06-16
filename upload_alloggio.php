@@ -20,8 +20,6 @@
       <li><a href="faq.php">faq</a></li>
       <li><a href="contattaci_no_log.html">contattaci</a></li>
       <li><a href="catalogo_no_log.php">catalogo</a></li>
-      <li><a href="#" class="active">registrati</a></li>
-      <li><a href="login.html">login</a></li>
     </ul>
     <label id="icon">
       <i class="fa fa-bars" aria-hidden="true" onclick="show_nav()"></i>
@@ -115,11 +113,7 @@ if (isset($_SESSION['user_id'])){
           <label>Dimensioni</label>
         </div>
 
-        <!-- numeri posti letto -->
-        <div class="field">
-          <input type="text" name="num_posti_letto_tot"  required>
-          <label>Numeri Posti Letto</label>
-        </div>
+
 
         <!-- data inizio -->
         <div class="field">
@@ -139,11 +133,6 @@ if (isset($_SESSION['user_id'])){
           <label>Vincoli</label>
         </div>
 
-        <!-- disponibilità -->
-        <div class="field">
-          <input type="text" name="disponibilita"  required>
-          <label>Disponibilità</label>
-        </div>
 
         <!-- wi-fi -->
 
@@ -206,7 +195,7 @@ if (isset($_SESSION['user_id'])){
 
         <!-- elettrodomestici -->
         <div class="form-group" style="margin-top: 10px">
-          <label>Parcheggio:</label>
+          <label>Elettrodomestici:</label>
           <div>
             <label for="yes4" class="radio-inline">
               <input
@@ -224,8 +213,14 @@ if (isset($_SESSION['user_id'])){
         </div>
 
 
-    Select Image File to Upload:
+    Inserisci la foto principale del tuo alloggio:
     <input type="file" name="file">
+
+    Inserici altre 3 immagini del tuo alloggio:
+    <input type="file" name="file2">
+    <input type="file" name="file3">
+    <input type="file" name="file4">
+
 
 
 

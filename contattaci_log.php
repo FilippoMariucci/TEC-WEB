@@ -13,12 +13,35 @@
   <nav>
     <label class="logo">Affittacamere</label>
     <ul id="nav">
-      <li><a href="home_log.html">home</a></li>
+      <li><a href="home_log.php" >home</a></li>
       <li><a href="faq.php">faq</a></li>
-      <li><a href="#" class="active">contattaci</a></li>
+      <li><a href="contattaci_log.php">contattaci</a></li>
       <li><a href="catalogo_log.php">catalogo</a></li>
-      <li><h2>"ciao, nomeutente"</h2></li>
-      <li><i class="fa fa-sign-out" aria-hidden="true"></i></li>
+      <li>
+       <li>
+       <?php
+       session_start();
+           if(isset($_SESSION['user_id']) && ($_SESSION['username']) =='admin') {
+              include("db.php");
+              $result = mysqli_query($connection, "SELECT * FROM user");
+        ?>
+        <a href="area_ris_4.php" style="padding:10px; color:orange"> Welcome <?php echo $_SESSION['username'] ?></a>
+        <?php
+           }elseif(isset($_SESSION['user_id']) && ($_SESSION['ruolo']) =='le') {
+              include("db.php");
+              $result = mysqli_query($connection, "SELECT * FROM user");
+        ?>
+        <a href="area_ris_2.php" style="padding:10px; color:orange"> Welcome <?php echo $_SESSION['username'] ?></a>
+        <?php
+          } else {
+              include("db.php");
+              $result = mysqli_query($connection, "SELECT * FROM user");
+              ?>
+              <a href="area_ris_3.php" style="padding:10px; color:orange"> Welcome <?php echo $_SESSION['username'] ?></a>
+              <?php
+          }
+         ?></li>
+      <li><a href="logout.php" class="fa fa-sign-out"></a></li>
     </ul>
     <label id="icon">
       <i class="fa fa-bars" aria-hidden="true" onclick="show_nav()"></i>

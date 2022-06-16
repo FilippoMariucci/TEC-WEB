@@ -2,7 +2,7 @@
 
 <?php
     require_once('db.php');
-    session_start();
+
     if (isset($_SESSION['user_id'])){
     $user_id = $_SESSION['user_id'];
     $userQuery = "SELECT * FROM user WHERE id = '$user_id'";
@@ -18,49 +18,99 @@
         $run = mysqli_query($connection, $q);
         $row = mysqli_fetch_array($run);
         $imageURL = 'uploads/'.$row["file_name"];
+        $imageURL2 = 'uploads/'.$row["img2"];
+        $imageURL3 = 'uploads/'.$row["img3"];
+        $imageURL4 = 'uploads/'.$row["img4"];
     }
 
 
 ?>
+<head>
+  <meta charset="UTF-8">
+  <title>HOMEPAGE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="css/Livello_1_style/home_style.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 <div class="container">
-<h1 class="title"><?php echo $row['descrizione']; ?></h1>
+<h1 class="title"><?php echo $row['citta']; ?></h1>
  <!-- RoomDetails -->
-            <div id="RoomDetails" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                <div class="item active"><img class="img-responsive" alt="slide" src="<?php echo $imageURL; ?>"/></div>
-                <!-- <div class="item  height-full"><img src="images/photos/<?php echo $row['image2']; ?>"  class="img-responsive" alt="slide"></div>  -->
-                <!-- <div class="item  height-full"><img src="images/photos/<?php echo $row['image3']; ?>"  class="img-responsive" alt="slide"></div>    -->
-                <!-- <div class="item  height-full"><img src="images/photos/<?php echo $row['image4']; ?>"  class="img-responsive" alt="slide"></div>  -->
-                </div>
-                <!-- Controls -->
-                <!-- <a class="left carousel-control" href="#RoomDetails" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a> -->
-                <!-- <a class="right carousel-control" href="#RoomDetails" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a> -->
-            </div>
-  <!-- RoomCarousel-->
+ <header>
+ <div class="mySlides">
+      <img class="img-responsive" alt="appartamento" src="<?php echo $imageURL;?>"/>
+    </div>
+    <div class="mySlides">
+      <img class="img-responsive" alt="appartamento" src="<?php echo $imageURL2;?>"/>
+    </div>
+    <div class="mySlides">
+      <img class="img-responsive" alt="appartamento" src="<?php echo $imageURL3;?>"/>
+    </div>
+    <div class="mySlides">
+      <img class="img-responsive" alt="appartamento" src="<?php echo $imageURL4;?>"/>
+    </div>
+</header>
+<script>
+    function show_nav(){
+      var x = document.getElementById("nav");
+      if(x.style.left === "0%"){
+        x.style.left = "-100%";
+      }
+      else{
+        x.style.left = "0%";
+      }
+      }
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {
+        myIndex = 1
+      }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 4000);
+    }
+</script>
 
 
 <div class="room-features spacer">
   <div class="row">
     <div class="col-sm-12 col-md-5">
-    <p><?php echo $row['citta']; ?></p>
+    <p><?php echo $row['descrizione']; ?></p>
     </div>
     <div class="col-sm-6 col-md-3 amenitites">
-    <h3>Common Facilities</h3>
+    <h3>More Details:</h3>
     <ul>
-      <li>Television with more than 400 channels.</li>
-      <li>Attached bathroom with bath-tub.</li>
-      <li>Wide balcony towards beautiful garden.</li>
-      <li>House keeping 3 times per day.</li>
-      <li>24 hours water supply.</li>
+      <li><p> Via: <?php echo $row['via']; ?></p></li>
+      <li><p> Numero Civico: <?php echo $row['numero_civico']; ?></p></li>
+      Disponibile
+      <li><p> Da: <?php echo $row['data_inizio']; ?></p></li>
+      <li><p> A: <?php echo $row['data_fine']; ?></p></li>
+      <li><p>Vincoli: <?php echo $row['vincoli']; ?></p></li>
+      <li><p> WI-FI: <?php echo $row['wi_fi']; ?></p></li>
+      <li><p> Parcheggio: <?php echo $row['parcheggio']; ?></p></li>
+      <li><p> Cucina: <?php echo $row['cucina']; ?></p></li>
+      <li><p> Elettrodomestici:<?php echo $row['elettrodomestici']; ?></p></li>
+
+      <li><p>Proprietario: <?php echo $row['user_username']; ?></p></li>
     </ul>
 
 
+
+
     </div>
     <div class="col-sm-3 col-md-2">
-      <div class="size-price">Size<span><?php echo $row['numero_civico']; ?> sq</span></div>
+      <div class="size-price">Size<span><?php echo $row['dimensioni']; ?> m^2</span></div>
     </div>
     <div class="col-sm-3 col-md-2">
-      <div class="size-price">Price<span><?php echo $row['via']; ?> /-</span></div>
+      <div class="size-price">Price<span><?php echo $row['prezzo']; ?> € </span></div>
     </div>
   </div>
 </div>
@@ -93,6 +143,7 @@
 
 
 <a href="signup.php">Contatta:  <?php echo $_SESSION['username'] ?></a>
+
                         </tbody>
                     </table>
                 </div>
@@ -100,6 +151,3 @@
 
         </div>
     </div>
-
-</div>
-

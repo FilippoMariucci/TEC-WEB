@@ -28,15 +28,17 @@ include_once "db.php";
 include_once "aggiungi_preferiti.php.";
 
 ?>
-  <nav>
+ <nav>
     <label class="logo">Affittacamere</label>
     <ul id="nav">
-      <li><a href="home_log.php" class="active">home</a></li>
-      <li><a href="faq.html">faq</a></li>
-      <li><a href="contattaci_log.html">contattaci</a></li>
+      <li><a href="home_log.php" >home</a></li>
+      <li><a href="faq.php">faq</a></li>
+      <li><a href="contattaci_log.php">contattaci</a></li>
       <li><a href="catalogo_log.php">catalogo</a></li>
-      <li><h2>"ciao, nomeutente"</h2></li>
-      <li><i class="fa fa-sign-out" aria-hidden="true"></i></li>
+      <li>
+       <li>
+        <a href="#" style="padding:10px; color:orange" class="active"> Welcome <?php echo $_SESSION['username'] ?></a></li>
+      <li><a href="logout.php" class="fa fa-sign-out"></a></li>
     </ul>
     <label id="icon">
       <i class="fa fa-bars" aria-hidden="true" onclick="show_nav()"></i>

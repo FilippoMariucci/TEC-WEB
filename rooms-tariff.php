@@ -2,9 +2,6 @@
 
 <div class="container">
 
-<h2>Rooms &amp; Tariff</h2>
-
-
 
 <!-- form -->
 <?php
@@ -25,31 +22,6 @@ if(isset($_POST['search']))
 }
 
 
-if(isset($_POST['from_date']) && isset($_POST['to_date']))
-{
-  $from_date = $_POST['from_date'];
-  $to_date = $_POST['to_date'];
-  $query = "SELECT * FROM room WHERE data_inizio BETWEEN '$from_date' AND '$to_date' UNION SELECT * FROM room WHERE data_fine BETWEEN '$from_date' AND '$to_date' ";
-  $search_result = filterTable($query);
-  }
-  else {
-    echo("no result found");
-}
-
-if(isset($_POST['from_price']) && isset($_POST['to_price']))
-{
-  $from_price = $_POST['from_price'];
-  $to_price = $_POST['to_price'];
-  $query = "SELECT * FROM room WHERE prezzo BETWEEN '$from_price' AND '$to_price'  ";
-  $search_result = filterTable($query);
-  }
-  else {
-    echo("no result found");
-}
-
-
-
-
 // function to connect and execute the query
 function filterTable($query)
 {
@@ -66,59 +38,6 @@ function filterTable($query)
     <body>
 
 
-    <form action="" method="post">
-    <div class="location">
-      <input type="text" name="valueToSearch" placeholder="Value To Search">
-      <input type="submit" name="search" value="Filter"><br><br>
-    </div>
-    </form>
-
-    <div class="tipologia">
-      <input type="radio" name="tipo">
-      <label>Appartamento</label><br>
-      <input type="radio" name="tipo">
-      <label>Posto Letto</label>
-    </div>
-
-  <form action="" method="post">
-     <button id="btn" onclick="myFunction('drop', 'btn'); bordo('drop', 'drop2')" class="dropbtn">
-      <p>Periodo di Locazione</p>
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div id="drop" class="tendina">
-      <label>Check In
-        <input type="date" name="from_date" class="form-control">
-      </label><br>
-      <label>Check Out
-        <input type="date" name="to_date" class="form-control">
-      </label>
-      <button type="submit" name="date" class="btn btn-primary">Filter</button>
-    </div>
-  </form>
-
-
-
-
- <form action="" method="post">
-<button id="btn2" onclick="myFunction('drop2', 'btn2'); bordo('drop', 'drop2')" class="dropbtn2">
-      <p>Fascia di Prezzo</p>
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div id="drop2" class="tendina2">
-      <label>DA €
-        <input type="number" name="from_price" class="form-control">
-      </label><br>
-      <label>A €
-        <input type="number" name="to_price" class="form-control">
-      </label>
-      <button type="submit" name="price" class="btn btn-primary">Filter</button>
-    </div>
-    </form>
-
-
-  </div>
-
-
 <div class="row">
       <!-- populate table from mysql database -->
       <?php while($row = mysqli_fetch_array($search_result)):?>
@@ -127,8 +46,8 @@ function filterTable($query)
        <div class="rooms">
           <img class="img-responsive" src="<?php echo $imageURL; ?>"/>
           <div class="info">
-              <h3><?php echo $row['descrizione']; ?></h3>
-              <p style="color: darkgreen;"> Size: <?php echo $row['dimensioni']; ?> sq. feet<br> Per Night: <?php echo $row['citta']; ?> Taka Only</p>
+              <h3><?php echo $row['citta']; ?></h3>
+              <p style="color: darkgreen;"> Size: <?php echo $row['dimensioni']; ?> m^2<br> Price: <?php echo $row['prezzo']; ?>€</p>
               <a href="room-details.php?id=<?php echo $row['room_id']; ?>" class="btn btn-default">Check Details</a>
 
 
@@ -182,5 +101,3 @@ function filterTable($query)
     }
 
   </script>
-
-

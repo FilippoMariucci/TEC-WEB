@@ -21,12 +21,45 @@ if (isset($_POST['login'])) {
         } else {
             header('Location:login.php?loginE');
         }
+
+        if(isset($_SESSION['valid']) && ($_SESSION['name'])== 'admin') {
+            header('Location: area_ris_4.php');
+         } else if(isset($_SESSION['valid'])){
+             header('Location: home_log.php');
+             }
     }
 }
 
 if (isset($_POST['add_room'])) {
+
+$statusMsg = '';
+
+   // File upload path
+    $targetDir = "uploads/";
+    $fileName1 = basename($_FILES["file1"]["name1"]);
+    $fileName2 = basename($_FILES["file2"]["name2"]);
+    $fileName3 = basename($_FILES["file3"]["name3"]);
+    $fileName4 = basename($_FILES["file4"]["name4"]);
+    $targetFilePath = $targetDir . $fileName;
+    $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
+
     $room_type_id = $_POST['room_type_id'];
     $room_no = $_POST['room_no'];
+
+        $des = $_POST['descrizione'];
+        $city = $_POST['citta'];
+        $vi = $_POST['via'];
+        $num = $_POST['numero_civico'];
+        $dim = $_POST['dimensioni'];
+        $di = $_POST['data_inizio'];
+        $df = $_POST['data_fine'];
+        $vin = $_POST['vincoli'];
+        $wf = $_POST['wi_fi'];
+        $par = $_POST['parcheggio'];
+        $cuc = $_POST['cucina'];
+        $elett = $_POST['elettrodomestici'];
+
+        $allowTypes = array('jpg','png','jpeg','gif','pdf');
 
     if ($room_no != '') {
         $sql = "SELECT * FROM room WHERE room_no = '$room_no'";
@@ -131,7 +164,7 @@ if (isset($_POST['room_price'])) {
     $result = mysqli_query($connection, $sql);
     if ($result) {
         $room = mysqli_fetch_assoc($result);
-        echo $room['price'];
+        echo $room['prezzo'];
     } else {
         echo "0";
     }

@@ -1,14 +1,14 @@
 <?php session_start(); ?>
 
 <?php
-if(!isset($_SESSION['valid'])) {
-    header('Location: login.html');
+if(!isset($_SESSION['user_id'])) {
+    header('Location: login.php');
 }
 ?>
 
 <?php
 // including the database connection file
-include_once("connection_1.php");
+include_once("db.php");
 
 if(isset($_POST['update']))
 {
@@ -29,7 +29,7 @@ if(isset($_POST['update']))
         }
     } else {
         //updating the table
-        $result = mysqli_query($mysqli, "UPDATE faq SET domanda='$dom', risposta='$ris' WHERE id_faq='$id'");
+        $result = mysqli_query($connection, "UPDATE faq SET domanda='$dom', risposta='$ris' WHERE id_faq='$id'");
         //redirectig to the display page. In our case, it is view.php
         header("Location: view_faq.php");
     }
@@ -40,7 +40,7 @@ if(isset($_POST['update']))
 $id = $_GET['id'];
 
 //selecting data associated with this particular id
-$result = mysqli_query($mysqli, "SELECT * FROM faq WHERE id_faq=$id");
+$result = mysqli_query($connection, "SELECT * FROM faq WHERE id_faq=$id");
 
 while($res = mysqli_fetch_array($result))
 {

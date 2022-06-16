@@ -15,13 +15,20 @@
     <label class="logo">Affittacamere</label>
     <ul id="nav">
       <li><a href="#" class="active">home</a></li>
-      <li><a href="faq.html">faq</a></li>
-      <li><a href="contattaci_log.html">contattaci</a></li>
+      <li><a href="faq.php">faq</a></li>
+      <li><a href="contattaci_log.php">contattaci</a></li>
       <li><a href="catalogo_log.php">catalogo</a></li>
       <li>
        <li><?php session_start(); ?>
+
+       <?php
+           if(isset($_SESSION['user_id']) && ($_SESSION['username']) =='admin') {
+              include("db.php");
+              $result = mysqli_query($connection, "SELECT * FROM user");
+        ?>
+        <a href="area_ris_4.php" style="padding:10px; color:orange"> Welcome <?php echo $_SESSION['username'] ?></a>
         <?php
-           if(isset($_SESSION['user_id']) && ($_SESSION['ruolo']) =='le') {
+           }elseif(isset($_SESSION['user_id']) && ($_SESSION['ruolo']) =='le') {
               include("db.php");
               $result = mysqli_query($connection, "SELECT * FROM user");
         ?>

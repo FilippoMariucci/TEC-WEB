@@ -1,5 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="en">
+<?php
+include_once("db.php");
+session_start();
+?>
+
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
@@ -16,25 +22,11 @@
     <ul id="nav">
       <li><a href="#" class="active">home</a></li>
       <li><a href="faq.html">faq</a></li>
-      <li><a href="contattaci_log.html">contattaci</a></li>
+      <li><a href="contattaci_log.php">contattaci</a></li>
       <li><a href="catalogo_log.php">catalogo</a></li>
       <li>
-       <li><?php session_start(); ?>
-        <?php
-           if(isset($_SESSION['valid']) && ($_SESSION['ruolo']) =='le') {
-              include("../Livello_1/connection_1.php");
-              $result = mysqli_query($mysqli, "SELECT * FROM users");
-        ?>
-        <a href="area_ris_2.php" style="padding:10px; color:orange"> Welcome <?php echo $_SESSION['name'] ?></a>
-        <?php
-          } else {
-              include("connection_1.php");
-              $result = mysqli_query($mysqli, "SELECT * FROM users");
-              ?>
-              <a href="area_ris_3.php" style="padding:10px; color:orange"> Welcome <?php echo $_SESSION['name'] ?></a>
-              <?php
-          }
-         ?></li>
+       <li>
+        <a href="#" style="padding:10px; color:orange" class="active"> Welcome <?php echo $_SESSION['username'] ?></a></li>
       <li><a href="logout.php" class="fa fa-sign-out"></a></li>
     </ul>
     <label id="icon">
@@ -47,19 +39,27 @@
 
 
     <div class="statistic">
-      <div class="field">
-          <p>Inserisci il periodo di ricerca da:</p>
-          <input type="date" name="data_in"  required>
+      <form action="" method="post">
 
-        <p>A:</p>
-          <input type="date" name="data_fn"  required>
-      </div>
-      <div class="field">
-          <button>
-            <a href="statistic_time.php"> cerca</a>
-          </button>
+      <p>Seleziona il periodo temporale su cui effettuare una statistica :<label>Da<input type="date" name="from_date" class="form-control"></label><label>A<input type="date" name="to_date" class="form-control"></label><button type="submit" name="date" class="btn btn-primary">Filter</button></p>
+<p>Tot:
 
-        </div>
+<?php
+if(isset($_POST['from_date']) && isset($_POST['to_date']))
+{
+  $from_date = $_POST['from_date'];
+  $to_date = $_POST['to_date'];
+  $query = "SELECT COUNT (room_id) FROM room ";
+  $result = $connection->query($query);
+  $search_result = filterTable($query);
+  while($row = $result ->fetch_array(MYSQLI_NUM)){
+  ?><p><?php echo $row?></p>
+ <?php
+ }
+  }?><?php
+?> </p>
+
+  </form>
     </div>
 
     <div class="statistic">

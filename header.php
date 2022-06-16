@@ -1,9 +1,11 @@
+
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>Hotel Fantastic | Best Hotel in Rajshahi</title>
+
 
 <!-- Google fonts -->
 <link href='http://fonts.googleapis.com/css?family=Raleway:300,500,800|Old+Standard+TT' rel='stylesheet' type='text/css'>
@@ -41,9 +43,9 @@
 <!-- top
   <form class="navbar-form navbar-left newsletter" role="search">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Enter Your Email Id Here">
+          <input type="text" class="form-control">
         </div>
-        <button type="submit" class="btn btn-inverse">Subscribe</button>
+
     </form>
  top -->
 
@@ -58,26 +60,22 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+      <a class="navbar-brand" href="index.html">
 
-      <a class="navbar-brand" href="index.php">
-          <div class="col-xs-3"><img src="images/logo.png" alt="holiday crown" width="45px"></div>
-          <div class="col-xs-9" style="margin-top: 18px; font-size: 16pt; margin-left: -12px; font-family: fantasy;">Hotel Fantastic</div>
       </a>
     </div>
-
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-
       <ul class="nav navbar-nav">
-        <li><a href="index.php">Home </a></li>
-        <li><a href="rooms-tariff.php">Rooms &amp; Tariff</a></li>
-        <li><a href="introduction.php">Introduction</a></li>
-        <li><a href="gallery.php">Gallery</a></li>
-        <li><a href="contact.php">Contact</a></li>
-        <li><a href="login.php">Admin</a></li>
+        <li><a href="home_log.php" class="active">HOME</a></li>
+      <li><a href="faq.php">FAQ</a></li>
+      <li><a href="contattaci_log.php">CONTATTACI</a></li>
+      <li><a href="#">CATALOGO</a></li>
+      <li>
+      <a  style="padding:10px; color:orange" class="active"> Welcome <?php echo $_SESSION['username'] ?></a>
+      </li>
       </ul>
     </div><!-- Wnavbar-collapse -->
   </div><!-- container-fluid -->
 </nav>
 <!-- header -->
-

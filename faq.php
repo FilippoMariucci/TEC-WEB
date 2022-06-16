@@ -15,13 +15,15 @@
 
   <nav>
     <label class="logo">Affittacamere</label>
+
+
     <ul id="nav">
       <li><a href="index.html">home</a></li>
       <li><a href="#" class="active">faq</a></li>
       <li><a href="contattaci_no_log.html">contattaci</a></li>
-      <li><a href="catalogo_no_log.php">catalogo</a></li>
+      <li><a href="rooms-tariff.php">catalogo</a></li>
       <li><a href="registrazione.html">registrati</a></li>
-      <li><a href="login.html">login</a></li>
+      <li><a href="login.php">login</a></li>
     </ul>
     <label id="icon">
       <i class="fa fa-bars" aria-hidden="true" onclick="show_nav()"></i>

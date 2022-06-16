@@ -1,17 +1,17 @@
 <?php session_start(); ?>
 
 <?php
-if(!isset($_SESSION['valid'])) {
-    header('Location: login.html');
+if(!isset($_SESSION['user_id'])) {
+    header('Location: login.php');
 }
 ?>
 
 <?php
 //including the database connection file
-include_once("connection_1.php");
+include_once("db.php");
 
 //fetching data in descending order (lastest entry first)
-$result = mysqli_query($mysqli, "SELECT * FROM faq  ORDER BY id_faq DESC");
+$result = mysqli_query($connection, "SELECT * FROM faq  ORDER BY id_faq DESC");
 ?>
 
 <html>

@@ -10,15 +10,22 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+<?php
+//This page displays the list of the forum's categories
+include('db.php');
+ session_start();
+?>
   <nav>
     <label class="logo">Affittacamere</label>
     <ul id="nav">
-      <li><a href="home_log.php">home</a></li>
+      <li><a href="home_log.php" >home</a></li>
       <li><a href="faq.php">faq</a></li>
-      <li><a href="contattaci_log.html">contattaci</a></li>
+      <li><a href="contattaci_log.php">contattaci</a></li>
       <li><a href="catalogo_log.php">catalogo</a></li>
-      <li><h2 class="active">"ciao, admin"</h2></li>
-      <li><i class="fa fa-sign-out" aria-hidden="true"></i></li>
+      <li>
+       <li>
+       <a href="#" style="padding:10px; color:orange" class="active"> Welcome <?php echo $_SESSION['username'] ?></a></li>
+      <li><a href="logout.php" class="fa fa-sign-out"></a></li>
     </ul>
     <label id="icon">
       <i class="fa fa-bars" aria-hidden="true" onclick="show_nav()"></i>
@@ -39,16 +46,11 @@
         <div class="statistiche">
           <button>
             <i class="fa fa-bar-chart" aria-hidden="true"></i>
-            <a href="statistic.html" class="active"><p>Visualizza e analizza le statistiche a tua disposizione</p></a>
+            <a href="statistic.php" class="active"><p>Visualizza e analizza le statistiche a tua disposizione</p></a>
           </button>
         </div>
 
-        <div class="account">
-          <button>
-            <i class="fa fa-user" aria-hidden="true"></i>
-            <p>Visualizza e/o modifica il tuo account</p>
-          </button>
-        </div>
+
 
         <div class="faq">
           <button>

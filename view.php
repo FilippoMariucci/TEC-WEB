@@ -1,17 +1,17 @@
 <?php session_start(); ?>
 
 <?php
-if(!isset($_SESSION['valid'])) {
-    header('Location: login.html');
+if(!isset($_SESSION['user_id'])) {
+    header('Location: login.php');
 }
 ?>
 
 <?php
 //including the database connection file
-include_once("connection_1.php");
+include_once("db.php");
 
 //fetching data in descending order (lastest entry first)
-$result = mysqli_query($mysqli, "SELECT * FROM users WHERE id=".$_SESSION['userid']." ORDER BY id DESC");
+$result = mysqli_query($connection, "SELECT * FROM user WHERE id=".$_SESSION['user_id']." ORDER BY id DESC");
 ?>
 
 <html>

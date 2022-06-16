@@ -1,14 +1,14 @@
 <?php session_start(); ?>
 
 <?php
-if(!isset($_SESSION['valid'])) {
-    header('Location: login.html');
+if(!isset($_SESSION['user_id'])) {
+    header('Location: login.php');
 }
 ?>
 
 <?php
 // including the database connection file
-include_once("connection_1.php");
+include_once("db.php");
 
 if(isset($_POST['update']))
 {
@@ -55,10 +55,10 @@ if(isset($_POST['update']))
         }
     } else {
         //updating the table
-        $result = mysqli_query($mysqli, "UPDATE users SET name='$name', username='$user', password='$pass', cognome='$cogn', data='$date', telefono='$tel', sesso='$sex', ruolo='$role' WHERE id=$id");
+        $result = mysqli_query($connection, "UPDATE user SET name='$name', username='$user', password='$pass', cognome='$cogn', data='$date', telefono='$tel', sesso='$sex', ruolo='$role' WHERE id=$id");
 
         //redirectig to the display page. In our case, it is view.php
-        header("Location: view.php");
+        header("Location: login.php");
     }
 }
 ?>
@@ -67,7 +67,7 @@ if(isset($_POST['update']))
 $id = $_GET['id'];
 
 //selecting data associated with this particular id
-$result = mysqli_query($mysqli, "SELECT * FROM users WHERE id=$id");
+$result = mysqli_query($connection, "SELECT * FROM user WHERE id=$id");
 
 while($res = mysqli_fetch_array($result))
 {
@@ -87,7 +87,7 @@ while($res = mysqli_fetch_array($result))
 </head>
 
 <body>
-    <a href="index.php">Home</a> | <a href="logout.php">Logout</a>
+    <a href="home_log.php">Home</a> | <a href="logout.php">Logout</a>
     <br/><br/>
 
     <form name="form1" method="post" action="edit.php">

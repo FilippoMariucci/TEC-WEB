@@ -20,7 +20,6 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">Manage Rooms
-                    <button class="btn btn-secondary pull-right" style="border-radius:0%" data-toggle="modal" data-target="#addRoom">Add Rooms</button>
                 </div>
                 <div class="panel-body">
                     <?php
@@ -38,14 +37,7 @@
                     <table class="table table-striped table-bordered table-responsive" cellspacing="0" width="100%"
                            id="rooms">
                         <thead>
-                        <tr>
-                            <th>Room No</th>
-                            <th>Room Type</th>
-                            <th>Booking Status</th>
-                            <th>Check In</th>
-                            <th>Check Out</th>
-                            <th>Action</th>
-                        </tr>
+
                         </thead>
                         <tbody>
                         <?php
@@ -117,56 +109,8 @@
         </div>
     </div>
 
-    <a href="upload_alloggio.php"> sesso </a>
+    <a href="upload_alloggio.php">Aggiungi Alloggio </a>
 
-    <!-- Add Room Modal -->
-    <div id="addRoom" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Add New Room</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <form id="addRoom" data-toggle="validator" role="form">
-                                <div class="response"></div>
-                                <div class="form-group">
-                                    <label>Room Type</label>
-                                    <select class="form-control" id="room_type_id" required
-                                            data-error="Select Room Type">
-                                        <option selected disabled>Select Room Type</option>
-                                        <?php
-                                        $query = "SELECT * FROM room_type";
-                                        $result = mysqli_query($connection, $query);
-                                        if (mysqli_num_rows($result) > 0) {
-                                            while ($room_type = mysqli_fetch_assoc($result)) {
-                                                echo '<option value="' . $room_type['room_type_id'] . '">' . $room_type['room_type'] . '</option>';
-                                            }
-                                        }
-                                        ?>
-                                    </select>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label>Room No</label>
-                                    <input class="form-control" placeholder="Room No" id="room_no"
-                                           data-error="Enter Room No" required>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                                <button class="btn btn-success pull-right">Add Room</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
 
     <!--Edit Room Modal -->
     <div id="editRoom" class="modal fade" role="dialog">
@@ -402,11 +346,7 @@
     </div>
 
 
-    <div class="row">
-        <div class="col-sm-12">
-        <p class="back-link">Developed By Prem Chand Saini</p>
-        </div>
-    </div>
+
 
 </div>    <!--/.main-->
 
